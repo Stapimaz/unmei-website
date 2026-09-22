@@ -78,17 +78,12 @@
       .map((item, index) => {
         const rank = index + 1;
         let rankClass = 'rank-other';
-        let medal = '';
-
         if (rank === 1) {
           rankClass = 'rank-1';
-          medal = '🥇';
         } else if (rank === 2) {
           rankClass = 'rank-2';
-          medal = '🥈';
         } else if (rank === 3) {
           rankClass = 'rank-3';
-          medal = '🥉';
         }
 
         const isHighlighted = highlightId && item.id === highlightId;
@@ -96,7 +91,7 @@
 
         return `
         <li class="lb-row ${rankClass} ${highlightClass}">
-          <span class="lb-rank">${medal || rank}</span>
+          <span class="lb-rank">${rank}</span>
           <span class="lb-name" title="${escapeHtml(item.name)}">${escapeHtml(item.name)}</span>
           <span class="lb-score">${item.score}</span>
         </li>
