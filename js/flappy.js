@@ -144,6 +144,7 @@
     if (!easterModal) return;
     easterModal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    if (window.UnmeiLeaderboard) window.UnmeiLeaderboard.render();
     initFlappyGame();
   }
 
@@ -151,6 +152,7 @@
     if (!easterModal) return;
     easterModal.style.display = 'none';
     document.body.style.overflow = '';
+    if (window.UnmeiLeaderboard) window.UnmeiLeaderboard.hideSubmitPanel();
     stopFlappyGame();
   }
 
@@ -177,15 +179,15 @@
   const birdImg = new Image();
   birdImg.src = 'assets/logo.png';
 
-  // Responsive Dimensions (Landscape on Desktop, Portrait on Mobile)
-  let isMobile = window.innerWidth <= 600;
-  let W = isMobile ? 360 : 720;
-  let H = isMobile ? 520 : 440;
+  // Responsive Dimensions (Landscape on Desktop next to Leaderboard, Portrait on Mobile)
+  let isMobile = window.innerWidth <= 820;
+  let W = isMobile ? 360 : 580;
+  let H = isMobile ? 480 : 430;
   let pipeWidth = isMobile ? 54 : 60;
   let pipeGap = isMobile ? 148 : 138;
   let baseSpeed = isMobile ? 2.3 : 2.7;
   let pipeSpeed = baseSpeed;
-  let pipeDistance = isMobile ? 230 : 255;
+  let pipeDistance = isMobile ? 220 : 250;
   let framesSinceLastPipe = 0;
 
   let animationId = null;
@@ -196,7 +198,7 @@
 
   // Bird Entity
   const bird = {
-    x: isMobile ? 80 : 120,
+    x: isMobile ? 80 : 110,
     y: H / 2 - 15,
     w: 44,
     h: 31,
@@ -213,20 +215,20 @@
   const stars = [];
 
   function updateDimensions() {
-    isMobile = window.innerWidth <= 600;
-    W = isMobile ? 360 : 720;
-    H = isMobile ? 520 : 440;
+    isMobile = window.innerWidth <= 820;
+    W = isMobile ? 360 : 580;
+    H = isMobile ? 480 : 430;
     pipeWidth = isMobile ? 54 : 60;
     pipeGap = isMobile ? 148 : 138;
     baseSpeed = isMobile ? 2.3 : 2.7;
     pipeSpeed = baseSpeed;
-    pipeDistance = isMobile ? 230 : 255;
+    pipeDistance = isMobile ? 220 : 250;
 
     canvas.width = W;
     canvas.height = H;
 
     stars.length = 0;
-    const starCount = isMobile ? 35 : 65;
+    const starCount = isMobile ? 35 : 55;
     for (let i = 0; i < starCount; i++) {
       stars.push({
         x: Math.random() * W,
@@ -240,7 +242,8 @@
 
   function resetGame() {
     updateDimensions();
-    bird.x = isMobile ? 80 : 120;
+    if (window.UnmeiLeaderboard) window.UnmeiLeaderboard.hideSubmitPanel();
+    bird.x = isMobile ? 80 : 110;
     bird.y = H / 2 - 15;
     bird.velocity = 0;
     bird.rotation = 0;
@@ -273,6 +276,10 @@
   // Input Listeners
   function handleInput(e) {
     if (easterModal.style.display !== 'flex') return;
+
+    // Ignore game controls if user is typing nickname in input
+    const nickInput = document.getElementById('player-nickname');
+    if (nickInput && document.activeElement === nickInput) return;
 
     if (e.type === 'keydown') {
       if (e.code === 'Space' || e.code === 'ArrowUp') {
@@ -441,6 +448,11 @@
     // Screen shake
     canvas.classList.add('canvas-shake');
     setTimeout(() => canvas.classList.remove('canvas-shake'), 400);
+
+    // Show score submission panel on Game Over
+    if (window.UnmeiLeaderboard) {
+      window.UnmeiLeaderboard.showSubmitPanel(score);
+    }
   }
 
   // =========================================================================

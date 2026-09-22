@@ -226,16 +226,66 @@
     </div>
   </footer>
 
-  <!-- Easter Egg: Flappy Uç Modal -->
+  <!-- Easter Egg: Flappy Uç & Leaderboard Modal -->
   <div id="easter-modal" class="easter-modal" style="display: none;">
     <div class="easter-modal-backdrop"></div>
     <div class="easter-modal-container">
-      <div class="game-wrapper">
-        <canvas id="flappy-canvas"></canvas>
+      
+      <!-- Top Bar: Title & Instructions -->
+      <div class="easter-modal-header">
+        <div class="easter-header-title">
+          <span class="easter-badge">FLAPPY UÇ</span>
+          <span class="easter-sub">Arşiv Özel Mini Oyunu</span>
+        </div>
+        <div class="easter-controls-hint">
+          <span>Zıpla: <strong>[ Space ]</strong> / <strong>Tıkla</strong></span>
+          <span class="easter-dot">•</span>
+          <span>Kapat: <strong>[ Esc ]</strong> veya dışarı tıkla</span>
+        </div>
       </div>
-      <div class="easter-modal-footer">
-        <span>Zıpla: <strong>[ Space ]</strong> / <strong>Tıkla</strong></span>
-        <span>Kapat: <strong>[ Esc ]</strong> veya dışarı tıkla</span>
+
+      <!-- Main Layout: Left Leaderboard | Right Game -->
+      <div class="easter-main-layout">
+        
+        <!-- Left Sidebar: Leaderboard (Always Visible) -->
+        <aside class="leaderboard-sidebar" id="leaderboard-sidebar">
+          <div class="leaderboard-header">
+            <div class="leaderboard-title-group">
+              <span class="lb-trophy">🏆</span>
+              <h3 class="leaderboard-title">Liderlik Tablosu</h3>
+            </div>
+            <button class="lb-refresh-btn" id="lb-refresh-btn" title="Yenile">⟳</button>
+          </div>
+          
+          <div class="leaderboard-list-wrapper">
+            <ol class="leaderboard-list" id="leaderboard-list">
+              <!-- Dynamically populated rows -->
+            </ol>
+          </div>
+          
+          <div class="leaderboard-footer">
+            <span class="lb-count" id="lb-player-count">En Yüksek 10 Skor</span>
+          </div>
+        </aside>
+
+        <!-- Right Column: Canvas + Score Submission -->
+        <section class="game-column">
+          <div class="game-wrapper">
+            <canvas id="flappy-canvas"></canvas>
+          </div>
+
+          <!-- Score Submission Bar (Shown on Game Over if score > 0) -->
+          <div class="score-submit-panel" id="score-submit-panel" style="display: none;">
+            <div class="submit-score-badge">
+              <span>Skorun: <strong id="submit-score-val">0</strong></span>
+            </div>
+            <form class="submit-form" id="score-submit-form">
+              <input type="text" id="player-nickname" class="submit-input" placeholder="Takma adını yaz..." maxlength="15" autocomplete="off" required>
+              <button type="submit" id="submit-score-btn" class="submit-btn">Skoru Kaydet</button>
+            </form>
+          </div>
+        </section>
+
       </div>
     </div>
   </div>
@@ -243,6 +293,7 @@
   <!-- Scripts -->
   <script src="js/rating.js"></script>
   <script src="js/disqus.js"></script>
+  <script src="js/leaderboard.js"></script>
   <script src="js/flappy.js"></script>
   <script src="js/app.js"></script>
 </body>
