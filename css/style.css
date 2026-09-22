@@ -78,7 +78,7 @@ body {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 2px solid var(--secondary);
-  padding: 22px 0;
+  padding: 16px 0;
 }
 
 .header-inner {
@@ -93,19 +93,18 @@ body {
   text-decoration: none;
 }
 
-.text-logo {
-  font-family: var(--font-logo);
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 0;
-  color: var(--secondary);
-  line-height: 1.15;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+.header-logo-img {
+  height: 52px;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 16px rgba(188, 25, 154, 0.2));
 }
 
-.brand-wrapper:hover .text-logo {
-  opacity: 0.92;
-  transform: translateY(-1px);
+.brand-wrapper:hover .header-logo-img {
+  opacity: 0.95;
+  transform: translateY(-1px) scale(1.015);
+  filter: drop-shadow(0 0 22px rgba(216, 31, 174, 0.4));
 }
 
 .main-nav {
@@ -885,8 +884,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .text-logo {
-    font-size: 23px;
+  .header-logo-img {
+    height: 42px;
   }
   .footer-logo {
     height: 95px;
