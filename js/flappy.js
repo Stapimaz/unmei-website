@@ -145,7 +145,9 @@
     easterModal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
     if (window.UnmeiLeaderboard) window.UnmeiLeaderboard.render();
-    initFlappyGame();
+    requestAnimationFrame(() => {
+      initFlappyGame();
+    });
   }
 
   function closeEasterGame() {
@@ -174,20 +176,21 @@
   const canvas = document.getElementById('flappy-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+  const gameWrapper = document.querySelector('.game-wrapper');
 
   // Load Bird Image (our logo)
   const birdImg = new Image();
   birdImg.src = 'assets/logo.png';
 
-  // Responsive Dimensions (Landscape on Desktop next to Leaderboard, Portrait on Mobile)
+  // Responsive Dimensions (Dynamic to fill gameWrapper 100%)
   let isMobile = window.innerWidth <= 820;
-  let W = isMobile ? 360 : 580;
-  let H = isMobile ? 480 : 430;
-  let pipeWidth = isMobile ? 54 : 60;
-  let pipeGap = isMobile ? 148 : 138;
-  let baseSpeed = isMobile ? 2.3 : 2.7;
+  let W = isMobile ? 360 : 820;
+  let H = isMobile ? 480 : 580;
+  let pipeWidth = isMobile ? 54 : 68;
+  let pipeGap = isMobile ? 148 : 162;
+  let baseSpeed = isMobile ? 2.4 : 3.0;
   let pipeSpeed = baseSpeed;
-  let pipeDistance = isMobile ? 220 : 250;
+  let pipeDistance = isMobile ? 220 : 280;
   let framesSinceLastPipe = 0;
 
   let animationId = null;
@@ -198,14 +201,14 @@
 
   // Bird Entity
   const bird = {
-    x: isMobile ? 80 : 110,
+    x: isMobile ? 70 : 130,
     y: H / 2 - 15,
-    w: 44,
-    h: 31,
-    radius: 14,
+    w: isMobile ? 44 : 52,
+    h: isMobile ? 31 : 37,
+    radius: isMobile ? 14 : 17,
     velocity: 0,
-    gravity: 0.28,
-    jump: -6.2,
+    gravity: isMobile ? 0.28 : 0.32,
+    jump: isMobile ? -6.2 : -7.0,
     rotation: 0,
     trail: []
   };
@@ -216,19 +219,36 @@
 
   function updateDimensions() {
     isMobile = window.innerWidth <= 820;
-    W = isMobile ? 360 : 580;
-    H = isMobile ? 480 : 430;
-    pipeWidth = isMobile ? 54 : 60;
-    pipeGap = isMobile ? 148 : 138;
-    baseSpeed = isMobile ? 2.3 : 2.7;
+
+    const wrapperW = gameWrapper ? gameWrapper.clientWidth : 0;
+    const wrapperH = gameWrapper ? gameWrapper.clientHeight : 0;
+
+    if (wrapperW > 50 && wrapperH > 50) {
+      W = Math.round(wrapperW);
+      H = Math.round(wrapperH);
+    } else {
+      W = isMobile ? 360 : 820;
+      H = isMobile ? 480 : 580;
+    }
+
+    pipeWidth = isMobile ? 54 : 68;
+    pipeGap = isMobile ? 148 : 162;
+    baseSpeed = isMobile ? 2.4 : 3.0;
     pipeSpeed = baseSpeed;
-    pipeDistance = isMobile ? 220 : 250;
+    pipeDistance = isMobile ? 220 : 280;
 
     canvas.width = W;
     canvas.height = H;
 
+    bird.x = isMobile ? 70 : 130;
+    bird.radius = isMobile ? 14 : 17;
+    bird.w = isMobile ? 44 : 52;
+    bird.h = isMobile ? 31 : 37;
+    bird.gravity = isMobile ? 0.28 : 0.32;
+    bird.jump = isMobile ? -6.2 : -7.0;
+
     stars.length = 0;
-    const starCount = isMobile ? 35 : 55;
+    const starCount = isMobile ? 35 : 70;
     for (let i = 0; i < starCount; i++) {
       stars.push({
         x: Math.random() * W,
@@ -243,7 +263,7 @@
   function resetGame() {
     updateDimensions();
     if (window.UnmeiLeaderboard) window.UnmeiLeaderboard.hideSubmitPanel();
-    bird.x = isMobile ? 80 : 110;
+    bird.x = isMobile ? 70 : 130;
     bird.y = H / 2 - 15;
     bird.velocity = 0;
     bird.rotation = 0;
@@ -252,7 +272,7 @@
     score = 0;
     frames = 0;
     framesSinceLastPipe = 0;
-    baseSpeed = isMobile ? 2.3 : 2.7;
+    baseSpeed = isMobile ? 2.4 : 3.0;
     pipeSpeed = baseSpeed;
     gameState = 'START';
   }
@@ -298,22 +318,30 @@
   canvas.addEventListener('pointerdown', handleInput);
 
   window.addEventListener('resize', () => {
-    if (easterModal.style.display === 'flex' && gameState !== 'PLAYING') {
+    if (easterModal && easterModal.style.display === 'flex') {
+      const prevW = W;
       updateDimensions();
+      if (gameState === 'PLAYING' && prevW > 0) {
+        const scaleX = W / prevW;
+        pipes.forEach((p) => {
+          p.x *= scaleX;
+        });
+      }
     }
   });
 
   function spawnPipe() {
     const groundH = 50;
-    const minTop = 50;
-    const maxTop = H - groundH - pipeGap - 50;
-    const topHeight = Math.floor(Math.random() * (maxTop - minTop + 1)) + minTop;
+    const minTop = 60;
+    const maxTop = H - groundH - pipeGap - 60;
+    const safeMaxTop = Math.max(minTop + 10, maxTop);
+    const topHeight = Math.floor(Math.random() * (safeMaxTop - minTop + 1)) + minTop;
 
     pipes.push({
       x: W + 20,
       topH: topHeight,
       bottomY: topHeight + pipeGap,
-      bottomH: H - groundH - (topHeight + pipeGap),
+      bottomH: Math.max(0, H - groundH - (topHeight + pipeGap)),
       passed: false
     });
   }
@@ -538,57 +566,57 @@
     // 8. UI Overlays based on Game State
     if (gameState === 'PLAYING') {
       // Live Score
-      ctx.font = '800 42px "Outfit", sans-serif';
+      ctx.font = '800 48px "Outfit", sans-serif';
       ctx.textAlign = 'center';
       ctx.fillStyle = '#ffffff';
       ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
-      ctx.shadowBlur = 8;
-      ctx.fillText(score, W / 2, 70);
+      ctx.shadowBlur = 10;
+      ctx.fillText(score, W / 2, 75);
       ctx.shadowBlur = 0;
     } else if (gameState === 'START') {
       // Start Screen (Clean & minimal without title)
-      drawGlassCard(W / 2 - 145, H / 2 - 75, 290, 150);
+      drawGlassCard(W / 2 - 160, H / 2 - 80, 320, 160);
 
       ctx.textAlign = 'center';
-      ctx.font = '600 15px "Plus Jakarta Sans", sans-serif';
+      ctx.font = '600 16px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = '#edf0f5';
       ctx.fillText('Başlamak için Tıkla veya', W / 2, H / 2 - 24);
 
-      ctx.font = '700 15px "Plus Jakarta Sans", sans-serif';
+      ctx.font = '700 16px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = '#bc199a';
-      ctx.fillText('[ Space ] Tuşuna Bas', W / 2, H / 2 + 3);
+      ctx.fillText('[ Space ] Tuşuna Bas', W / 2, H / 2 + 5);
 
       ctx.font = '600 13px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = '#848b98';
-      ctx.fillText(`En Yüksek Skor: ${highScore}`, W / 2, H / 2 + 45);
+      ctx.fillText(`En Yüksek Skor: ${highScore}`, W / 2, H / 2 + 48);
     } else if (gameState === 'GAMEOVER') {
       // Game Over Screen
-      drawGlassCard(W / 2 - 150, H / 2 - 125, 300, 220);
+      drawGlassCard(W / 2 - 165, H / 2 - 130, 330, 240);
 
       ctx.textAlign = 'center';
-      ctx.font = '800 26px "Outfit", sans-serif';
+      ctx.font = '800 28px "Outfit", sans-serif';
       ctx.fillStyle = '#ef4444';
-      ctx.fillText('OYUN BİTTİ', W / 2, H / 2 - 80);
+      ctx.fillText('OYUN BİTTİ', W / 2, H / 2 - 84);
 
       // Current Score
       ctx.font = '500 13px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = '#848b98';
-      ctx.fillText('SKOR', W / 2, H / 2 - 45);
+      ctx.fillText('SKOR', W / 2, H / 2 - 48);
 
-      ctx.font = '800 36px "Outfit", sans-serif';
+      ctx.font = '800 42px "Outfit", sans-serif';
       ctx.fillStyle = '#ffffff';
-      ctx.fillText(score, W / 2, H / 2 - 10);
+      ctx.fillText(score, W / 2, H / 2 - 8);
 
       // High Score
-      ctx.font = '600 13px "Plus Jakarta Sans", sans-serif';
+      ctx.font = '600 14px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = score >= highScore && score > 0 ? '#10b981' : '#848b98';
       const recordText = score >= highScore && score > 0 ? `YENİ REKOR: ${highScore}` : `En İyi: ${highScore}`;
-      ctx.fillText(recordText, W / 2, H / 2 + 26);
+      ctx.fillText(recordText, W / 2, H / 2 + 32);
 
       // Restart hint
-      ctx.font = '600 13px "Plus Jakarta Sans", sans-serif';
+      ctx.font = '600 13.5px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = '#bc199a';
-      ctx.fillText('Tekrar oynamak için Tıkla / [Space]', W / 2, H / 2 + 64);
+      ctx.fillText('Tekrar oynamak için Tıkla / [Space]', W / 2, H / 2 + 74);
     }
   }
 
