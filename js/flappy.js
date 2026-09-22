@@ -183,7 +183,6 @@
   let H = isMobile ? 520 : 440;
   let pipeWidth = isMobile ? 54 : 60;
   let pipeGap = isMobile ? 148 : 138;
-  let pipeSpeed = isMobile ? 2.3 : 2.7;
   let baseSpeed = isMobile ? 2.3 : 2.7;
   let pipeSpeed = baseSpeed;
   let pipeDistance = isMobile ? 230 : 255;
