@@ -190,6 +190,14 @@ function handleRouting() {
   showView('view-catalog');
 }
 
+function formatEpisodeSize(sizeMb) {
+  if (!sizeMb || sizeMb <= 0) return '-';
+  if (sizeMb >= 1024) {
+    return Math.round(sizeMb / 1024) + ' GB';
+  }
+  return Math.round(sizeMb) + ' MB';
+}
+
 function renderAnimeDetail(slug) {
   if (!catalogData || !catalogData.items) return;
   const anime = catalogData.items.find(it => it.slug === slug);
@@ -204,6 +212,7 @@ function renderAnimeDetail(slug) {
   const synopsisText = document.getElementById("detail-synopsis-text");
   const episodesBody = document.getElementById("detail-episodes-body");
   const episodesCount = document.getElementById("detail-episodes-count");
+  const gdriveBtn = document.getElementById("detail-gdrive-btn");
 
   // Full-width Letterboxd Backdrop
   const bannerSrc = anime.banner_image || anime.cover_image || "";
@@ -234,20 +243,84 @@ function renderAnimeDetail(slug) {
   // Özet
   synopsisText.textContent = anime.synopsis || "Bu seri için henüz özet bulunmuyor.";
 
+  // Arşiv Durumu Bilgilendirme Kartı (Yalnızca arşivi eksik olanlar için)
+  const archiveCard = document.getElementById("detail-archive-card");
+  const archiveCardTitle = document.getElementById("archive-card-title");
+  const archiveCardBadge = document.getElementById("archive-card-badge");
+  const archiveCardDesc = document.getElementById("archive-card-desc");
+  const archiveCardMissingList = document.getElementById("archive-card-missing-list");
+  const archiveCardMissingRow = document.getElementById("archive-card-missing-row");
+
+  if (archiveCard) {
+    if (anime.arsiv_durumu && anime.arsiv_durumu !== "Eksiksiz") {
+      archiveCard.style.display = "flex";
+      const isRot = (anime.arsiv_durumu && anime.arsiv_durumu.includes("Link Rot")) || anime.archived_count === 0;
+
+      if (isRot) {
+        archiveCardTitle.textContent = "Arşiv Kurtarılamadı (Link Rot)";
+        archiveCardBadge.textContent = "0 Bölüm";
+        archiveCardDesc.textContent = "Orijinal fansub indirme linkleri ve tüm internet aynaları silinmiş olduğundan bu serinin bölümleri kurtarılamamıştır.";
+      } else {
+        archiveCardTitle.textContent = "Arşiv Tam Değildir (Kısmen Arşivlendi)";
+        const totalRef = anime.translated_episodes || anime.total_episodes || anime.episodes_count || 0;
+        archiveCardBadge.textContent = `${anime.archived_count} / ${totalRef} Bölüm`;
+        archiveCardDesc.textContent = "Orijinal fansub kaynaklarındaki link kaybı (link rot) nedeniyle bu serinin tüm bölümleri henüz kurtarılamamıştır.";
+      }
+
+      if (anime.missing_episodes && anime.missing_episodes !== "-") {
+        if (archiveCardMissingRow) archiveCardMissingRow.style.display = "flex";
+        if (archiveCardMissingList) archiveCardMissingList.textContent = anime.missing_episodes;
+      } else {
+        if (archiveCardMissingRow) archiveCardMissingRow.style.display = "none";
+      }
+    } else {
+      archiveCard.style.display = "none";
+    }
+  }
+
+  // Google Drive Klasör Butonu
+  if (gdriveBtn) {
+    if (anime.gdrive_url) {
+      gdriveBtn.href = anime.gdrive_url;
+      gdriveBtn.classList.remove("disabled");
+      gdriveBtn.removeAttribute("aria-disabled");
+      gdriveBtn.setAttribute("target", "_blank");
+      gdriveBtn.style.pointerEvents = "auto";
+      gdriveBtn.style.opacity = "1";
+    } else {
+      gdriveBtn.href = "javascript:void(0)";
+      gdriveBtn.classList.add("disabled");
+      gdriveBtn.setAttribute("aria-disabled", "true");
+      gdriveBtn.style.pointerEvents = "none";
+      gdriveBtn.style.opacity = "0.5";
+    }
+  }
+
   // Dual Ratings
   RatingManager.renderRatingWidget("rating-anime-container", anime, "anime", "Anime Puanı");
   RatingManager.renderRatingWidget("rating-translation-container", anime, "translation", "Çeviri Kalitesi");
 
   // Bölümler
   if (episodesCount) episodesCount.textContent = anime.episodes_count;
-  episodesBody.innerHTML = (anime.episodes || []).map(ep => `
-    <tr>
-      <td style="font-weight: 600; color: #fff;">${String(ep.ep_no).padStart(2, '0')}</td>
-      <td class="ep-file-name">${ep.file_name || '-'}</td>
-      <td>${ep.quality || '-'}</td>
-      <td>${ep.size_mb ? ep.size_mb + ' MB' : '-'}</td>
-    </tr>
-  `).join('');
+  if (!anime.episodes || anime.episodes.length === 0) {
+    episodesBody.innerHTML = `
+      <tr>
+        <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 32px 16px;">
+          ${anime.arsiv_durumu && anime.arsiv_durumu.includes('Link Rot') ? 'Bu serinin bölümleri link rot sebebiyle henüz arşivlenememiştir.' : 'Kayıtlı bölüm bulunamadı.'}
+        </td>
+      </tr>
+    `;
+  } else {
+    episodesBody.innerHTML = (anime.episodes || []).map(ep => `
+      <tr>
+        <td style="font-weight: 600; color: #fff;">${String(ep.ep_no).padStart(2, '0')}</td>
+        <td class="ep-file-name">${ep.file_name || '-'}</td>
+        <td><span class="codec-badge">${ep.codec || 'H.264'}</span></td>
+        <td>${ep.quality || '-'}</td>
+        <td style="font-variant-numeric: tabular-nums;">${formatEpisodeSize(ep.size_mb)}</td>
+      </tr>
+    `).join('');
+  }
 
   // Disqus
   DisqusManager.loadComments(anime.slug, anime.title);

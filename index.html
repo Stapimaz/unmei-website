@@ -150,18 +150,49 @@
             </div>
           </div>
 
+          <!-- Arşiv Durumu Bilgi Kartı (Eksik / Link Rot seriler için) -->
+          <div id="detail-archive-card" class="archive-notice-card" style="display: none;">
+            <div class="archive-card-icon-wrap">
+              <svg class="archive-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="archive-card-body">
+              <div class="archive-card-header">
+                <h4 id="archive-card-title" class="archive-card-title">Arşiv Tam Değildir (Kısmen Arşivlendi)</h4>
+                <span id="archive-card-badge" class="archive-card-badge">0 / 0 Bölüm</span>
+              </div>
+              <p id="archive-card-desc" class="archive-card-desc">
+                Orijinal fansub kaynaklarındaki link kaybı (link rot) nedeniyle bu serinin tüm bölümleri henüz kurtarılamamıştır.
+              </p>
+              <div id="archive-card-missing-row" class="archive-card-missing-row">
+                <span class="missing-label">Eksik Bölümler:</span>
+                <span id="archive-card-missing-list" class="missing-list">-</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Bölümler Tablosu -->
           <div class="section-block">
-            <h3 class="section-heading">Bölümler (<span id="detail-episodes-count">0</span>)</h3>
-            <div class="episodes-note">
-              İndirme bağlantıları arşiv tamamlandığında eklenecektir.
+            <div class="episodes-top-bar">
+              <h3 class="section-heading mb-0">Bölümler (<span id="detail-episodes-count">0</span>)</h3>
+              <a id="detail-gdrive-btn" href="#" target="_blank" rel="noopener noreferrer" class="gdrive-folder-btn" title="Google Drive Klasörü">
+                <svg class="gdrive-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Klasör Bağlantısı</span>
+              </a>
             </div>
+
             <div class="episodes-table-wrapper">
               <table class="episodes-table">
                 <thead>
                   <tr>
                     <th style="width: 60px;">Bölüm</th>
                     <th>Dosya Adı</th>
+                    <th style="width: 90px;">Codec</th>
                     <th style="width: 80px;">Kalite</th>
                     <th style="width: 90px;">Boyut</th>
                   </tr>
@@ -197,7 +228,7 @@
       <div class="subpage-box">
         <h2>Unmei Fansub Hakkında</h2>
         <p>Unmei Fansub, 2017 ve 2022 yılları arasında aktif olarak faaliyet göstermiş bir Türkçe anime çeviri ve fansub topluluğudur.</p>
-        <p>Bu site; türkanime.tv ve diğer geleneksel izleme platformlarının kapanmasının ardından, 5 yıllık yayın hayatımız boyunca ürettiğimiz 161 serilik çeviri arşivimizin kaybolmaması ve geleceğe aktarılması amacıyla hazırlanmıştır.</p>
+        <p>Bu site; türkanime.tv ve diğer geleneksel izleme platformlarının kapanmasının ardından, 5 yıllık yayın hayatımız boyunca ürettiğimiz 184 serilik çeviri arşivimizin kaybolmaması ve geleceğe aktarılması amacıyla hazırlanmıştır.</p>
         <p>Arşivimizdeki tüm bölümler yerel disklerde ses ve görüntü bütünlüğü denetlenerek saklanmaktadır.</p>
       </div>
     </div>

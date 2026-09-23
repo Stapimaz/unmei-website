@@ -2604,5 +2604,373 @@
       "Romance",
       "Slice of Life"
     ]
+  },
+  "perfect-blue": {
+    "anilist_id": 437,
+    "romaji_title": "PERFECT BLUE",
+    "english_title": "Perfect Blue",
+    "native_title": "PERFECT BLUE",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/437-3yMVTyN7gl2A.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx437-69NMlXKFeuse.jpg",
+    "theme_color": "#1a356b",
+    "year": 1998,
+    "anilist_score": 85,
+    "anilist_genres": [
+      "Drama",
+      "Horror",
+      "Psychological",
+      "Thriller"
+    ]
+  },
+  "ssss-dynazenon": {
+    "anilist_id": 113950,
+    "romaji_title": "SSSS.DYNAZENON",
+    "english_title": "SSSS.DYNAZENON",
+    "native_title": "SSSS.DYNAZENON",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113950-466E1yrRgD0N.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113950-XqVhfpSccNuJ.png",
+    "theme_color": "#5daef1",
+    "year": 2021,
+    "anilist_score": 74,
+    "anilist_genres": [
+      "Action",
+      "Mecha",
+      "Romance",
+      "Sci-Fi"
+    ]
+  },
+  "super-cub": {
+    "anilist_id": 113418,
+    "romaji_title": "Super Cub",
+    "english_title": "Super Cub",
+    "native_title": "スーパーカブ",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/113418-Pcst3ICxDgro.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx113418-OjWcmCXAHWkq.jpg",
+    "theme_color": "#3578ae",
+    "year": 2021,
+    "anilist_score": 72,
+    "anilist_genres": [
+      "Slice of Life"
+    ]
+  },
+  "uzumaki": {
+    "anilist_id": 111314,
+    "romaji_title": "Uzumaki",
+    "english_title": "Uzumaki",
+    "native_title": "うずまき",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/111314-OWfOEbP2ZsSJ.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx111314-ui2D6cvpNumy.jpg",
+    "theme_color": "#00d2ff",
+    "year": 2024,
+    "anilist_score": 54,
+    "anilist_genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Psychological",
+      "Supernatural"
+    ]
+  },
+  "wave-surfing-yappe-tv": {
+    "anilist_id": 130402,
+    "romaji_title": "WAVE!! Surfing Yappe!! (TV)",
+    "english_title": "WAVE!! -Let's go surfing!!- (TV)",
+    "native_title": "WAVE!!～サーフィンやっぺ!!～ (TV)",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/130402-crRPotHULmho.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx130402-rx1MDFeAyILr.png",
+    "theme_color": "#e47843",
+    "year": 2021,
+    "anilist_score": 57,
+    "anilist_genres": [
+      "Slice of Life",
+      "Sports"
+    ]
+  },
+  "raise-wa-tanin-ga-ii": {
+    "anilist_id": 170468,
+    "romaji_title": "Raise wa Tanin ga Ii",
+    "english_title": "Yakuza Fiancé: Raise wa Tanin ga Ii",
+    "native_title": "来世は他人がいい",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/170468-nzu4osxgLius.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx170468-kD2X9O2XM9KH.jpg",
+    "theme_color": "#e46b50",
+    "year": 2024,
+    "anilist_score": 71,
+    "anilist_genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ]
+  },
+  "shokugeki-no-souma-gou-no-sara": {
+    "anilist_id": 114043,
+    "romaji_title": "Shokugeki no Souma: Gou no Sara",
+    "english_title": "Food Wars! The Fifth Plate",
+    "native_title": "食戟のソーマ 豪ノ皿",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/114043-5RRtoLPrzQ0P.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx114043-QkgiycojrojN.jpg",
+    "theme_color": "#1a78ae",
+    "year": 2020,
+    "anilist_score": 71,
+    "anilist_genres": [
+      "Comedy",
+      "Drama",
+      "Ecchi"
+    ]
+  },
+  "sk-crazy-rock-jam": {
+    "anilist_id": null,
+    "romaji_title": "Sk Crazy Rock Jam",
+    "english_title": "Sk Crazy Rock Jam",
+    "native_title": null,
+    "banner_image": null,
+    "cover_image": null,
+    "theme_color": "#00d2ff",
+    "year": null,
+    "anilist_score": null,
+    "anilist_genres": []
+  },
+  "tenki-no-ko": {
+    "anilist_id": 106286,
+    "romaji_title": "Tenki no Ko",
+    "english_title": "Weathering With You",
+    "native_title": "天気の子",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/106286-3oKwiwjd7Wkm.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx106286-5COcpd0J9VbL.png",
+    "theme_color": "#5dbbe4",
+    "year": 2019,
+    "anilist_score": 81,
+    "anilist_genres": [
+      "Drama",
+      "Romance",
+      "Slice of Life",
+      "Supernatural"
+    ]
+  },
+  "overlord-iii": {
+    "anilist_id": 101474,
+    "romaji_title": "Overlord III",
+    "english_title": "Overlord III",
+    "native_title": "オーバーロードⅢ",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101474-n35NKyt9APDw.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101474-tGRyvSAWMjU9.jpg",
+    "theme_color": "#5daef1",
+    "year": 2018,
+    "anilist_score": 77,
+    "anilist_genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ]
+  },
+  "shingeki-no-kyojin-season-3-part-2": {
+    "anilist_id": 104578,
+    "romaji_title": "Shingeki no Kyojin Season 3 Part 2",
+    "english_title": "Attack on Titan Season 3 Part 2",
+    "native_title": "進撃の巨人 Season３ Part.2",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/104578-z7SadpYEuAsy.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx104578-k61nx3LPjvgd.jpg",
+    "theme_color": "#e49350",
+    "year": 2019,
+    "anilist_score": 89,
+    "anilist_genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Mystery"
+    ]
+  },
+  "shoushimin-series": {
+    "anilist_id": 173295,
+    "romaji_title": "Shoushimin Series",
+    "english_title": "SHOSHIMIN: How to Become Ordinary",
+    "native_title": "小市民シリーズ",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/173295-L0RjWH3jVdZz.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx173295-5DIOnrTYiF0a.jpg",
+    "theme_color": "#e4ae5d",
+    "year": 2024,
+    "anilist_score": 74,
+    "anilist_genres": [
+      "Mystery",
+      "Slice of Life"
+    ]
+  },
+  "steins-gate-0": {
+    "anilist_id": 21127,
+    "romaji_title": "Steins;Gate 0",
+    "english_title": "Steins;Gate 0",
+    "native_title": "シュタインズ・ゲート ゼロ",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/21127-6jTjz7ndTHOi.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx21127-7ARWZkDXKiiD.jpg",
+    "theme_color": "#f1d6bb",
+    "year": 2018,
+    "anilist_score": 84,
+    "anilist_genres": [
+      "Drama",
+      "Psychological",
+      "Sci-Fi",
+      "Thriller"
+    ]
+  },
+  "vanitas-no-karte": {
+    "anilist_id": 131646,
+    "romaji_title": "Vanitas no Carte",
+    "english_title": "The Case Study of Vanitas",
+    "native_title": "ヴァニタスの手記",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/131646-ewbYrSfyUyp6.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx131646-cuyGfKcekZ62.jpg",
+    "theme_color": "#f1c950",
+    "year": 2021,
+    "anilist_score": 78,
+    "anilist_genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Mystery",
+      "Supernatural"
+    ]
+  },
+  "yeon-ae-halujeon": {
+    "anilist_id": null,
+    "romaji_title": "Yeon Ae Halujeon",
+    "english_title": "Yeon Ae Halujeon",
+    "native_title": null,
+    "banner_image": null,
+    "cover_image": null,
+    "theme_color": "#00d2ff",
+    "year": null,
+    "anilist_score": null,
+    "anilist_genres": []
+  },
+  "osomatsu-san-2nd-season": {
+    "anilist_id": 98565,
+    "romaji_title": "Osomatsu-san 2nd Season",
+    "english_title": "Mr. Osomatsu 2nd season",
+    "native_title": "おそ松さん 第2期",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98565-Km46w3GXIMOX.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98565-SflMvnfkJY82.jpg",
+    "theme_color": "#5086e4",
+    "year": 2017,
+    "anilist_score": 74,
+    "anilist_genres": [
+      "Comedy",
+      "Slice of Life"
+    ]
+  },
+  "shingeki-no-kyojin-lost-girls": {
+    "anilist_id": 99634,
+    "romaji_title": "Shingeki no Kyojin: LOST GIRLS",
+    "english_title": "Attack on Titan: Lost Girls",
+    "native_title": "進撃の巨人 LOST GIRLS",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/99634-m8hKbCnDL2ue.png",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx99634-9u4hdvWwmC2s.png",
+    "theme_color": "#aed6ff",
+    "year": 2017,
+    "anilist_score": 77,
+    "anilist_genres": [
+      "Action",
+      "Drama",
+      "Fantasy",
+      "Mystery"
+    ]
+  },
+  "shoujo-kageki-revue-starlight": {
+    "anilist_id": 98658,
+    "romaji_title": "Shoujo☆Kageki Revue Starlight",
+    "english_title": "Revue Starlight",
+    "native_title": "少女☆歌劇 レヴュー・スタァライト",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/98658-YifB5qgBgnGQ.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx98658-Xz8uliDO7dzZ.png",
+    "theme_color": "#50a1e4",
+    "year": 2018,
+    "anilist_score": 77,
+    "anilist_genres": [
+      "Action",
+      "Drama",
+      "Music",
+      "Psychological"
+    ]
+  },
+  "sirius": {
+    "anilist_id": 101361,
+    "romaji_title": "Tenrou: Sirius the Jaeger",
+    "english_title": "Sirius the Jaeger",
+    "native_title": "天狼 Sirius the Jaeger",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/101361-Iwl4qtdAYCFb.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx101361-q4sHpCRgkhYQ.jpg",
+    "theme_color": "#e4a135",
+    "year": 2018,
+    "anilist_score": 68,
+    "anilist_genres": [
+      "Action",
+      "Supernatural"
+    ]
+  },
+  "sword-art-online-alicization-war-of-underworld": {
+    "anilist_id": 108759,
+    "romaji_title": "Sword Art Online: Alicization - War of Underworld",
+    "english_title": "Sword Art Online: Alicization - War of Underworld",
+    "native_title": "ソードアート・オンライン アリシゼーション War of Underworld",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/108759-HGsEWBcisLmO.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx108759-jcXbDf9BJTcb.jpg",
+    "theme_color": "#f1ae5d",
+    "year": 2019,
+    "anilist_score": 75,
+    "anilist_genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy",
+      "Sci-Fi"
+    ]
+  },
+  "tokyo-revengers": {
+    "anilist_id": 120120,
+    "romaji_title": "Tokyo Revengers",
+    "english_title": "Tokyo Revengers",
+    "native_title": "東京リベンジャーズ",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/120120-UDYgoHA69peT.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx120120-cWDmnmeEntSe.jpg",
+    "theme_color": "#f1865d",
+    "year": 2021,
+    "anilist_score": 77,
+    "anilist_genres": [
+      "Action",
+      "Drama",
+      "Romance",
+      "Supernatural"
+    ]
+  },
+  "yami-shibai-7": {
+    "anilist_id": 109603,
+    "romaji_title": "Yami Shibai 7",
+    "english_title": "Theatre of Darkness: Yamishibai 7",
+    "native_title": "闇芝居 7",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/109603-IvrdD8S6Rh5F.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx109603-ToNTtS3MMJJw.jpg",
+    "theme_color": "#a10d00",
+    "year": 2019,
+    "anilist_score": 55,
+    "anilist_genres": [
+      "Horror",
+      "Supernatural"
+    ]
+  },
+  "yuukoku-no-moriarty-2nd-season": {
+    "anilist_id": 124858,
+    "romaji_title": "Yuukoku no Moriarty Part 2",
+    "english_title": "Moriarty the Patriot Part 2",
+    "native_title": "憂国のモリアーティ2クール",
+    "banner_image": "https://s4.anilist.co/file/anilistcdn/media/anime/banner/124858-3Kb09cB8JxnF.jpg",
+    "cover_image": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx124858-96RtyVSgUYnm.jpg",
+    "theme_color": "#e44328",
+    "year": 2021,
+    "anilist_score": 82,
+    "anilist_genres": [
+      "Drama",
+      "Mystery",
+      "Psychological",
+      "Thriller"
+    ]
   }
 }
