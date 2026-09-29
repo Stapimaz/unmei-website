@@ -2,12 +2,12 @@
  * UNMEI FANSUB - MINIMAL CATALOG & FULL-PAGE NAVIGATION APPLICATION
  */
 
+const API_BASE = "https://unmei-rating-api.stapimazgraphics.workers.dev";
 let catalogData = null;
 let currentFilters = {
   search: "",
   status: "all",
   format: "all",
-  quality: "all",
   sort: "name_asc"
 };
 
@@ -22,6 +22,7 @@ async function initApp() {
     const res = await fetch("data/catalog.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     catalogData = await res.json();
+    renderTrending();
     renderCatalog();
     handleRouting();
   } catch (err) {
@@ -72,15 +73,6 @@ function filterAndSortItems() {
     items = items.filter(it => it.category === currentFilters.format);
   }
 
-  // Kalite
-  if (currentFilters.quality !== "all") {
-    if (currentFilters.quality === "1080p") {
-      items = items.filter(it => it.max_quality === "1080p");
-    } else if (currentFilters.quality === "720p") {
-      items = items.filter(it => it.max_quality === "720p");
-    }
-  }
-
   // Sıralama
   items.sort((a, b) => {
     switch (currentFilters.sort) {
@@ -102,10 +94,132 @@ function filterAndSortItems() {
   return items;
 }
 
+function renderTrending() {
+  const track = document.getElementById("trending-track");
+  if (!track || !catalogData || !catalogData.items) return;
+
+  const prioritySlugs = [
+    "jujutsu-kaisen",
+    "vinland-saga",
+    "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen-2",
+    "horimiya",
+    "kimi-no-suizou-wo-tabetai"
+  ];
+
+  let trendingItems = [];
+  for (const slug of prioritySlugs) {
+    const found = catalogData.items.find(it => it.slug === slug);
+    if (found) trendingItems.push(found);
+  }
+
+  if (trendingItems.length < 5) {
+    const additional = catalogData.items
+      .filter(it => !trendingItems.includes(it) && (it.episodes_count || 0) > 0)
+      .sort((a, b) => (b.anilist_score || 0) - (a.anilist_score || 0))
+      .slice(0, 5 - trendingItems.length);
+    trendingItems = [...trendingItems, ...additional];
+  }
+
+  if (trendingItems.length === 0) return;
+
+  const mockViews = ["1.9K", "1.6K", "1.3K", "980", "840"];
+
+  function buildTrendingHtml(items, viewsArray) {
+    const top1 = items[0];
+    const others = items.slice(1, 5);
+
+    const eyeIconSvg = `
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+        <circle cx="12" cy="12" r="3"></circle>
+      </svg>
+    `;
+
+    const cleanTitle = (t) => (t || "").replace(/\s*\((?:TV|Film)\)/gi, '').trim();
+
+    const top1Html = `
+      <a href="#/anime/${top1.slug}" class="spotlight-card">
+        <span class="rank-badge">#1</span>
+        <div class="card-backdrop" style="background-image: url('${top1.banner_image || top1.cover_image}');"></div>
+        <div class="card-overlay"></div>
+        <div class="card-inner-content">
+          <div class="card-top-row">
+            <div class="trending-views-pill">
+              ${eyeIconSvg}
+              <span>${viewsArray[0]}</span>
+            </div>
+          </div>
+          <div class="spotlight-bottom-info">
+            <h3 class="spotlight-title">${cleanTitle(top1.title)}</h3>
+          </div>
+        </div>
+      </a>
+    `;
+
+    const othersHtml = `
+      <div class="trending-side-grid">
+        ${others.map((anime, idx) => {
+          const rank = idx + 2;
+          const views = viewsArray[idx + 1] || "600+";
+          const bgImg = anime.banner_image || anime.cover_image || "assets/placeholder_poster.svg";
+
+          return `
+            <a href="#/anime/${anime.slug}" class="side-trending-card">
+              <span class="rank-badge">#${rank}</span>
+              <div class="card-backdrop" style="background-image: url('${bgImg}');"></div>
+              <div class="card-overlay"></div>
+              <div class="card-inner-content">
+                <div class="card-top-row">
+                  <div class="trending-views-pill">
+                    ${eyeIconSvg}
+                    <span>${views}</span>
+                  </div>
+                </div>
+                <div class="side-bottom-info">
+                  <h4 class="side-card-title" title="${anime.title}">${cleanTitle(anime.title)}</h4>
+                </div>
+              </div>
+            </a>
+          `;
+        }).join('')}
+      </div>
+    `;
+
+    return top1Html + othersHtml;
+  }
+
+  track.innerHTML = buildTrendingHtml(trendingItems, mockViews);
+
+  if (API_BASE) {
+    fetch(`${API_BASE}/trending`)
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        if (data && data.trending && data.trending.length >= 5) {
+          const liveSlugs = data.trending.map(r => r.slug);
+          const liveItems = [];
+          for (const s of liveSlugs) {
+            const found = catalogData.items.find(it => it.slug === s);
+            if (found) liveItems.push(found);
+          }
+          if (liveItems.length === 5) {
+            const liveViews = data.trending.map(r => r.total_views > 1000 ? (r.total_views / 1000).toFixed(1) + 'K' : String(r.total_views));
+            track.innerHTML = buildTrendingHtml(liveItems, liveViews);
+          }
+        }
+      })
+      .catch(() => {});
+  }
+}
+
 function renderCatalog() {
   const grid = document.getElementById("anime-grid");
   const countEl = document.getElementById("results-count-display");
+  const trendingSec = document.getElementById("trending-section");
   if (!grid) return;
+
+  if (trendingSec) {
+    trendingSec.style.display = currentFilters.search.trim() ? "none" : "block";
+  }
 
   const items = filterAndSortItems();
 
@@ -204,10 +318,27 @@ function formatEpisodeSize(sizeMb) {
   return Math.round(sizeMb) + ' MB';
 }
 
+function recordPageView(slug) {
+  if (!API_BASE || !slug) return;
+  const storageKey = `unmei_hit_${slug}`;
+  const lastHit = localStorage.getItem(storageKey);
+  const now = Date.now();
+  if (!lastHit || now - parseInt(lastHit, 10) > 30 * 60 * 1000) {
+    localStorage.setItem(storageKey, String(now));
+    fetch(`${API_BASE}/hit`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ slug })
+    }).catch(() => {});
+  }
+}
+
 function renderAnimeDetail(slug) {
   if (!catalogData || !catalogData.items) return;
   const anime = catalogData.items.find(it => it.slug === slug);
   if (!anime) return;
+
+  recordPageView(slug);
 
   const banner = document.getElementById("detail-banner");
   const poster = document.getElementById("detail-poster");
@@ -381,15 +512,6 @@ function setupEventListeners() {
       document.querySelectorAll("[data-filter-format]").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentFilters.format = btn.getAttribute("data-filter-format");
-      renderCatalog();
-    });
-  });
-
-  document.querySelectorAll("[data-filter-quality]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll("[data-filter-quality]").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentFilters.quality = btn.getAttribute("data-filter-quality");
       renderCatalog();
     });
   });

@@ -1,12 +1,6 @@
 /**
- * UNMEI FANSUB - 1 IP = 1 VOTE RATING BACKEND
- * Cloudflare Worker with KV storage.
- * Free tier: 100,000 requests/day, zero server maintenance.
- *
- * Setup:
- * 1. Create a free Cloudflare Worker.
- * 2. Create a KV namespace named 'UNMEI_VOTES' and bind it to this worker.
- * 3. Set the worker URL in js/rating.js (API_ENDPOINT = "https://your-worker.workers.dev/vote")
+ * UNMEI FANSUB - FULL BACKEND (RATINGS + D1 PAGE VIEWS & TRENDING)
+ * Cloudflare Worker + KV (Ratings) + D1 SQLite (Views & Weekly Trending)
  */
 
 const SALT = "unmei_fansub_tribute_2017_2022";
@@ -25,7 +19,7 @@ export default {
 
     const url = new URL(request.url);
 
-    // GET /stats?slug=...&type=anime|translation
+    // 1. GET /stats?slug=...&type=anime|translation
     if (request.method === "GET" && url.pathname === "/stats") {
       const slug = url.searchParams.get("slug");
       const type = url.searchParams.get("type") || "anime";
@@ -39,20 +33,19 @@ export default {
       });
     }
 
-    // POST /vote
+    // 2. POST /vote (1 IP = 1 Vote)
     if (request.method === "POST" && url.pathname === "/vote") {
       try {
         const body = await request.json();
         const { slug, type, score } = body;
 
         if (!slug || !type || typeof score !== "number" || score < 1 || score > 5) {
-          return new Response(JSON.stringify({ error: "Geçersiz oy verisi" }), {
+          return new Response(JSON.stringify({ error: "Gecersiz oy verisi" }), {
             status: 400,
             headers: { ...corsHeaders, "Content-Type": "application/json" }
           });
         }
 
-        // 1 IP = 1 Vote check with SHA-256 privacy hash
         const clientIp = request.headers.get("CF-Connecting-IP") || "127.0.0.1";
         const ipHash = await hashString(`${clientIp}:${SALT}`);
         const userVoteKey = `voted:${slug}:${type}:${ipHash}`;
@@ -62,18 +55,15 @@ export default {
         let stats = (await env.UNMEI_VOTES.get(statsKey, "json")) || { sum: 0, count: 0, avg: 0 };
 
         if (existingScore !== null) {
-          // User already voted from this IP -> update their existing score
           const oldScore = parseFloat(existingScore);
           stats.sum = stats.sum - oldScore + score;
         } else {
-          // New IP vote
           stats.count += 1;
           stats.sum += score;
         }
 
         stats.avg = parseFloat((stats.sum / (stats.count || 1)).toFixed(1));
 
-        // Save to KV
         await env.UNMEI_VOTES.put(userVoteKey, score.toString());
         await env.UNMEI_VOTES.put(statsKey, JSON.stringify(stats));
 
@@ -96,7 +86,60 @@ export default {
       }
     }
 
-    return new Response("Unmei Rating API", { headers: corsHeaders });
+    // 3. POST /hit (Record page view into D1 SQLite)
+    if (request.method === "POST" && url.pathname === "/hit") {
+      try {
+        const body = await request.json();
+        const { slug } = body;
+        if (!slug) return new Response("Missing slug", { status: 400, headers: corsHeaders });
+
+        if (env.DB) {
+          await env.DB.prepare(
+            `INSERT INTO page_views (slug, view_date, views) 
+             VALUES (?, date('now'), 1) 
+             ON CONFLICT(slug, view_date) DO UPDATE SET views = views + 1`
+          ).bind(slug).run();
+        }
+
+        return new Response(JSON.stringify({ success: true, slug }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      } catch (err) {
+        return new Response(JSON.stringify({ error: err.message }), {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      }
+    }
+
+    // 4. GET /trending (Last 7 days top viewed anime from D1 SQLite)
+    if (request.method === "GET" && url.pathname === "/trending") {
+      try {
+        let results = [];
+        if (env.DB) {
+          const query = await env.DB.prepare(
+            `SELECT slug, SUM(views) as total_views 
+             FROM page_views 
+             WHERE view_date >= date('now', '-7 days') 
+             GROUP BY slug 
+             ORDER BY total_views DESC 
+             LIMIT 5`
+          ).all();
+          results = query.results || [];
+        }
+
+        return new Response(JSON.stringify({ success: true, trending: results }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      } catch (err) {
+        return new Response(JSON.stringify({ error: err.message }), {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      }
+    }
+
+    return new Response("Unmei Rating & Trending API is live", { headers: corsHeaders });
   }
 };
 
