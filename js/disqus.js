@@ -3,24 +3,20 @@
  */
 
 const DisqusManager = (() => {
-  const DISQUS_SHORTNAME = "unmei-fansub"; 
+  const DISQUS_SHORTNAME = "unmeiceviri"; 
   let isDisqusLoaded = false;
 
   function loadComments(slug, title) {
     const threadContainer = document.getElementById("disqus_thread");
     if (!threadContainer) return;
 
-    const pageUrl = `${window.location.origin}${window.location.pathname}#/anime/${slug}`;
+    // Canonical URL for unmei.net
+    const pageUrl = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+      ? `https://unmei.net/#/anime/${slug}`
+      : `${window.location.origin}${window.location.pathname}#/anime/${slug}`;
     const pageIdentifier = `unmei_anime_${slug}`;
 
-    if (!DISQUS_SHORTNAME || DISQUS_SHORTNAME === "unmei-fansub") {
-      threadContainer.innerHTML = `
-        <div style="text-align: center; padding: 24px; color: var(--text-muted); background: var(--bg-surface); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-          <p style="font-size: 13px; max-width: 500px; margin: 0 auto; line-height: 1.5;">
-            Bu animeye ait Disqus yorum alanı hazırdır. Sitenin Disqus hesabı tanımlandığında yorumlar burada listelenecektir.
-          </p>
-        </div>
-      `;
+    if (!DISQUS_SHORTNAME) {
       return;
     }
 
