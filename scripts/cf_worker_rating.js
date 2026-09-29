@@ -159,27 +159,12 @@ export default {
           )`
         ).run();
 
-        // Check if empty, seed initial high scores
-        const countRes = await env.DB.prepare(`SELECT COUNT(*) as count FROM leaderboard`).first();
-        if (countRes && countRes.count === 0) {
-          const seeds = [
-            ['Stapimaz', 26],
-            ['UnmeiAdmin', 21],
-            ['Haruhi', 17],
-            ['Akudama', 14],
-            ['FansubLord', 11],
-            ['KaraokeMaster', 8],
-            ['EncodeKing', 6],
-            ['SubSync', 5],
-            ['OtakuTR', 3],
-            ['Arsivci', 2]
-          ];
-          for (const [sName, sScore] of seeds) {
-            await env.DB.prepare(
-              `INSERT OR IGNORE INTO leaderboard (nickname, score) VALUES (?, ?)`
-            ).bind(sName, sScore).run();
-          }
-        }
+        // Eradicate any legacy placeholder mock seeds from D1 SQLite
+        await env.DB.prepare(
+          `DELETE FROM leaderboard 
+           WHERE nickname IN ('UnmeiAdmin', 'Haruhi', 'Akudama', 'FansubLord', 'KaraokeMaster', 'EncodeKing', 'SubSync', 'OtakuTR', 'Arsivci')
+           OR (nickname = 'Stapimaz' AND score = 26)`
+        ).run();
 
         const query = await env.DB.prepare(
           `SELECT nickname as name, score, created_at as date

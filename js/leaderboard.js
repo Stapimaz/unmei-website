@@ -12,19 +12,13 @@
   const STORAGE_KEY = 'unmei_public_leaderboard';
   const NICK_KEY = 'unmei_player_nickname';
 
-  // Varsayılan nostaljik başlangıç skorları (İlk yüklemede liste asla boş görünmez)
-  const DEFAULT_LEADERBOARD = [
-    { name: 'Stapimaz', score: 26, date: '2026-09-20' },
-    { name: 'UnmeiAdmin', score: 21, date: '2026-09-18' },
-    { name: 'Haruhi', score: 17, date: '2026-09-15' },
-    { name: 'Akudama', score: 14, date: '2026-09-12' },
-    { name: 'FansubLord', score: 11, date: '2026-09-10' },
-    { name: 'KaraokeMaster', score: 8, date: '2026-09-08' },
-    { name: 'EncodeKing', score: 6, date: '2026-09-05' },
-    { name: 'SubSync', score: 5, date: '2026-09-02' },
-    { name: 'OtakuTR', score: 3, date: '2026-09-01' },
-    { name: 'Arsivci', score: 2, date: '2026-08-28' }
-  ];
+  // Clear legacy mock placeholder seeds from client localStorage if present
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw && (raw.includes('KaraokeMaster') || raw.includes('UnmeiAdmin') || raw.includes('FansubLord'))) {
+      localStorage.removeItem(STORAGE_KEY);
+    }
+  } catch (e) {}
 
   // DOM Elements
   const listEl = document.getElementById('leaderboard-list');
@@ -43,14 +37,14 @@
       const data = localStorage.getItem(STORAGE_KEY);
       if (data) {
         const parsed = JSON.parse(data);
-        if (Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed)) {
           return parsed;
         }
       }
     } catch (e) {
       console.warn('Leaderboard parse error:', e);
     }
-    return DEFAULT_LEADERBOARD;
+    return [];
   }
 
   function saveCachedScores(scores) {
@@ -74,6 +68,16 @@
 
     // Limit to Top 10
     const top10 = scores.slice(0, 10);
+
+    if (top10.length === 0) {
+      listEl.innerHTML = `
+        <li class="lb-empty-state">
+          <span>Henüz kayıtlı skor yok.</span>
+          <span class="lb-empty-sub">İlk rekoru sen kır!</span>
+        </li>
+      `;
+      return;
+    }
 
     listEl.innerHTML = top10
       .map((item, index) => {
