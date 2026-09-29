@@ -109,59 +109,41 @@ function renderTrending() {
   const track = document.getElementById("trending-track");
   if (!track || !catalogData || !catalogData.items) return;
 
-  const prioritySlugs = [
-    "jujutsu-kaisen",
-    "vinland-saga",
-    "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen-2",
-    "horimiya",
-    "kimi-no-suizou-wo-tabetai"
-  ];
+  const eyeIconSvg = `
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+  `;
 
-  let trendingItems = [];
-  for (const slug of prioritySlugs) {
-    const found = catalogData.items.find(it => it.slug === slug);
-    if (found) trendingItems.push(found);
-  }
+  const cleanTitle = (t) => (t || "").replace(/\s*\((?:TV|Film)\)/gi, '').trim();
 
-  if (trendingItems.length < 5) {
-    const additional = catalogData.items
-      .filter(it => !trendingItems.includes(it) && (it.episodes_count || 0) > 0)
-      .sort((a, b) => (b.anilist_score || 0) - (a.anilist_score || 0))
-      .slice(0, 5 - trendingItems.length);
-    trendingItems = [...trendingItems, ...additional];
-  }
+  const formatViews = (v) => {
+    const num = Number(v) || 0;
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return String(num);
+  };
 
-  if (trendingItems.length === 0) return;
-
-  const mockViews = ["1.9K", "1.6K", "1.3K", "980", "840"];
-
-  function buildTrendingHtml(items, viewsArray) {
-    const top1 = items[0];
-    const others = items.slice(1, 5);
-
-    const eyeIconSvg = `
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-      </svg>
-    `;
-
-    const cleanTitle = (t) => (t || "").replace(/\s*\((?:TV|Film)\)/gi, '').trim();
+  function buildTrendingHtml(itemsWithViews) {
+    if (!itemsWithViews || itemsWithViews.length === 0) return "";
+    const top1 = itemsWithViews[0];
+    const others = itemsWithViews.slice(1, 5);
 
     const top1Html = `
-      <a href="#/anime/${top1.slug}" class="spotlight-card">
+      <a href="#/anime/${top1.anime.slug}" class="spotlight-card">
         <span class="rank-badge">#1</span>
-        <div class="card-backdrop" style="background-image: url('${top1.banner_image || top1.cover_image}');"></div>
+        <div class="card-backdrop" style="background-image: url('${top1.anime.banner_image || top1.anime.cover_image}');"></div>
         <div class="card-overlay"></div>
         <div class="card-inner-content">
           <div class="card-top-row">
             <div class="trending-views-pill">
               ${eyeIconSvg}
-              <span>${viewsArray[0]}</span>
+              <span>${formatViews(top1.views)}</span>
             </div>
           </div>
           <div class="spotlight-bottom-info">
-            <h3 class="spotlight-title">${cleanTitle(top1.title)}</h3>
+            <h3 class="spotlight-title">${cleanTitle(top1.anime.title)}</h3>
           </div>
         </div>
       </a>
@@ -169,13 +151,12 @@ function renderTrending() {
 
     const othersHtml = `
       <div class="trending-side-grid">
-        ${others.map((anime, idx) => {
+        ${others.map((item, idx) => {
           const rank = idx + 2;
-          const views = viewsArray[idx + 1] || "600+";
-          const bgImg = anime.banner_image || anime.cover_image || "assets/placeholder_poster.svg";
+          const bgImg = item.anime.banner_image || item.anime.cover_image || "assets/placeholder_poster.svg";
 
           return `
-            <a href="#/anime/${anime.slug}" class="side-trending-card">
+            <a href="#/anime/${item.anime.slug}" class="side-trending-card">
               <span class="rank-badge">#${rank}</span>
               <div class="card-backdrop" style="background-image: url('${bgImg}');"></div>
               <div class="card-overlay"></div>
@@ -183,11 +164,11 @@ function renderTrending() {
                 <div class="card-top-row">
                   <div class="trending-views-pill">
                     ${eyeIconSvg}
-                    <span>${views}</span>
+                    <span>${formatViews(item.views)}</span>
                   </div>
                 </div>
                 <div class="side-bottom-info">
-                  <h4 class="side-card-title" title="${anime.title}">${cleanTitle(anime.title)}</h4>
+                  <h4 class="side-card-title" title="${item.anime.title}">${cleanTitle(item.anime.title)}</h4>
                 </div>
               </div>
             </a>
@@ -199,26 +180,53 @@ function renderTrending() {
     return top1Html + othersHtml;
   }
 
-  track.innerHTML = buildTrendingHtml(trendingItems, mockViews);
+  // Alfabetik tamamlama fonksiyonu:
+  // Görüntülenmesi olmayan yerler veya API yanıtı gelene kadarki boşluklar katalogdaki animelerle alfabetik doldurulur
+  function getAlphabeticalFillers(excludeSlugs = [], count = 5) {
+    return catalogData.items
+      .filter(it => !excludeSlugs.includes(it.slug) && (it.episodes_count || 0) > 0)
+      .sort((a, b) => (a.title || "").localeCompare(b.title || "", "tr"))
+      .slice(0, count)
+      .map(it => ({ anime: it, views: 0 }));
+  }
 
+  // İlk render: Alfabetik animeler ve 0 izlenme (gerçek sıfır başlangıç)
+  const initialList = getAlphabeticalFillers([], 5);
+  if (initialList.length > 0) {
+    track.innerHTML = buildTrendingHtml(initialList);
+  }
+
+  // Cloudflare D1'den canlı görüntülenmeleri çek
   if (API_BASE) {
     fetch(`${API_BASE}/trending`)
       .then(res => res.ok ? res.json() : null)
       .then(data => {
-        if (data && data.trending && data.trending.length >= 5) {
-          const liveSlugs = data.trending.map(r => r.slug);
-          const liveItems = [];
-          for (const s of liveSlugs) {
-            const found = catalogData.items.find(it => it.slug === s);
-            if (found) liveItems.push(found);
+        if (data && data.trending) {
+          const liveList = [];
+          const usedSlugs = [];
+
+          for (const entry of data.trending) {
+            const found = catalogData.items.find(it => it.slug === entry.slug);
+            if (found) {
+              liveList.push({ anime: found, views: entry.total_views || 0 });
+              usedSlugs.push(found.slug);
+            }
           }
-          if (liveItems.length === 5) {
-            const liveViews = data.trending.map(r => r.total_views > 1000 ? (r.total_views / 1000).toFixed(1) + 'K' : String(r.total_views));
-            track.innerHTML = buildTrendingHtml(liveItems, liveViews);
+
+          // 5'ten az ise kalanları alfabetik ve 0 izlenme ile tamamla
+          if (liveList.length < 5) {
+            const fillers = getAlphabeticalFillers(usedSlugs, 5 - liveList.length);
+            liveList.push(...fillers);
+          }
+
+          if (liveList.length > 0) {
+            track.innerHTML = buildTrendingHtml(liveList);
           }
         }
       })
-      .catch(() => {});
+      .catch((err) => {
+        console.warn("Canli trending alinamadi:", err);
+      });
   }
 }
 
@@ -318,6 +326,7 @@ function handleRouting() {
     return;
   }
 
+  renderTrending();
   showView('view-catalog');
 }
 
