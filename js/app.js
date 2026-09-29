@@ -234,19 +234,12 @@ function renderAnimeDetail(slug) {
   const statusClass = isCompleted ? "status-text-completed" : "status-text-incomplete";
   const statusLabel = anime.ceviri_durumu || (isCompleted ? "Tamamlandı" : "Yarım Kaldı");
 
-  const groupPill = anime.group_code ? `
-    <span class="group-pill group-${anime.group_code.toLowerCase()}">
-      [${anime.group_code}] ${anime.group_name || ''}
-    </span>
-  ` : '';
-
   metaList.innerHTML = `
     <div class="meta-item">Stüdyo: <strong>${anime.studio || "Bilinmiyor"}</strong></div>
     <div class="meta-item">Yayın Yılı: <strong>${anime.year || "-"}</strong></div>
     <div class="meta-item">Bölüm: <strong>${anime.translated_episodes} / ${anime.total_episodes}</strong></div>
     <div class="meta-item">Format: <strong>${anime.category || "TV"}</strong></div>
     <div class="meta-item">Çeviri Durumu: <strong class="${statusClass}">${statusLabel}</strong></div>
-    ${groupPill ? `<div class="meta-item">Arşiv Grubu: ${groupPill}</div>` : ''}
   `;
 
   // Genres
@@ -275,10 +268,10 @@ function renderAnimeDetail(slug) {
         archiveCardBadge.textContent = "0 Bölüm";
         archiveCardDesc.textContent = "Orijinal fansub indirme linkleri ve tüm internet aynaları silinmiş olduğundan bu serinin bölümleri kurtarılamamıştır.";
       } else {
-        archiveCardTitle.textContent = "Arşiv Tam Değildir (Link Rot Eksikli)";
+        archiveCardTitle.textContent = "Arşiv Eksiktir";
         const totalRef = anime.translated_episodes || anime.total_episodes || anime.episodes_count || 0;
         archiveCardBadge.textContent = `${anime.archived_count} / ${totalRef} Bölüm`;
-        archiveCardDesc.textContent = "Orijinal fansub kaynaklarındaki link kaybı (link rot) nedeniyle bu serinin tüm bölümleri henüz kurtarılamamıştır.";
+        archiveCardDesc.textContent = "Orijinal fansub kaynaklarındaki link kaybı (link rot) nedeniyle bu serinin bazı bölümleri yerel arşivde eksiktir.";
       }
 
       if (anime.missing_episodes && anime.missing_episodes !== "-") {
