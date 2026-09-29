@@ -2,10 +2,12 @@
  * UNMEI FANSUB - DUAL RATING SYSTEM (SADE VE EMOJİSİZ)
  * 1. Anime Puanı (Overall Anime Rating)
  * 2. Çeviri Kalitesi (Fansub Translation Quality)
+ * Backend: Cloudflare Workers + KV Storage (1 IP = 1 Oy Korumalı)
  */
 
 const RatingManager = (() => {
-  const API_ENDPOINT = ""; 
+  const API_BASE = "https://unmei-rating-api.stapimazgraphics.workers.dev";
+  const API_ENDPOINT = `${API_BASE}/vote`;
   const STORAGE_KEY_PREFIX = "unmei_rating_";
 
   function getBaselineScores(anime) {
@@ -95,7 +97,22 @@ const RatingManager = (() => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ slug, type, score })
-      }).catch(err => console.warn("Vote sync error:", err));
+      })
+      .then(res => res.ok ? res.json() : null)
+      .then(serverData => {
+        if (serverData && serverData.success) {
+          const baseline = getBaselineScores(anime)[type];
+          const totalVotes = baseline.votes + serverData.count;
+          const scoreEl = document.getElementById(`${type}-score-display`);
+          const countEl = document.getElementById(`${type}-votes-display`);
+          if (scoreEl && countEl) {
+            const combinedAvg = parseFloat((((baseline.avg * baseline.votes) + (serverData.avg * serverData.count)) / totalVotes).toFixed(1));
+            scoreEl.textContent = combinedAvg.toFixed(1);
+            countEl.textContent = `${totalVotes} değerlendirme`;
+          }
+        }
+      })
+      .catch(err => console.warn("Vote sync error:", err));
     }
 
     return updatedData;
@@ -146,6 +163,30 @@ const RatingManager = (() => {
     const feedback = container.querySelector(`#${type}-feedback`);
     const scoreDisplay = container.querySelector(`#${type}-score-display`);
     const votesDisplay = container.querySelector(`#${type}-votes-display`);
+
+    // Fetch live ratings from Cloudflare Worker KV in background
+    if (API_BASE) {
+      fetch(`${API_BASE}/stats?slug=${encodeURIComponent(anime.slug)}&type=${type}`)
+        .then(res => res.ok ? res.json() : null)
+        .then(stats => {
+          if (stats && stats.count > 0) {
+            const baseline = getBaselineScores(anime)[type];
+            const totalVotes = baseline.votes + stats.count;
+            const totalAvg = parseFloat((((baseline.avg * baseline.votes) + stats.sum) / totalVotes).toFixed(1));
+            
+            scoreDisplay.textContent = totalAvg.toFixed(1);
+            votesDisplay.textContent = `${totalVotes} değerlendirme`;
+
+            const currentData = getRatingData(anime, type);
+            if (!currentData.hasVoted) {
+              starBtns.forEach((s, sIdx) => {
+                s.classList.toggle('filled', sIdx < Math.round(totalAvg));
+              });
+            }
+          }
+        })
+        .catch(() => {});
+    }
 
     starBtns.forEach((btn, idx) => {
       const starVal = idx + 1;
