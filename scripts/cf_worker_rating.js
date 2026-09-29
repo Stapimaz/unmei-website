@@ -139,7 +139,162 @@ export default {
       }
     }
 
-    return new Response("Unmei Rating & Trending API is live", { headers: corsHeaders });
+    // 5. GET /leaderboard (Global Top 10 High Scores from D1 SQLite)
+    if (request.method === "GET" && url.pathname === "/leaderboard") {
+      try {
+        if (!env.DB) {
+          return new Response(JSON.stringify({ success: false, error: "Database not bound" }), {
+            status: 500,
+            headers: { ...corsHeaders, "Content-Type": "application/json" }
+          });
+        }
+
+        // Auto-bootstrap table if not exists
+        await env.DB.prepare(
+          `CREATE TABLE IF NOT EXISTS leaderboard (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nickname TEXT NOT NULL UNIQUE,
+            score INTEGER NOT NULL,
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+          )`
+        ).run();
+
+        // Check if empty, seed initial high scores
+        const countRes = await env.DB.prepare(`SELECT COUNT(*) as count FROM leaderboard`).first();
+        if (countRes && countRes.count === 0) {
+          const seeds = [
+            ['Stapimaz', 26],
+            ['UnmeiAdmin', 21],
+            ['Haruhi', 17],
+            ['Akudama', 14],
+            ['FansubLord', 11],
+            ['KaraokeMaster', 8],
+            ['EncodeKing', 6],
+            ['SubSync', 5],
+            ['OtakuTR', 3],
+            ['Arsivci', 2]
+          ];
+          for (const [sName, sScore] of seeds) {
+            await env.DB.prepare(
+              `INSERT OR IGNORE INTO leaderboard (nickname, score) VALUES (?, ?)`
+            ).bind(sName, sScore).run();
+          }
+        }
+
+        const query = await env.DB.prepare(
+          `SELECT nickname as name, score, created_at as date
+           FROM leaderboard
+           ORDER BY score DESC, created_at ASC
+           LIMIT 10`
+        ).all();
+
+        return new Response(JSON.stringify({
+          success: true,
+          leaderboard: query.results || []
+        }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      } catch (err) {
+        return new Response(JSON.stringify({ error: err.message }), {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      }
+    }
+
+    // 6. POST /leaderboard (Submit high score to D1 SQLite)
+    if (request.method === "POST" && url.pathname === "/leaderboard") {
+      try {
+        if (!env.DB) {
+          return new Response(JSON.stringify({ success: false, error: "Database not bound" }), {
+            status: 500,
+            headers: { ...corsHeaders, "Content-Type": "application/json" }
+          });
+        }
+
+        const body = await request.json();
+        const { nickname, score } = body;
+
+        // Validation
+        const cleanName = typeof nickname === "string" ? nickname.trim() : "";
+        if (!cleanName || cleanName.length < 2 || cleanName.length > 15) {
+          return new Response(JSON.stringify({ error: "Takma ad 2-15 karakter arasında olmalıdır." }), {
+            status: 400,
+            headers: { ...corsHeaders, "Content-Type": "application/json" }
+          });
+        }
+
+        // Allow Unicode letters, numbers, spaces, dots, dashes, underscores
+        if (!/^[\p{L}\p{N}_\-\. ]+$/u.test(cleanName)) {
+          return new Response(JSON.stringify({ error: "Takma ad geçersiz karakterler içeriyor." }), {
+            status: 400,
+            headers: { ...corsHeaders, "Content-Type": "application/json" }
+          });
+        }
+
+        const cleanScore = parseInt(score, 10);
+        if (isNaN(cleanScore) || cleanScore < 1 || cleanScore > 9999) {
+          return new Response(JSON.stringify({ error: "Geçersiz skor değeri." }), {
+            status: 400,
+            headers: { ...corsHeaders, "Content-Type": "application/json" }
+          });
+        }
+
+        // Ensure table exists
+        await env.DB.prepare(
+          `CREATE TABLE IF NOT EXISTS leaderboard (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nickname TEXT NOT NULL UNIQUE,
+            score INTEGER NOT NULL,
+            created_at TEXT NOT NULL DEFAULT (datetime('now'))
+          )`
+        ).run();
+
+        // Upsert score (preserve higher score if existing)
+        await env.DB.prepare(
+          `INSERT INTO leaderboard (nickname, score, created_at)
+           VALUES (?, ?, datetime('now'))
+           ON CONFLICT(nickname) DO UPDATE SET
+             created_at = CASE WHEN excluded.score > leaderboard.score THEN datetime('now') ELSE leaderboard.created_at END,
+             score = MAX(leaderboard.score, excluded.score)`
+        ).bind(cleanName, cleanScore).run();
+
+        // Retrieve actual highest score for this user to determine rank
+        const userRecord = await env.DB.prepare(
+          `SELECT score FROM leaderboard WHERE nickname = ?`
+        ).bind(cleanName).first();
+        const userBestScore = userRecord ? userRecord.score : cleanScore;
+
+        const rankRes = await env.DB.prepare(
+          `SELECT COUNT(*) + 1 as rank FROM leaderboard WHERE score > ?`
+        ).bind(userBestScore).first();
+
+        // Retrieve updated Top 10
+        const query = await env.DB.prepare(
+          `SELECT nickname as name, score, created_at as date
+           FROM leaderboard
+           ORDER BY score DESC, created_at ASC
+           LIMIT 10`
+        ).all();
+
+        return new Response(JSON.stringify({
+          success: true,
+          name: cleanName,
+          score: userBestScore,
+          rank: rankRes ? rankRes.rank : null,
+          leaderboard: query.results || []
+        }), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      } catch (err) {
+        return new Response(JSON.stringify({ error: err.message }), {
+          status: 500,
+          headers: { ...corsHeaders, "Content-Type": "application/json" }
+        });
+      }
+    }
+
+    return new Response("Unmei Rating & Trending & Leaderboard API is live", { headers: corsHeaders });
   }
 };
 

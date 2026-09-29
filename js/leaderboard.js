@@ -1,29 +1,30 @@
 /**
- * UNMEI FANSUB - PUBLIC LEADERBOARD SYSTEM
- * 1. Sol panelde her zaman açık, canlı Top 10 sıralaması.
- * 2. Oyun bitince takma ad girip skoru anında kaydetme.
- * 3. Hibrit Depolama: LocalStorage ve opsiyonel Cloud API senkronizasyonu.
+ * UNMEI FANSUB - PUBLIC LEADERBOARD SYSTEM (LIVE D1 SQLITE BACKEND)
+ * 1. Sol panelde her zaman açık, canlı Top 10 sıralaması (Cloudflare D1 SQLite).
+ * 2. Oyun bitince takma ad girip skoru anında veritabanına kaydetme.
+ * 3. Çift katmanlı mimari: Canlı API + Kesintisiz Yerel Önbellek (Offline/Fallback).
  */
 
 (function () {
   'use strict';
 
-  // Varsayılan nostaljik başlangıç skorları (liste asla boş görünmez)
-  const DEFAULT_LEADERBOARD = [
-    { id: 'seed-1', name: 'Stapimaz', score: 26, date: '2026-09-20' },
-    { id: 'seed-2', name: 'UnmeiAdmin', score: 21, date: '2026-09-18' },
-    { id: 'seed-3', name: 'Haruhi', score: 17, date: '2026-09-15' },
-    { id: 'seed-4', name: 'Akudama', score: 14, date: '2026-09-12' },
-    { id: 'seed-5', name: 'FansubLord', score: 11, date: '2026-09-10' },
-    { id: 'seed-6', name: 'KaraokeMaster', score: 8, date: '2026-09-08' },
-    { id: 'seed-7', name: 'EncodeKing', score: 6, date: '2026-09-05' },
-    { id: 'seed-8', name: 'SubSync', score: 5, date: '2026-09-02' },
-    { id: 'seed-9', name: 'OtakuTR', score: 3, date: '2026-09-01' },
-    { id: 'seed-10', name: 'Arsivci', score: 2, date: '2026-08-28' }
-  ];
-
+  const API_BASE = 'https://unmei-rating-api.stapimazgraphics.workers.dev';
   const STORAGE_KEY = 'unmei_public_leaderboard';
   const NICK_KEY = 'unmei_player_nickname';
+
+  // Varsayılan nostaljik başlangıç skorları (İlk yüklemede liste asla boş görünmez)
+  const DEFAULT_LEADERBOARD = [
+    { name: 'Stapimaz', score: 26, date: '2026-09-20' },
+    { name: 'UnmeiAdmin', score: 21, date: '2026-09-18' },
+    { name: 'Haruhi', score: 17, date: '2026-09-15' },
+    { name: 'Akudama', score: 14, date: '2026-09-12' },
+    { name: 'FansubLord', score: 11, date: '2026-09-10' },
+    { name: 'KaraokeMaster', score: 8, date: '2026-09-08' },
+    { name: 'EncodeKing', score: 6, date: '2026-09-05' },
+    { name: 'SubSync', score: 5, date: '2026-09-02' },
+    { name: 'OtakuTR', score: 3, date: '2026-09-01' },
+    { name: 'Arsivci', score: 2, date: '2026-08-28' }
+  ];
 
   // DOM Elements
   const listEl = document.getElementById('leaderboard-list');
@@ -35,8 +36,9 @@
   const submitBtn = document.getElementById('submit-score-btn');
 
   let currentPendingScore = 0;
+  let isFetching = false;
 
-  function getStoredScores() {
+  function getCachedScores() {
     try {
       const data = localStorage.getItem(STORAGE_KEY);
       if (data) {
@@ -48,27 +50,26 @@
     } catch (e) {
       console.warn('Leaderboard parse error:', e);
     }
-    // Seed default if empty
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_LEADERBOARD));
     return DEFAULT_LEADERBOARD;
   }
 
-  function saveScores(scores) {
+  function saveCachedScores(scores) {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(scores));
     } catch (e) {}
   }
 
   function escapeHtml(str) {
+    if (!str) return '';
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
   }
 
-  function renderLeaderboard(highlightId = null) {
+  function renderLeaderboard(highlightName = null) {
     if (!listEl) return;
 
-    const scores = getStoredScores();
+    const scores = getCachedScores();
     scores.sort((a, b) => b.score - a.score);
 
     // Limit to Top 10
@@ -86,7 +87,8 @@
           rankClass = 'rank-3';
         }
 
-        const isHighlighted = highlightId && item.id === highlightId;
+        const isHighlighted = highlightName && item.name &&
+          item.name.toLowerCase() === highlightName.toLowerCase();
         const highlightClass = isHighlighted ? 'row-highlight' : '';
 
         return `
@@ -100,12 +102,38 @@
       .join('');
   }
 
+  // Live API Fetch from Cloudflare D1
+  async function fetchLeaderboard(highlightName = null) {
+    if (isFetching) return;
+    isFetching = true;
+    try {
+      const res = await fetch(`${API_BASE}/leaderboard`, {
+        method: 'GET',
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.success && Array.isArray(data.leaderboard) && data.leaderboard.length > 0) {
+          saveCachedScores(data.leaderboard);
+          renderLeaderboard(highlightName);
+          return;
+        }
+      }
+    } catch (e) {
+      console.warn('Leaderboard API fetch error, fallback to cache:', e);
+    } finally {
+      isFetching = false;
+    }
+    // Render from cache if network fails
+    renderLeaderboard(highlightName);
+  }
+
   // Refresh Button Click
   if (refreshBtn) {
-    refreshBtn.addEventListener('click', () => {
+    refreshBtn.addEventListener('click', async () => {
       refreshBtn.classList.add('spin-anim');
+      await fetchLeaderboard();
       setTimeout(() => {
-        renderLeaderboard();
         refreshBtn.classList.remove('spin-anim');
       }, 400);
     });
@@ -144,7 +172,7 @@
 
   // Handle Score Submission
   if (submitForm) {
-    submitForm.addEventListener('submit', (e) => {
+    submitForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const nickname = (nickInput ? nickInput.value : '').trim();
       if (!nickname || currentPendingScore <= 0) return;
@@ -152,45 +180,90 @@
       // Save nickname preference
       localStorage.setItem(NICK_KEY, nickname);
 
-      // Create entry
-      const newEntry = {
-        id: 'user-' + Date.now(),
-        name: nickname,
-        score: currentPendingScore,
-        date: new Date().toISOString().split('T')[0]
-      };
-
-      // Add to local leaderboard
-      const scores = getStoredScores();
-      scores.push(newEntry);
-      scores.sort((a, b) => b.score - a.score);
-      const topScores = scores.slice(0, 15);
-      saveScores(topScores);
-
-      // Button success feedback
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = '✓ Kaydedildi!';
-        submitBtn.classList.add('btn-success');
+        submitBtn.textContent = 'Kaydediliyor...';
+        submitBtn.classList.remove('btn-success');
       }
 
-      // Re-render and highlight new rank
-      renderLeaderboard(newEntry.id);
+      let isSavedOnline = false;
 
-      // Auto-hide panel after 2.5s
+      // 1. Send to Live Cloudflare D1 Backend
+      try {
+        const res = await fetch(`${API_BASE}/leaderboard`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            nickname: nickname,
+            score: currentPendingScore
+          })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.success && Array.isArray(data.leaderboard)) {
+            saveCachedScores(data.leaderboard);
+            isSavedOnline = true;
+            renderLeaderboard(nickname);
+
+            if (submitBtn) {
+              const rankMsg = data.rank && data.rank <= 10 
+                ? `#${data.rank} Sıraya Girdin!` 
+                : 'Kaydedildi!';
+              submitBtn.textContent = rankMsg;
+              submitBtn.classList.add('btn-success');
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('Leaderboard online submission error, using local fallback:', err);
+      }
+
+      // 2. Offline / Fallback handling if network request failed
+      if (!isSavedOnline) {
+        const scores = getCachedScores();
+        const existingIdx = scores.findIndex(
+          (s) => s.name && s.name.toLowerCase() === nickname.toLowerCase()
+        );
+        if (existingIdx !== -1) {
+          scores[existingIdx].score = Math.max(scores[existingIdx].score, currentPendingScore);
+        } else {
+          scores.push({
+            name: nickname,
+            score: currentPendingScore,
+            date: new Date().toISOString().split('T')[0]
+          });
+        }
+        scores.sort((a, b) => b.score - a.score);
+        saveCachedScores(scores.slice(0, 15));
+        renderLeaderboard(nickname);
+
+        if (submitBtn) {
+          submitBtn.textContent = 'Kaydedildi (Yerel)';
+          submitBtn.classList.add('btn-success');
+        }
+      }
+
+      // Auto-hide submit panel after 2.5s
       setTimeout(() => {
         hideSubmitPanel();
       }, 2500);
     });
   }
 
-  // Initial Render on script load
+  // Initial Render & Live Fetch on script load
   renderLeaderboard();
+  fetchLeaderboard();
 
   // Global interface for Flappy Uç game
   window.UnmeiLeaderboard = {
     showSubmitPanel,
     hideSubmitPanel,
-    render: renderLeaderboard
+    render: () => {
+      renderLeaderboard();
+      fetchLeaderboard();
+    },
+    fetch: fetchLeaderboard
   };
 })();
+
