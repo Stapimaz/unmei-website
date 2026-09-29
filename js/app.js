@@ -58,7 +58,13 @@ function filterAndSortItems() {
 
   // Durum
   if (currentFilters.status !== "all") {
-    items = items.filter(it => it.status === currentFilters.status);
+    if (currentFilters.status === "TAMAMLANDI") {
+      items = items.filter(it => it.status === "TAMAMLANDI");
+    } else if (currentFilters.status === "YARIM_KALAN") {
+      items = items.filter(it => it.status !== "TAMAMLANDI");
+    } else {
+      items = items.filter(it => it.status === currentFilters.status);
+    }
   }
 
   // Format
@@ -226,7 +232,13 @@ function renderAnimeDetail(slug) {
   // Status & Meta
   const isCompleted = anime.status === "TAMAMLANDI";
   const statusClass = isCompleted ? "status-text-completed" : "status-text-incomplete";
-  const statusLabel = isCompleted ? "Tamamlandı" : "Yarım Kaldı";
+  const statusLabel = anime.ceviri_durumu || (isCompleted ? "Tamamlandı" : "Yarım Kaldı");
+
+  const groupPill = anime.group_code ? `
+    <span class="group-pill group-${anime.group_code.toLowerCase()}">
+      [${anime.group_code}] ${anime.group_name || ''}
+    </span>
+  ` : '';
 
   metaList.innerHTML = `
     <div class="meta-item">Stüdyo: <strong>${anime.studio || "Bilinmiyor"}</strong></div>
@@ -234,6 +246,7 @@ function renderAnimeDetail(slug) {
     <div class="meta-item">Bölüm: <strong>${anime.translated_episodes} / ${anime.total_episodes}</strong></div>
     <div class="meta-item">Format: <strong>${anime.category || "TV"}</strong></div>
     <div class="meta-item">Çeviri Durumu: <strong class="${statusClass}">${statusLabel}</strong></div>
+    ${groupPill ? `<div class="meta-item">Arşiv Grubu: ${groupPill}</div>` : ''}
   `;
 
   // Genres
@@ -243,7 +256,7 @@ function renderAnimeDetail(slug) {
   // Özet
   synopsisText.textContent = anime.synopsis || "Bu seri için henüz özet bulunmuyor.";
 
-  // Arşiv Durumu Bilgilendirme Kartı (Yalnızca arşivi eksik olanlar için)
+  // Arşiv Durumu Bilgilendirme Kartı (Yalnızca arşivi eksik olan seriler için: Grup B ve D)
   const archiveCard = document.getElementById("detail-archive-card");
   const archiveCardTitle = document.getElementById("archive-card-title");
   const archiveCardBadge = document.getElementById("archive-card-badge");
@@ -252,16 +265,17 @@ function renderAnimeDetail(slug) {
   const archiveCardMissingRow = document.getElementById("archive-card-missing-row");
 
   if (archiveCard) {
-    if (anime.arsiv_durumu && anime.arsiv_durumu !== "Eksiksiz") {
+    const isEksiksiz = anime.group_code === 'A' || anime.group_code === 'C' || anime.arsiv_durumu === 'Eksiksiz';
+    if (!isEksiksiz) {
       archiveCard.style.display = "flex";
-      const isRot = (anime.arsiv_durumu && anime.arsiv_durumu.includes("Link Rot")) || anime.archived_count === 0;
+      const isRot = (anime.arsiv_durumu && (anime.arsiv_durumu.includes("0 Bolum") || anime.arsiv_durumu.includes("Link Rot (0"))) || anime.archived_count === 0;
 
       if (isRot) {
         archiveCardTitle.textContent = "Arşiv Kurtarılamadı (Link Rot)";
         archiveCardBadge.textContent = "0 Bölüm";
         archiveCardDesc.textContent = "Orijinal fansub indirme linkleri ve tüm internet aynaları silinmiş olduğundan bu serinin bölümleri kurtarılamamıştır.";
       } else {
-        archiveCardTitle.textContent = "Arşiv Tam Değildir (Kısmen Arşivlendi)";
+        archiveCardTitle.textContent = "Arşiv Tam Değildir (Link Rot Eksikli)";
         const totalRef = anime.translated_episodes || anime.total_episodes || anime.episodes_count || 0;
         archiveCardBadge.textContent = `${anime.archived_count} / ${totalRef} Bölüm`;
         archiveCardDesc.textContent = "Orijinal fansub kaynaklarındaki link kaybı (link rot) nedeniyle bu serinin tüm bölümleri henüz kurtarılamamıştır.";
@@ -306,20 +320,29 @@ function renderAnimeDetail(slug) {
     episodesBody.innerHTML = `
       <tr>
         <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 32px 16px;">
-          ${anime.arsiv_durumu && anime.arsiv_durumu.includes('Link Rot') ? 'Bu serinin bölümleri link rot sebebiyle henüz arşivlenememiştir.' : 'Kayıtlı bölüm bulunamadı.'}
+          ${anime.arsiv_durumu && (anime.arsiv_durumu.includes('Link Rot') || anime.archived_count === 0) ? 'Bu serinin bölümleri link rot sebebiyle henüz arşivlenememiştir.' : 'Kayıtlı bölüm bulunamadı.'}
         </td>
       </tr>
     `;
   } else {
-    episodesBody.innerHTML = (anime.episodes || []).map(ep => `
-      <tr>
-        <td style="font-weight: 600; color: #fff;">${String(ep.ep_no).padStart(2, '0')}</td>
-        <td class="ep-file-name">${ep.file_name || '-'}</td>
-        <td><span class="codec-badge">${ep.codec || 'H.264'}</span></td>
-        <td>${ep.quality || '-'}</td>
-        <td style="font-variant-numeric: tabular-nums;">${formatEpisodeSize(ep.size_mb)}</td>
-      </tr>
-    `).join('');
+    episodesBody.innerHTML = (anime.episodes || []).map(ep => {
+      let epLabel = ep.label || String(ep.ep_no).padStart(2, '0');
+      if (ep.ep_type === 'movie' || (ep.file_name && ep.file_name.includes('_Movie_')) || (anime.category === 'Film' && anime.episodes.length === 1)) {
+        epLabel = '<span class="ep-badge-special">Film</span>';
+      } else if (ep.ep_type === 'special' || (ep.file_name && ep.file_name.includes('_Special_')) || (['OVA', 'Özel / ONA'].includes(anime.category) && anime.episodes.length === 1)) {
+        epLabel = '<span class="ep-badge-special">Özel</span>';
+      }
+
+      return `
+        <tr>
+          <td style="font-weight: 600; color: #fff;">${epLabel}</td>
+          <td class="ep-file-name">${ep.file_name || '-'}</td>
+          <td><span class="codec-badge">${ep.codec || 'H.264'}</span></td>
+          <td>${ep.quality || '-'}</td>
+          <td style="font-variant-numeric: tabular-nums;">${formatEpisodeSize(ep.size_mb)}</td>
+        </tr>
+      `;
+    }).join('');
   }
 
   // Disqus

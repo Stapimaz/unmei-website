@@ -126,7 +126,7 @@ def fetch_anilist_info(title, slug, cache):
     return fallback
 
 def load_all_disk_manifests():
-    """Scan all 3 drives (D:, E:, C:) and merge manifests by slug."""
+    """Scan all 3 drives (D:, E:, C:) and merge manifests by slug with physical disk file verification."""
     merged_manifests = {}
     for dpath in DISK_DIRS:
         if not os.path.exists(dpath):
@@ -136,14 +136,15 @@ def load_all_disk_manifests():
             if not os.path.isdir(sp):
                 continue
             mp = os.path.join(sp, "manifest.json")
-            if not os.path.exists(mp):
-                continue
-            try:
-                with open(mp, 'r', encoding='utf-8') as f:
-                    m = json.load(f)
-            except Exception as e:
-                print(f"Error loading {mp}: {e}")
-                continue
+            m = {}
+            if os.path.exists(mp):
+                try:
+                    with open(mp, 'r', encoding='utf-8') as f:
+                        m = json.load(f)
+                except Exception as e:
+                    print(f"Error loading {mp}: {e}")
+
+            physical_files = [f for f in os.listdir(sp) if f.endswith('.mp4')]
 
             slug = sname.lower()
             if slug not in merged_manifests:
@@ -155,19 +156,56 @@ def load_all_disk_manifests():
                     'translated_episodes': m.get('translated_episodes', 0),
                     'total_episodes': m.get('total_episodes', 0),
                     'final_episode': m.get('final_episode'),
-                    'episodes_map': {}
+                    'episodes_map': {},
+                    'physical_files': {}
                 }
             
-            # Merge episodes without duplicates (keyed by ep_no)
+            for p_file in physical_files:
+                p_size = os.path.getsize(os.path.join(sp, p_file)) / (1024.0 * 1024.0)
+                merged_manifests[slug]['physical_files'][p_file] = p_size
+
+            # Merge episodes from manifest
             for ep in m.get('episodes', []):
                 ep_no = ep.get('ep_no')
                 if ep_no is not None and ep_no not in merged_manifests[slug]['episodes_map']:
                     merged_manifests[slug]['episodes_map'][ep_no] = ep
 
-    # Convert episodes_map to sorted list
+    # If physical files exist but not in manifest (or renamed), reconcile them
     result = {}
     for slug, m in merged_manifests.items():
-        sorted_eps = sorted(m['episodes_map'].values(), key=lambda x: x.get('ep_no', 0))
+        episodes_map = m['episodes_map']
+        physical_files = m['physical_files']
+
+        # Reconcile filenames with physical disk
+        for ep_no, ep_data in episodes_map.items():
+            curr_fn = ep_data.get('file_name', '')
+            if curr_fn not in physical_files:
+                # Look for matching movie/special or renamed file
+                for pfn, psz in physical_files.items():
+                    if '_Movie_' in pfn and ('_Movie_' in curr_fn or '_final' in curr_fn or 'movie' in slug):
+                        ep_data['file_name'] = pfn
+                        ep_data['size_mb'] = round(psz, 1)
+                        break
+                    elif '_Special_' in pfn and ('_Special_' in curr_fn or '_final' in curr_fn or 'special' in slug):
+                        ep_data['file_name'] = pfn
+                        ep_data['size_mb'] = round(psz, 1)
+                        break
+
+        # If episodes_map was empty but physical files exist, construct episodes
+        if not episodes_map and physical_files:
+            sorted_p = sorted(physical_files.keys())
+            for idx, pfn in enumerate(sorted_p, 1):
+                q = '1080p' if '1080p' in pfn else ('720p' if '720p' in pfn else '480p')
+                episodes_map[idx] = {
+                    'ep_no': idx,
+                    'file_name': pfn,
+                    'quality': q,
+                    'codec': 'H.264',
+                    'size_mb': round(physical_files[pfn], 1),
+                    'source': 'Unmei Archive'
+                }
+
+        sorted_eps = sorted(episodes_map.values(), key=lambda x: x.get('ep_no', 0))
         m['episodes'] = sorted_eps
         del m['episodes_map']
         result[slug] = m
@@ -179,7 +217,7 @@ def normalize_key(s):
     return re.sub(r'[^a-zA-Z0-9]', '', s).lower()
 
 def main():
-    print("=== UNMEI ARCHIVE CATALOG SYNC ===", flush=True)
+    print("=== UNMEI ARCHIVE CATALOG SYNC (REVISED 4-GROUP + MOVIE/SPECIAL STANDARDS) ===", flush=True)
 
     with open(GDRIVE_CATALOG, 'r', encoding='utf-8') as f:
         gdrive_items = json.load(f)
@@ -220,7 +258,6 @@ def main():
     incomplete_count = 0
     master_1080p_count = 0
 
-    # Special manual overrides for specific leet folder to slug/catalog mappings
     special_slug_map = {
         'Unmei_R3K4H415_SHB': 're-zero-kara-hajimeru-isekai-seikatsu-shin-henshuu-ban',
         'Unmei_R3K4H415_S2': 're-zero-kara-hajimeru-isekai-seikatsu-2nd-season',
@@ -230,37 +267,36 @@ def main():
         'Unmei_5hN0KyL0': 'shingeki-no-kyojin-lost-girls',
     }
 
+    # Group counts
+    group_stats = {'A': 0, 'B': 0, 'C': 0, 'D': 0}
+    arsiv_stats = {'Eksiksiz': 0, 'Kismi': 0, 'LinkRot': 0}
+
     for idx, g in enumerate(gdrive_items, 1):
         g_title = g.get('title', '')
         lfn = g.get('leet_folder_name', '')
         raw_leet = lfn.replace('Unmei_', '') if lfn.startswith('Unmei_') else lfn
         
-        # Determine canonical slug
-        slug = special_slug_map.get(lfn)
+        # Canonical slug
+        slug = g.get('slug') or special_slug_map.get(lfn)
         if not slug:
-            # Check mirror folder match
             norm_title = normalize_key(g_title)
             slug = mirror_by_norm.get(norm_title)
-        
         if not slug:
-            # Fallback slugify
             slug = re.sub(r'[^a-zA-Z0-9]+', '-', g_title.lower()).strip('-')
 
-        # Find existing item if any
+        # Existing record
         existing = existing_catalog_by_slug.get(slug)
         if not existing:
-            # Try finding by leet_code
             for it in existing_catalog_by_slug.values():
                 if it.get('leet_code') and it.get('leet_code').lower() == raw_leet.lower():
                     existing = it
                     slug = it['slug']
                     break
 
-        # Check mirror info.json
+        # Mirror info
         mirror_info = {}
         mirror_info_path = os.path.join(ANIMELER_DIR, slug, "info.json")
         if not os.path.exists(mirror_info_path):
-            # Try title slug
             alt_slug = mirror_by_norm.get(normalize_key(g_title))
             if alt_slug:
                 mirror_info_path = os.path.join(ANIMELER_DIR, alt_slug, "info.json")
@@ -271,11 +307,21 @@ def main():
             except:
                 pass
 
+        # Category determination
+        raw_cat = g.get('kategori') or mirror_info.get('Kategori') or (existing.get('category') if existing else 'TV')
+        if raw_cat in ['Movie', 'Film']:
+            category = 'Film'
+        elif raw_cat in ['OVA', 'OAV']:
+            category = 'OVA'
+        elif raw_cat in ['ONA', 'Special', 'Özel']:
+            category = 'Özel / ONA'
+        else:
+            category = 'Dizi (TV)'
+
         # Episodes from disk manifest or existing
         manifest = disk_manifests.get(slug) or disk_manifests.get(slug.replace('-', '')) or {}
         episodes = manifest.get('episodes') or (existing.get('episodes') if existing else [])
         
-        # Sanitize episodes list: add video codec H.264
         sanitized_episodes = []
         series_size_mb = 0
         has_1080p = False
@@ -290,16 +336,39 @@ def main():
             else:
                 all_1080p = False
 
+            fn = ep.get('file_name', '')
+            
+            # Determine episode type & display label
+            # If movie or special file, mark accordingly
+            if '_Movie_' in fn or (category == 'Film' and len(episodes) == 1):
+                ep_type = 'movie'
+                label = 'Film'
+            elif '_Special_' in fn or (category in ['OVA', 'Özel / ONA'] and len(episodes) == 1):
+                ep_type = 'special'
+                label = 'Özel'
+            else:
+                ep_type = 'episode'
+                label = str(ep.get('ep_no')).zfill(2)
+
+            # Codec detection
+            codec = ep.get('codec') or ep.get('video_codec') or 'H.264'
+            if 'hevc' in codec.lower() or 'h265' in codec.lower():
+                codec = 'HEVC'
+            else:
+                codec = 'H.264'
+
             sanitized_episodes.append({
                 'ep_no': ep.get('ep_no'),
-                'file_name': ep.get('file_name'),
+                'label': label,
+                'ep_type': ep_type,
+                'file_name': fn,
                 'quality': q,
-                'codec': 'H.264',
+                'codec': codec,
                 'size_mb': round(size_mb, 1),
                 'source': ep.get('source', 'Unmei Archive')
             })
 
-        # If episodes empty from disk but gdrive has size, parse size
+        # Size fallback from gdrive catalog string
         if not series_size_mb and g.get('size'):
             size_str = g.get('size', '')
             if 'GB' in size_str:
@@ -322,40 +391,33 @@ def main():
         else:
             max_quality = "720p"
 
-        # Fansub translation status
+        # Translation status (Fansub metric)
         ceviri_durumu = g.get('ceviri_durumu', '')
-        if ceviri_durumu == 'Tamamlandi' or (existing and existing.get('status') == 'TAMAMLANDI'):
-            series_status = 'TAMAMLANDI'
+        is_completed = ceviri_durumu.startswith('Tamamlandi')
+        series_status = 'TAMAMLANDI' if is_completed else 'DEVAM EDIYOR'
+        if is_completed:
             completed_count += 1
         else:
-            series_status = 'DEVAM EDIYOR'
             incomplete_count += 1
 
-        # Archive completeness status from gdrive_catalog
+        # Groups: [A], [B], [C], [D]
+        grp_code = g.get('group_code', 'A')
+        grp_name = g.get('group_name', '')
+        group_stats[grp_code] = group_stats.get(grp_code, 0) + 1
+
+        # Archive completeness status
         raw_arsiv = g.get('arsiv_durumu', '')
         if raw_arsiv == 'Eksiksiz':
             arsiv_durumu = 'Eksiksiz'
-        elif 'Eksik' in raw_arsiv:
-            archived_num = int(g.get('archived_count', 0))
-            if archived_num == 0:
-                arsiv_durumu = 'İndirilemedi (Link Rot)'
-            else:
-                arsiv_durumu = 'Kısmen Arşivlendi'
+            arsiv_stats['Eksiksiz'] += 1
+        elif 'Link Rot (0 Bolum)' in raw_arsiv or int(g.get('local_count', 0)) == 0:
+            arsiv_durumu = 'İndirilemedi (Link Rot)'
+            arsiv_stats['LinkRot'] += 1
         else:
-            arsiv_durumu = raw_arsiv or 'Bilinmiyor'
+            arsiv_durumu = raw_arsiv
+            arsiv_stats['Kismi'] += 1
 
         missing_eps = g.get('missing_episodes', '-')
-
-        # Categories
-        raw_cat = g.get('kategori') or mirror_info.get('Kategori') or (existing.get('category') if existing else 'TV')
-        if raw_cat in ['Movie', 'Film']:
-            category = 'Film'
-        elif raw_cat in ['OVA', 'OAV']:
-            category = 'OVA'
-        elif raw_cat in ['ONA', 'Special', 'Özel']:
-            category = 'Özel / ONA'
-        else:
-            category = 'Dizi (TV)'
 
         # Turkish Genres
         turk_genres = mirror_info.get('Anime Türü', [])
@@ -389,11 +451,9 @@ def main():
         synopsis = synopsis.replace('<br />', ' ').replace('<br/>', ' ').strip()
         synopsis = re.sub(r'\s+', ' ', synopsis)
 
-        orig_total = g.get('original_total')
-        try:
-            total_eps = int(orig_total)
-        except:
-            total_eps = int(g.get('translated_count', len(sanitized_episodes)))
+        official_total = int(g.get('official_total') or g.get('original_total') or len(sanitized_episodes))
+        unmei_count = int(g.get('unmei_count') or g.get('translated_count') or len(sanitized_episodes))
+        local_count = int(g.get('local_count') or g.get('archived_count') or len(sanitized_episodes))
 
         item = {
             'id': idx,
@@ -405,9 +465,9 @@ def main():
             'leet_code': raw_leet,
             'status': series_status,
             'category': category,
-            'translated_episodes': int(g.get('translated_count', len(sanitized_episodes))),
-            'total_episodes': total_eps,
-            'final_episode': int(g.get('translated_count', len(sanitized_episodes))),
+            'translated_episodes': unmei_count,
+            'total_episodes': official_total,
+            'final_episode': unmei_count,
             'studio': mirror_info.get('Stüdyo') or (existing.get('studio') if existing else 'Bilinmiyor'),
             'start_date': mirror_info.get('Başlama Tarihi') or (existing.get('start_date') if existing else ''),
             'end_date': mirror_info.get('Bitiş Tarihi') or (existing.get('end_date') if existing else ''),
@@ -425,10 +485,14 @@ def main():
             'size_gb': round(series_size_mb / 1024.0, 2),
             'episodes_count': len(sanitized_episodes),
             'episodes': sanitized_episodes,
-            # GDrive & Archive completeness fields:
+            # Updated 4-Group Classification & Archive attributes:
+            'group_code': grp_code,
+            'group_name': grp_name,
+            'ceviri_durumu': ceviri_durumu,
             'arsiv_durumu': arsiv_durumu,
-            'archived_count': int(g.get('archived_count', len(sanitized_episodes))),
+            'archived_count': local_count,
             'missing_episodes': missing_eps,
+            'drives': g.get('drives', ''),
             'gdrive_url': g.get('folder_url', '')
         }
 
@@ -441,9 +505,15 @@ def main():
             'total_anime': len(catalog_items),
             'completed': completed_count,
             'incomplete': incomplete_count,
+            'fully_archived': arsiv_stats['Eksiksiz'],
+            'partially_archived': arsiv_stats['Kismi'],
+            'link_rot': arsiv_stats['LinkRot'],
             'total_episodes': total_episodes_count,
+            'total_translated_episodes': sum(it['translated_episodes'] for it in catalog_items),
+            'total_official_episodes': sum(it['total_episodes'] for it in catalog_items),
             'total_size_gb': total_size_gb,
             'has_1080p_count': master_1080p_count,
+            'groups': group_stats,
             'archive_period': "2017 - 2022"
         },
         'items': catalog_items
@@ -454,6 +524,7 @@ def main():
 
     print(f"\nSuccessfully wrote {len(catalog_items)} anime to {OUTPUT_CATALOG}")
     print(f"Stats: {catalog_data['stats']}")
+    print(f"Group breakdown: {group_stats}")
 
 if __name__ == '__main__':
     main()
