@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function initApp() {
   setupEventListeners();
+  updateTrendingBadge();
 
   try {
     const res = await fetch("data/catalog.json");
@@ -94,7 +95,17 @@ function filterAndSortItems() {
   return items;
 }
 
+function updateTrendingBadge() {
+  const badge = document.getElementById("trending-badge");
+  if (!badge) return;
+  const now = new Date();
+  const month = now.toLocaleDateString("tr-TR", { month: "long" });
+  const capitalizedMonth = month.charAt(0).toLocaleUpperCase("tr-TR") + month.slice(1);
+  badge.textContent = `${capitalizedMonth} ${now.getFullYear()}`;
+}
+
 function renderTrending() {
+  updateTrendingBadge();
   const track = document.getElementById("trending-track");
   if (!track || !catalogData || !catalogData.items) return;
 
