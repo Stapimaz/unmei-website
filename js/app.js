@@ -20,7 +20,8 @@ async function initApp() {
   updateTrendingBadge();
 
   try {
-    const res = await fetch("data/catalog.json");
+    const rootPath = window.UNMEI_ROOT || "";
+    const res = await fetch(rootPath + "data/catalog.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     catalogData = await res.json();
     renderTrending();
@@ -305,6 +306,12 @@ function showView(viewId) {
 }
 
 function handleRouting() {
+  if (window.UNMEI_SLUG && !window.location.hash) {
+    renderAnimeDetail(window.UNMEI_SLUG);
+    showView('view-detail');
+    return;
+  }
+
   const hash = window.location.hash || "#/anime";
 
   if (hash.startsWith("#/anime/")) {
@@ -552,8 +559,24 @@ function setupEventListeners() {
   const backBtn = document.getElementById("detail-back-btn");
   if (backBtn) {
     backBtn.addEventListener("click", () => {
-      window.location.hash = "#/anime";
+      if (window.UNMEI_ROOT) {
+        window.location.href = window.UNMEI_ROOT + "#/anime";
+      } else {
+        window.location.hash = "#/anime";
+      }
     });
+  }
+
+  const root = window.UNMEI_ROOT || "";
+  if (root) {
+    const brandLink = document.getElementById("brand-link");
+    const navAnime = document.getElementById("nav-anime");
+    const navManga = document.getElementById("nav-manga");
+    const navAbout = document.getElementById("nav-about");
+    if (brandLink) brandLink.href = root + "#/anime";
+    if (navAnime) navAnime.href = root + "#/anime";
+    if (navManga) navManga.href = root + "#/manga";
+    if (navAbout) navAbout.href = root + "#/hakkimizda";
   }
 
   window.addEventListener("hashchange", handleRouting);
