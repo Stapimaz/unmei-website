@@ -711,8 +711,30 @@
     ctx.restore();
   }
 
-  function loop() {
-    update();
+  // =========================================================================
+  // 5. FIXED TIMESTEP GAME LOOP (INDEPENDENT OF 60Hz / 120Hz / 144Hz REFRESH RATE)
+  // =========================================================================
+  let lastTime = 0;
+  let accumulator = 0;
+  const FIXED_STEP = 1000 / 60; // Exact 60 ticks per second (16.6667ms)
+
+  function loop(currentTime) {
+    if (!lastTime) lastTime = currentTime;
+    let elapsed = currentTime - lastTime;
+    lastTime = currentTime;
+
+    // Clamp frame time to prevent huge physics jumps on tab switch / lag spikes
+    if (elapsed > 100) elapsed = 100;
+    if (elapsed < 0) elapsed = 0;
+
+    accumulator += elapsed;
+
+    // Run physics updates strictly at 60Hz regardless of monitor refresh rate
+    while (accumulator >= FIXED_STEP) {
+      update();
+      accumulator -= FIXED_STEP;
+    }
+
     draw();
     animationId = requestAnimationFrame(loop);
   }
@@ -720,6 +742,8 @@
   function initFlappyGame() {
     resetGame();
     if (animationId) cancelAnimationFrame(animationId);
+    lastTime = performance.now();
+    accumulator = 0;
     animationId = requestAnimationFrame(loop);
   }
 
@@ -728,5 +752,13 @@
       cancelAnimationFrame(animationId);
       animationId = null;
     }
+    lastTime = 0;
+    accumulator = 0;
   }
+
+  // Prevent accumulator spike when returning from background / tab switch
+  window.addEventListener('visibilitychange', () => {
+    lastTime = performance.now();
+    accumulator = 0;
+  });
 })();
