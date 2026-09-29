@@ -317,15 +317,18 @@ function handleRouting() {
   }
 
   if (hash === "#/manga") {
+    document.title = "Manga - Unmei Çeviri";
     showView('view-manga');
     return;
   }
 
   if (hash === "#/hakkimizda") {
+    document.title = "Hakkımızda - Unmei Çeviri";
     showView('view-about');
     return;
   }
 
+  document.title = "Unmei Çeviri";
   renderTrending();
   showView('view-catalog');
 }
@@ -359,6 +362,8 @@ function renderAnimeDetail(slug) {
   if (!anime) return;
 
   recordPageView(slug);
+  const cleanTitle = (t) => (t || "").replace(/\s*\((?:TV|Film)\)/gi, '').trim();
+  document.title = `${cleanTitle(anime.title)} - Unmei Çeviri`;
 
   const banner = document.getElementById("detail-banner");
   const poster = document.getElementById("detail-poster");
