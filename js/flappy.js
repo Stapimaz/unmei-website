@@ -164,6 +164,11 @@
     }
   });
 
+  const closeBtn = document.getElementById('easter-modal-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeEasterGame);
+  }
+
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && easterModal.style.display === 'flex') {
       closeEasterGame();
@@ -216,6 +221,7 @@
   // Pipes & Stars
   let pipes = [];
   const stars = [];
+  let bgGrad = null;
 
   function updateDimensions() {
     isMobile = window.innerWidth <= 820;
@@ -233,29 +239,34 @@
 
     pipeWidth = isMobile ? 54 : 68;
     pipeGap = isMobile ? 148 : 162;
-    baseSpeed = isMobile ? 2.4 : 3.0;
+    baseSpeed = isMobile ? 2.6 : 3.0;
     pipeSpeed = baseSpeed;
     pipeDistance = isMobile ? 220 : 280;
 
     canvas.width = W;
     canvas.height = H;
 
+    // Cache background gradient once on resize instead of every frame
+    bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+    bgGrad.addColorStop(0, '#090a0c');
+    bgGrad.addColorStop(0.7, '#0e1014');
+    bgGrad.addColorStop(1, '#14181f');
+
     bird.x = isMobile ? 70 : 130;
     bird.radius = isMobile ? 14 : 17;
     bird.w = isMobile ? 44 : 52;
     bird.h = isMobile ? 31 : 37;
-    bird.gravity = isMobile ? 0.28 : 0.32;
-    bird.jump = isMobile ? -6.2 : -7.0;
+    bird.gravity = isMobile ? 0.30 : 0.32;
+    bird.jump = isMobile ? -6.6 : -7.0;
 
     stars.length = 0;
-    const starCount = isMobile ? 35 : 70;
+    const starCount = isMobile ? 25 : 45;
     for (let i = 0; i < starCount; i++) {
       stars.push({
         x: Math.random() * W,
         y: Math.random() * (H - 60),
-        size: Math.random() * 1.8 + 0.6,
-        alpha: Math.random() * 0.7 + 0.2,
-        speed: Math.random() * 0.35 + 0.1
+        size: Math.random() * 1.6 + 0.8,
+        speed: Math.random() * 0.3 + 0.1
       });
     }
   }
@@ -484,33 +495,31 @@
   }
 
   // =========================================================================
-  // 4. DRAWING
+  // 4. DRAWING (ULTRA OPTIMIZED - ZERO PER-FRAME GRADIENT/SHADOW ALLOCATIONS)
   // =========================================================================
   function draw() {
-    // 1. Sky Background
-    const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
-    bgGrad.addColorStop(0, '#090a0c');
-    bgGrad.addColorStop(0.7, '#0e1014');
-    bgGrad.addColorStop(1, '#14181f');
-    ctx.fillStyle = bgGrad;
+    // 1. Sky Background (Uses pre-cached gradient)
+    ctx.fillStyle = bgGrad || '#0e1014';
     ctx.fillRect(0, 0, W, H);
 
-    // 2. Stars
-    stars.forEach((s) => {
-      ctx.fillStyle = `rgba(188, 25, 154, ${s.alpha * 0.7})`;
-      ctx.beginPath();
-      ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
-      ctx.fill();
-    });
+    // 2. Stars (Batched single path draw call - 0 string allocations)
+    ctx.fillStyle = 'rgba(188, 25, 154, 0.55)';
+    ctx.beginPath();
+    for (let i = 0; i < stars.length; i++) {
+      const s = stars[i];
+      ctx.rect(s.x, s.y, s.size, s.size);
+    }
+    ctx.fill();
 
-    // 3. Subtle background silhouettes (Mountains/Horizon for landscape feel)
+    // 3. Subtle background silhouettes
     drawBackgroundSilhouette();
 
     // 4. Pipes
-    pipes.forEach((p) => {
+    for (let i = 0; i < pipes.length; i++) {
+      const p = pipes[i];
       drawPipe(p.x, 0, pipeWidth, p.topH, true);
       drawPipe(p.x, p.bottomY, pipeWidth, p.bottomH, false);
-    });
+    }
 
     // 5. Ground
     const groundH = 50;
@@ -519,7 +528,7 @@
     ctx.fillStyle = '#101216';
     ctx.fillRect(0, groundY, W, groundH);
 
-    // Ground top border (Unmei Magenta Glow Line)
+    // Ground top border (Unmei Magenta Line)
     ctx.strokeStyle = '#bc199a';
     ctx.lineWidth = 2.5;
     ctx.beginPath();
@@ -530,31 +539,31 @@
     // Ground grid lines
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
     ctx.lineWidth = 1;
+    ctx.beginPath();
     for (let x = (frames * -pipeSpeed) % 24; x < W; x += 24) {
-      ctx.beginPath();
       ctx.moveTo(x, groundY);
       ctx.lineTo(x, H);
-      ctx.stroke();
     }
+    ctx.stroke();
 
     // 6. Bird Trail
-    bird.trail.forEach((t) => {
-      ctx.fillStyle = `rgba(188, 25, 154, ${t.alpha * 0.4})`;
+    if (bird.trail.length > 0) {
+      ctx.fillStyle = 'rgba(188, 25, 154, 0.35)';
       ctx.beginPath();
-      ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2);
+      for (let i = 0; i < bird.trail.length; i++) {
+        const t = bird.trail[i];
+        ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2);
+      }
       ctx.fill();
-    });
+    }
 
-    // 7. Bird (Our "uç" logo)
+    // 7. Bird (Our "uç" logo - Direct hardware blit, no software Gaussian blur)
     ctx.save();
     ctx.translate(bird.x, bird.y);
     ctx.rotate(bird.rotation);
 
     if (birdImg.complete && birdImg.naturalWidth > 0) {
-      ctx.shadowColor = 'rgba(188, 25, 154, 0.6)';
-      ctx.shadowBlur = 12;
       ctx.drawImage(birdImg, -bird.w / 2, -bird.h / 2, bird.w, bird.h);
-      ctx.shadowBlur = 0;
     } else {
       ctx.fillStyle = '#bc199a';
       ctx.beginPath();
@@ -565,16 +574,14 @@
 
     // 8. UI Overlays based on Game State
     if (gameState === 'PLAYING') {
-      // Live Score
+      // Live Score (Hardware-accelerated offset drop shadow instead of Gaussian blur)
       ctx.font = '800 48px "Outfit", sans-serif';
       ctx.textAlign = 'center';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+      ctx.fillText(score, W / 2 + 2, 77);
       ctx.fillStyle = '#ffffff';
-      ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
-      ctx.shadowBlur = 10;
       ctx.fillText(score, W / 2, 75);
-      ctx.shadowBlur = 0;
     } else if (gameState === 'START') {
-      // Start Screen (Clean & minimal without title)
       drawGlassCard(W / 2 - 160, H / 2 - 80, 320, 160);
 
       ctx.textAlign = 'center';
@@ -590,7 +597,6 @@
       ctx.fillStyle = '#848b98';
       ctx.fillText(`En Yüksek Skor: ${highScore}`, W / 2, H / 2 + 48);
     } else if (gameState === 'GAMEOVER') {
-      // Game Over Screen
       drawGlassCard(W / 2 - 165, H / 2 - 130, 330, 240);
 
       ctx.textAlign = 'center';
@@ -598,7 +604,6 @@
       ctx.fillStyle = '#ef4444';
       ctx.fillText('OYUN BİTTİ', W / 2, H / 2 - 84);
 
-      // Current Score
       ctx.font = '500 13px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = '#848b98';
       ctx.fillText('SKOR', W / 2, H / 2 - 48);
@@ -607,13 +612,11 @@
       ctx.fillStyle = '#ffffff';
       ctx.fillText(score, W / 2, H / 2 - 8);
 
-      // High Score
       ctx.font = '600 14px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = score >= highScore && score > 0 ? '#10b981' : '#848b98';
       const recordText = score >= highScore && score > 0 ? `YENİ REKOR: ${highScore}` : `En İyi: ${highScore}`;
       ctx.fillText(recordText, W / 2, H / 2 + 32);
 
-      // Restart hint
       ctx.font = '600 13.5px "Plus Jakarta Sans", sans-serif';
       ctx.fillStyle = '#bc199a';
       ctx.fillText('Tekrar oynamak için Tıkla / [Space]', W / 2, H / 2 + 74);
@@ -641,17 +644,9 @@
   function drawPipe(x, y, w, h, isTop) {
     if (h <= 0) return;
 
-    // Body Gradient
-    const pipeGrad = ctx.createLinearGradient(x, 0, x + w, 0);
-    pipeGrad.addColorStop(0, '#15181f');
-    pipeGrad.addColorStop(0.3, '#1c202a');
-    pipeGrad.addColorStop(0.7, '#181b24');
-    pipeGrad.addColorStop(1, '#0e1014');
-
-    ctx.fillStyle = pipeGrad;
+    // Body
+    ctx.fillStyle = '#161922';
     ctx.fillRect(x, y, w, h);
-
-    // Border
     ctx.strokeStyle = '#282d38';
     ctx.lineWidth = 1.5;
     ctx.strokeRect(x, y, w, h);
@@ -663,14 +658,8 @@
     const lipW = w + lipExtend * 2;
     const lipY = isTop ? y + h - lipH : y;
 
-    const lipGrad = ctx.createLinearGradient(lipX, 0, lipX + lipW, 0);
-    lipGrad.addColorStop(0, '#1c202a');
-    lipGrad.addColorStop(0.5, '#242936');
-    lipGrad.addColorStop(1, '#15181f');
-
-    ctx.fillStyle = lipGrad;
+    ctx.fillStyle = '#222733';
     ctx.fillRect(lipX, lipY, lipW, lipH);
-
     ctx.strokeStyle = '#323947';
     ctx.lineWidth = 1.5;
     ctx.strokeRect(lipX, lipY, lipW, lipH);
@@ -687,11 +676,9 @@
 
   function drawGlassCard(x, y, w, h) {
     ctx.save();
-    ctx.fillStyle = 'rgba(16, 18, 22, 0.94)';
-    ctx.strokeStyle = 'rgba(188, 25, 154, 0.4)';
+    ctx.fillStyle = 'rgba(16, 18, 22, 0.95)';
+    ctx.strokeStyle = 'rgba(188, 25, 154, 0.5)';
     ctx.lineWidth = 1.5;
-    ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
-    ctx.shadowBlur = 24;
 
     const r = 12;
     ctx.beginPath();
@@ -712,13 +699,27 @@
   }
 
   // =========================================================================
-  // 5. FIXED TIMESTEP GAME LOOP (INDEPENDENT OF 60Hz / 120Hz / 144Hz REFRESH RATE)
+  // 5. FIXED TIMESTEP GAME LOOP (STRICT 60Hz PHYSICS & ZERO-CPU BACKGROUND)
   // =========================================================================
   let lastTime = 0;
   let accumulator = 0;
-  const FIXED_STEP = 1000 / 60; // Exact 60 ticks per second (16.6667ms)
+  const FIXED_STEP = 1000 / 60; // 16.6667ms
 
   function loop(currentTime) {
+    // If modal is closed or tab is hidden, halt immediately
+    if (!easterModal || easterModal.style.display !== 'flex') {
+      stopFlappyGame();
+      return;
+    }
+
+    if (document.hidden) {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+      return;
+    }
+
     if (!lastTime) lastTime = currentTime;
     let elapsed = currentTime - lastTime;
     lastTime = currentTime;
@@ -729,7 +730,6 @@
 
     accumulator += elapsed;
 
-    // Run physics updates strictly at 60Hz regardless of monitor refresh rate
     while (accumulator >= FIXED_STEP) {
       update();
       accumulator -= FIXED_STEP;
@@ -756,9 +756,19 @@
     accumulator = 0;
   }
 
-  // Prevent accumulator spike when returning from background / tab switch
-  window.addEventListener('visibilitychange', () => {
-    lastTime = performance.now();
-    accumulator = 0;
+  // Prevent background CPU usage when switching tabs
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    } else {
+      if (easterModal && easterModal.style.display === 'flex' && !animationId) {
+        lastTime = performance.now();
+        accumulator = 0;
+        animationId = requestAnimationFrame(loop);
+      }
+    }
   });
 })();
