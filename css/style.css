@@ -2031,6 +2031,1038 @@ body {
   }
 }
 
+/* ==========================================================================
+   MANGA SHOWCASE & 3D BOOK
+   ========================================================================== */
+.manga-page-container {
+  padding: 30px 0 60px 0;
+}
+
+.manga-header-section {
+  margin-bottom: 36px;
+}
+
+.manga-header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--secondary-subtle);
+  border: 1px solid var(--secondary-border);
+  color: var(--secondary);
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.manga-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--secondary);
+}
+
+.manga-page-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+}
+
+.manga-page-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.manga-catalog-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px 60px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manga-catalog-container .static-page-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* Manga Showcase Vitrin - Centered layout with max 3 books per row */
+.manga-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px 48px;
+  margin-top: 12px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.manga-item {
+  width: 210px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  user-select: none;
+  outline: none;
+  transition: transform 0.25s ease;
+}
+
+.manga-item:hover .item-title {
+  color: #fff;
+}
+
+.manga-item .item-title {
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.manga-item .manga-item-meta {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* 3D Book Container in Card */
+.manga-book-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  perspective: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px 20px 12px;
+}
+
+/* Mathematically accurate 28px-thick solid 3D Manga Volume */
+.manga-book-3d {
+  position: relative;
+  width: 165px;
+  height: 245px;
+  transform-style: preserve-3d;
+  /* Angled to show front cover + 28px page thickness along right and top */
+  transform: rotateY(-18deg) rotateX(6deg);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+  outline: 1px solid transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.manga-item:hover .manga-book-3d,
+.manga-item:focus-visible .manga-book-3d {
+  transform: rotateY(-6deg) rotateX(1deg) translateY(-8px) scale(1.03);
+}
+
+/* Front Cover (Z = +14px) */
+.manga-book-3d .book-cover {
+  position: absolute;
+  inset: 0;
+  border-radius: 2px 4px 4px 2px;
+  overflow: hidden;
+  background: #111;
+  transform: translateZ(14px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  box-shadow:
+    0 0 1px rgba(0, 0, 0, 0.4),
+    inset 1px 0 2px rgba(255, 255, 255, 0.15),
+    inset -1px 0 2px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+}
+
+.manga-book-3d .book-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: inherit;
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+}
+
+.manga-book-3d .book-crease {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 22px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(255, 255, 255, 0.12) 15%,
+    rgba(0, 0, 0, 0.2) 35%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 6;
+}
+
+.manga-book-3d .book-shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.02) 30%,
+    transparent 50%
+  );
+  pointer-events: none;
+  z-index: 7;
+}
+
+.manga-book-3d .status-badge {
+  z-index: 10;
+}
+
+/* Back Cover (Z = -14px) */
+.manga-book-3d .book-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px 2px 2px 4px;
+  background: #161820;
+  transform: rotateY(180deg) translateZ(14px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  z-index: 1;
+}
+
+/* Spine (Left side, spanning Z = -14px to +14px) */
+.manga-book-3d .book-spine {
+  position: absolute;
+  top: 0;
+  left: -14px;
+  width: 28px;
+  height: 100%;
+  background: linear-gradient(to right, #242938 0%, #161922 100%);
+  transform: rotateY(-90deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  z-index: 4;
+}
+
+.manga-book-3d .spine-text {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+  transform: rotate(90deg);
+  opacity: 0.85;
+}
+
+/* Right Edge - Paper Pages Block (28px Depth) */
+.manga-book-3d .book-pages-right {
+  position: absolute;
+  top: 1px;
+  right: -14px;
+  width: 28px;
+  height: calc(100% - 2px);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 2.5px,
+      rgba(0, 0, 0, 0.035) 2.5px,
+      rgba(0, 0, 0, 0.035) 4px
+    ),
+    linear-gradient(
+      to right,
+      #d0c9bc 0%,
+      #e8e4d8 25%,
+      #f5f0e6 70%,
+      #ded8cc 96%,
+      #c4beaf 100%
+    );
+  transform: rotateY(90deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  box-shadow:
+    inset 2px 0 5px rgba(0, 0, 0, 0.22),
+    inset -1px 0 3px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 1px 1px 0;
+  z-index: 4;
+}
+
+/* Top Edge - Paper Pages Block (28px Depth) */
+.manga-book-3d .book-pages-top {
+  position: absolute;
+  top: -14px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: 28px;
+  background:
+    repeating-linear-gradient(
+      to right,
+      transparent 0px,
+      transparent 2.5px,
+      rgba(0, 0, 0, 0.035) 2.5px,
+      rgba(0, 0, 0, 0.035) 4px
+    ),
+    linear-gradient(
+      to bottom,
+      #d3cdbf 0%,
+      #ece8dc 35%,
+      #f6f2e8 75%,
+      #dfd9cd 96%,
+      #c6c0b2 100%
+    );
+  transform: rotateX(90deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.22),
+    inset 0 -1px 3px rgba(0, 0, 0, 0.15),
+    0 0 1px rgba(0, 0, 0, 0.2);
+  z-index: 4;
+}
+
+/* Bottom Edge - Hidden when viewed from above to prevent edge aliasing/leakage */
+.manga-book-3d .book-pages-bottom {
+  display: none;
+}
+
+/* Ambient 3D Shadow under book */
+.manga-book-3d .book-shadow {
+  position: absolute;
+  bottom: -22px;
+  left: 5%;
+  width: 95%;
+  height: 28px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.25) 45%, transparent 70%);
+  transform: translateZ(-14px) rotateX(90deg);
+  filter: blur(10px);
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+
+.manga-item:hover .book-shadow {
+  transform: translateZ(-14px) rotateX(90deg) translateY(6px) scale(1.1);
+  filter: blur(14px);
+  opacity: 0.9;
+}
+
+.manga-item-meta {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* ==========================================================================
+   MINIMAL MANGA READER MODAL
+   ========================================================================== */
+.manga-reader-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #08090d;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* Minimal Top Bar */
+.reader-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 54px;
+  padding: 0 20px;
+  background: rgba(12, 14, 20, 0.96);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  flex-shrink: 0;
+  z-index: 100;
+}
+
+.reader-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.reader-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: var(--text-color);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.reader-back-btn:hover {
+  background: var(--secondary-subtle);
+  border-color: var(--secondary);
+  color: #fff;
+}
+
+.reader-series-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+.reader-header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reader-chapter-dropdown {
+  height: 32px;
+  padding: 0 28px 0 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23848b98'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+}
+
+.reader-chapter-dropdown:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.reader-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* 2 Reading Modes Toggle */
+.reader-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.reader-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reader-mode-btn:hover {
+  color: #fff;
+}
+
+.reader-mode-btn.active {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.reader-page-indicator {
+  font-family: var(--font-heading);
+  font-size: 13px;
+  font-weight: 700;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Reader Viewport (Handles both Single Page and Continuous Scroll) */
+.reader-viewport {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  background: #08090d;
+}
+
+.reader-viewport.is-scroll-mode {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Single Page View */
+.reader-single-view {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 2000px;
+  padding: 16px;
+}
+
+/* Continuous Scroll View */
+.reader-scroll-view {
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 24px 16px 80px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scroll-page-wrap {
+  position: relative;
+  width: 100%;
+  background: #11141c;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.scroll-page-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scroll-page-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 3px 8px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #cbd5e1;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.reader-scroll-footer {
+  display: flex;
+  justify-content: center;
+  padding: 32px 0 20px 0;
+}
+
+.reader-scroll-next-btn {
+  padding: 12px 28px;
+  background: var(--secondary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(188, 25, 154, 0.4);
+  transition: all 0.2s ease;
+}
+
+.reader-scroll-next-btn:hover:not(:disabled) {
+  background: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(188, 25, 154, 0.55);
+}
+
+.reader-scroll-next-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.reader-stage {
+  position: relative;
+  height: calc(100vh - 86px);
+  max-height: 940px;
+  aspect-ratio: 1440 / 2048; /* Standard manga page ratio */
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  border-radius: 4px;
+}
+
+.reader-page-sheet {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #101218;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.reader-page-sheet.base-sheet {
+  z-index: 1;
+}
+
+.reader-page-sheet.active-sheet {
+  z-index: 2;
+  transform-origin: left center;
+}
+
+.reader-sheet-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Realistic 3D Paper Flip Animations */
+.page-curl-shadow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+@keyframes pageTurnForward {
+  0% {
+    transform: rotateY(0deg);
+    filter: drop-shadow(-3px 0 10px rgba(0, 0, 0, 0.3));
+  }
+  40% {
+    filter: drop-shadow(-15px 0 25px rgba(0, 0, 0, 0.6));
+  }
+  100% {
+    transform: rotateY(-95deg);
+    opacity: 0;
+    filter: drop-shadow(-20px 0 30px rgba(0, 0, 0, 0.8));
+  }
+}
+
+@keyframes pageTurnBackward {
+  0% {
+    transform: rotateY(-95deg);
+    opacity: 0;
+    filter: drop-shadow(-20px 0 30px rgba(0, 0, 0, 0.8));
+  }
+  60% {
+    filter: drop-shadow(-15px 0 25px rgba(0, 0, 0, 0.6));
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+    filter: drop-shadow(-3px 0 10px rgba(0, 0, 0, 0.3));
+  }
+}
+
+.reader-stage.turn-forward .active-sheet {
+  animation: pageTurnForward 0.36s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.reader-stage.turn-forward .page-curl-shadow {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 25%, transparent 100%);
+  opacity: 1;
+}
+
+.reader-stage.turn-backward .active-sheet {
+  animation: pageTurnBackward 0.36s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.reader-stage.turn-backward .page-curl-shadow {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 25%, transparent 100%);
+  opacity: 1;
+}
+
+/* Click Hitbox Zones */
+.reader-click-zone {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.reader-click-zone.zone-prev {
+  left: 0;
+  width: 35%;
+}
+
+.reader-click-zone.zone-next {
+  right: 0;
+  width: 65%;
+}
+
+/* Minimal Floating Nav Arrows */
+.reader-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 18, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+  opacity: 0.65;
+}
+
+.reader-nav-arrow:hover {
+  opacity: 1;
+  background: var(--secondary);
+  border-color: var(--secondary-hover);
+  box-shadow: 0 4px 16px rgba(188, 25, 154, 0.45);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.reader-nav-arrow.arrow-left {
+  left: 20px;
+}
+
+.reader-nav-arrow.arrow-right {
+  right: 20px;
+}
+
+/* ==========================================================================
+   MINIMAL LIGHT NOVEL READER (Continuous Vertical Scroll)
+   ========================================================================== */
+.ln-reader-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #090a0f;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ln-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  padding: 0 16px;
+  background: rgba(9, 10, 15, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 100;
+  user-select: none;
+}
+
+.ln-top-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ln-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: #cbd5e1;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ln-back-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.ln-series-title {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+.ln-top-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ln-chapter-dropdown {
+  height: 32px;
+  padding: 0 28px 0 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23848b98'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 12px;
+}
+
+.ln-chapter-dropdown:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.ln-top-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ln-font-control {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.ln-font-btn {
+  background: transparent;
+  border: none;
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ln-font-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+/* Light Novel Viewport & Content */
+.ln-reader-viewport {
+  position: relative;
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: #090a0f;
+}
+
+.ln-content-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 50px 24px 100px 24px;
+  width: 100%;
+}
+
+.ln-chapter-header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ln-chapter-title {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.ln-section-heading {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 48px 0 24px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ln-section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(188, 25, 154, 0.45) 0%, transparent 80%);
+}
+
+.ln-text-para {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: var(--ln-font-size, 18px);
+  line-height: 1.88;
+  color: #e2e8f0;
+  margin: 0 0 22px 0;
+  letter-spacing: 0.15px;
+  word-break: break-word;
+}
+
+.ln-text-para.is-dialogue {
+  color: #f8fafc;
+}
+
+.ln-illustration-wrap {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.ln-illustration-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: block;
+  margin: 0 auto;
+}
+
+.ln-reader-footer {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin-top: 48px;
+}
+
+.ln-next-chapter-btn {
+  padding: 12px 28px;
+  background: var(--secondary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(188, 25, 154, 0.4);
+  transition: all 0.2s ease;
+}
+
+.ln-next-chapter-btn:hover {
+  background: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(188, 25, 154, 0.55);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .ln-series-title {
+    display: none;
+  }
+  .ln-content-wrapper {
+    padding: 30px 16px 80px 16px;
+  }
+  .ln-text-para {
+    font-size: 16.5px;
+    line-height: 1.8;
+  }
+  .manga-grid {
+    gap: 28px 20px;
+  }
+  .manga-item {
+    width: 170px;
+  }
+  .reader-top-bar {
+    padding: 0 10px;
+    gap: 8px;
+  }
+  .reader-series-title {
+    display: none;
+  }
+  .reader-chapter-dropdown {
+    max-width: 115px;
+    font-size: 12px;
+    padding: 0 22px 0 8px;
+  }
+  .reader-nav-arrow {
+    display: none; /* Tap on left/right half on mobile */
+  }
+  .reader-stage {
+    height: calc(100vh - 72px);
+    width: 100%;
+    max-width: 100%;
+  }
+  .reader-viewport {
+    padding: 8px 4px;
+  }
+  .reader-scroll-view {
+    padding: 14px 8px 60px 8px;
+  }
+}
 
 
 

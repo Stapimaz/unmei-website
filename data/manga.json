@@ -1,0 +1,951 @@
+[
+  {
+    "id": "please-go-home-akutsu-san",
+    "slug": "please-go-home-akutsu-san",
+    "title": "Please Go Home, Akutsu-san!",
+    "romaji_title": "Kaette Kudasai! Akutsu-san",
+    "japanese_title": "帰ってください！ 阿久津さん",
+    "author": "Nagaoka Taichi",
+    "artist": "Nagaoka Taichi",
+    "cover_image": "assets/manga/akutsu-san/cover.jpg",
+    "status": "Yarım Kaldı",
+    "total_chapters": 71,
+    "demo_chapters": 71,
+    "year": 2019,
+    "genres": [
+      "Romantik",
+      "Komedi",
+      "Okul Hayatı",
+      "Ecchi"
+    ],
+    "synopsis": "Ooyama kendi halinde, sessiz sakin yaşayan bir lise öğrencisidir. Fakat sınıfın havalı ve serseri kızı Akutsu Riko, onun tek göz odalı dairesini resmen kendi evi gibi kullanmaya başlamıştır! Ooyama ders çalışmak ve yalnız kalmak için sürekli Akutsu'nun gitmesini ister, fakat Akutsu türlü bahanelerle bir türlü evine dönmez...",
+    "chapters": [
+      {
+        "chapter_num": 1,
+        "title": "Bölüm 1",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-1/00.jpg",
+          "assets/manga/akutsu-san/chapter-1/01.jpg",
+          "assets/manga/akutsu-san/chapter-1/02.jpg",
+          "assets/manga/akutsu-san/chapter-1/03.jpg",
+          "assets/manga/akutsu-san/chapter-1/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 2,
+        "title": "Bölüm 2",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-2/00.jpg",
+          "assets/manga/akutsu-san/chapter-2/01.jpg",
+          "assets/manga/akutsu-san/chapter-2/02.jpg",
+          "assets/manga/akutsu-san/chapter-2/03.jpg",
+          "assets/manga/akutsu-san/chapter-2/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 3,
+        "title": "Bölüm 3",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-3/00.jpg",
+          "assets/manga/akutsu-san/chapter-3/01.jpg",
+          "assets/manga/akutsu-san/chapter-3/02.jpg",
+          "assets/manga/akutsu-san/chapter-3/03.jpg",
+          "assets/manga/akutsu-san/chapter-3/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 4,
+        "title": "Bölüm 4",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-4/00.jpg",
+          "assets/manga/akutsu-san/chapter-4/01.jpg",
+          "assets/manga/akutsu-san/chapter-4/02.jpg",
+          "assets/manga/akutsu-san/chapter-4/03.jpg",
+          "assets/manga/akutsu-san/chapter-4/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 5,
+        "title": "Bölüm 5",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-5/00.jpg",
+          "assets/manga/akutsu-san/chapter-5/01.jpg",
+          "assets/manga/akutsu-san/chapter-5/02.jpg",
+          "assets/manga/akutsu-san/chapter-5/03.jpg",
+          "assets/manga/akutsu-san/chapter-5/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 6,
+        "title": "Bölüm 6",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-6/00.jpg",
+          "assets/manga/akutsu-san/chapter-6/01.jpg",
+          "assets/manga/akutsu-san/chapter-6/02.jpg",
+          "assets/manga/akutsu-san/chapter-6/03.jpg",
+          "assets/manga/akutsu-san/chapter-6/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 7,
+        "title": "Bölüm 7",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-7/00.jpg",
+          "assets/manga/akutsu-san/chapter-7/01.jpg",
+          "assets/manga/akutsu-san/chapter-7/02.jpg",
+          "assets/manga/akutsu-san/chapter-7/03.jpg",
+          "assets/manga/akutsu-san/chapter-7/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 8,
+        "title": "Bölüm 8",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-8/00.jpg",
+          "assets/manga/akutsu-san/chapter-8/01.jpg",
+          "assets/manga/akutsu-san/chapter-8/02.jpg",
+          "assets/manga/akutsu-san/chapter-8/03.jpg",
+          "assets/manga/akutsu-san/chapter-8/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 9,
+        "title": "Bölüm 9",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-9/00.jpg",
+          "assets/manga/akutsu-san/chapter-9/01.jpg",
+          "assets/manga/akutsu-san/chapter-9/02.jpg",
+          "assets/manga/akutsu-san/chapter-9/03.jpg",
+          "assets/manga/akutsu-san/chapter-9/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 10,
+        "title": "Bölüm 10",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-10/00.jpg",
+          "assets/manga/akutsu-san/chapter-10/01.jpg",
+          "assets/manga/akutsu-san/chapter-10/02.jpg",
+          "assets/manga/akutsu-san/chapter-10/03.jpg",
+          "assets/manga/akutsu-san/chapter-10/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 11,
+        "title": "Bölüm 11",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-11/00.jpg",
+          "assets/manga/akutsu-san/chapter-11/01.jpg",
+          "assets/manga/akutsu-san/chapter-11/02.jpg",
+          "assets/manga/akutsu-san/chapter-11/03.jpg",
+          "assets/manga/akutsu-san/chapter-11/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 12,
+        "title": "Bölüm 12",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-12/00.jpg",
+          "assets/manga/akutsu-san/chapter-12/01.jpg",
+          "assets/manga/akutsu-san/chapter-12/02.jpg",
+          "assets/manga/akutsu-san/chapter-12/03.jpg",
+          "assets/manga/akutsu-san/chapter-12/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 13,
+        "title": "Bölüm 13",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-13/00.jpg",
+          "assets/manga/akutsu-san/chapter-13/01.jpg",
+          "assets/manga/akutsu-san/chapter-13/02.jpg",
+          "assets/manga/akutsu-san/chapter-13/03.jpg",
+          "assets/manga/akutsu-san/chapter-13/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 14,
+        "title": "Bölüm 14",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-14/00.jpg",
+          "assets/manga/akutsu-san/chapter-14/01.jpg",
+          "assets/manga/akutsu-san/chapter-14/02.jpg",
+          "assets/manga/akutsu-san/chapter-14/03.jpg",
+          "assets/manga/akutsu-san/chapter-14/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 15,
+        "title": "Bölüm 15",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-15/00.jpg",
+          "assets/manga/akutsu-san/chapter-15/01.jpg",
+          "assets/manga/akutsu-san/chapter-15/02.jpg",
+          "assets/manga/akutsu-san/chapter-15/03.jpg",
+          "assets/manga/akutsu-san/chapter-15/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 16,
+        "title": "Bölüm 16",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-16/00.jpg",
+          "assets/manga/akutsu-san/chapter-16/01.jpg",
+          "assets/manga/akutsu-san/chapter-16/02.jpg",
+          "assets/manga/akutsu-san/chapter-16/03.jpg",
+          "assets/manga/akutsu-san/chapter-16/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 17,
+        "title": "Bölüm 17",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-17/00.jpg",
+          "assets/manga/akutsu-san/chapter-17/01.jpg",
+          "assets/manga/akutsu-san/chapter-17/02.jpg",
+          "assets/manga/akutsu-san/chapter-17/03.jpg",
+          "assets/manga/akutsu-san/chapter-17/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 18,
+        "title": "Bölüm 18",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-18/00.jpg",
+          "assets/manga/akutsu-san/chapter-18/01.jpg",
+          "assets/manga/akutsu-san/chapter-18/02.jpg",
+          "assets/manga/akutsu-san/chapter-18/03.jpg",
+          "assets/manga/akutsu-san/chapter-18/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 19,
+        "title": "Bölüm 19",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-19/00.jpg",
+          "assets/manga/akutsu-san/chapter-19/01.jpg",
+          "assets/manga/akutsu-san/chapter-19/02.jpg",
+          "assets/manga/akutsu-san/chapter-19/03.jpg",
+          "assets/manga/akutsu-san/chapter-19/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 20,
+        "title": "Bölüm 20",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-20/00.jpg",
+          "assets/manga/akutsu-san/chapter-20/01.jpg",
+          "assets/manga/akutsu-san/chapter-20/02.jpg",
+          "assets/manga/akutsu-san/chapter-20/03.jpg",
+          "assets/manga/akutsu-san/chapter-20/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 21,
+        "title": "Bölüm 21",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-21/00.jpg",
+          "assets/manga/akutsu-san/chapter-21/01.jpg",
+          "assets/manga/akutsu-san/chapter-21/02.jpg",
+          "assets/manga/akutsu-san/chapter-21/03.jpg",
+          "assets/manga/akutsu-san/chapter-21/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 22,
+        "title": "Bölüm 22",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-22/00.jpg",
+          "assets/manga/akutsu-san/chapter-22/01.jpg",
+          "assets/manga/akutsu-san/chapter-22/02.jpg",
+          "assets/manga/akutsu-san/chapter-22/03.jpg",
+          "assets/manga/akutsu-san/chapter-22/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 23,
+        "title": "Bölüm 23",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-23/00.jpg",
+          "assets/manga/akutsu-san/chapter-23/01.jpg",
+          "assets/manga/akutsu-san/chapter-23/02.jpg",
+          "assets/manga/akutsu-san/chapter-23/03.jpg",
+          "assets/manga/akutsu-san/chapter-23/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 24,
+        "title": "Bölüm 24",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-24/00.jpg",
+          "assets/manga/akutsu-san/chapter-24/01.jpg",
+          "assets/manga/akutsu-san/chapter-24/02.jpg",
+          "assets/manga/akutsu-san/chapter-24/03.jpg",
+          "assets/manga/akutsu-san/chapter-24/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 25,
+        "title": "Bölüm 25",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-25/00.jpg",
+          "assets/manga/akutsu-san/chapter-25/01.jpg",
+          "assets/manga/akutsu-san/chapter-25/02.jpg",
+          "assets/manga/akutsu-san/chapter-25/03.jpg",
+          "assets/manga/akutsu-san/chapter-25/04.jpg",
+          "assets/manga/akutsu-san/chapter-25/05.jpg",
+          "assets/manga/akutsu-san/chapter-25/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 26,
+        "title": "Bölüm 26",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-26/00.jpg",
+          "assets/manga/akutsu-san/chapter-26/01.jpg",
+          "assets/manga/akutsu-san/chapter-26/02.jpg",
+          "assets/manga/akutsu-san/chapter-26/03.jpg",
+          "assets/manga/akutsu-san/chapter-26/04.jpg",
+          "assets/manga/akutsu-san/chapter-26/05.jpg",
+          "assets/manga/akutsu-san/chapter-26/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 27,
+        "title": "Bölüm 27",
+        "pages_count": 13,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-27/00.jpg",
+          "assets/manga/akutsu-san/chapter-27/01.jpg",
+          "assets/manga/akutsu-san/chapter-27/02.jpg",
+          "assets/manga/akutsu-san/chapter-27/03.jpg",
+          "assets/manga/akutsu-san/chapter-27/04.jpg",
+          "assets/manga/akutsu-san/chapter-27/05.jpg",
+          "assets/manga/akutsu-san/chapter-27/06.jpg",
+          "assets/manga/akutsu-san/chapter-27/07.jpg",
+          "assets/manga/akutsu-san/chapter-27/08.jpg",
+          "assets/manga/akutsu-san/chapter-27/09.jpg",
+          "assets/manga/akutsu-san/chapter-27/10.jpg",
+          "assets/manga/akutsu-san/chapter-27/11.jpg",
+          "assets/manga/akutsu-san/chapter-27/12.jpg"
+        ]
+      },
+      {
+        "chapter_num": 28,
+        "title": "Bölüm 28",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-28/00.jpg",
+          "assets/manga/akutsu-san/chapter-28/01.jpg",
+          "assets/manga/akutsu-san/chapter-28/02.jpg",
+          "assets/manga/akutsu-san/chapter-28/03.jpg",
+          "assets/manga/akutsu-san/chapter-28/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 29,
+        "title": "Bölüm 29",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-29/00.jpg",
+          "assets/manga/akutsu-san/chapter-29/01.jpg",
+          "assets/manga/akutsu-san/chapter-29/02.jpg",
+          "assets/manga/akutsu-san/chapter-29/03.jpg",
+          "assets/manga/akutsu-san/chapter-29/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 30,
+        "title": "Bölüm 30",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-30/00.jpg",
+          "assets/manga/akutsu-san/chapter-30/01.jpg",
+          "assets/manga/akutsu-san/chapter-30/02.jpg",
+          "assets/manga/akutsu-san/chapter-30/03.jpg",
+          "assets/manga/akutsu-san/chapter-30/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 31,
+        "title": "Bölüm 31",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-31/00.jpg",
+          "assets/manga/akutsu-san/chapter-31/01.jpg",
+          "assets/manga/akutsu-san/chapter-31/02.jpg",
+          "assets/manga/akutsu-san/chapter-31/03.jpg",
+          "assets/manga/akutsu-san/chapter-31/04.jpg",
+          "assets/manga/akutsu-san/chapter-31/05.jpg",
+          "assets/manga/akutsu-san/chapter-31/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 32,
+        "title": "Bölüm 32",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-32/00.jpg",
+          "assets/manga/akutsu-san/chapter-32/01.jpg",
+          "assets/manga/akutsu-san/chapter-32/02.jpg",
+          "assets/manga/akutsu-san/chapter-32/03.jpg",
+          "assets/manga/akutsu-san/chapter-32/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 33,
+        "title": "Bölüm 33",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-33/00.jpg",
+          "assets/manga/akutsu-san/chapter-33/01.jpg",
+          "assets/manga/akutsu-san/chapter-33/02.jpg",
+          "assets/manga/akutsu-san/chapter-33/03.jpg",
+          "assets/manga/akutsu-san/chapter-33/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 34,
+        "title": "Bölüm 34",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-34/00.jpg",
+          "assets/manga/akutsu-san/chapter-34/01.jpg",
+          "assets/manga/akutsu-san/chapter-34/02.jpg",
+          "assets/manga/akutsu-san/chapter-34/03.jpg",
+          "assets/manga/akutsu-san/chapter-34/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 35,
+        "title": "Bölüm 35",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-35/00.jpg",
+          "assets/manga/akutsu-san/chapter-35/01.jpg",
+          "assets/manga/akutsu-san/chapter-35/02.jpg",
+          "assets/manga/akutsu-san/chapter-35/03.jpg",
+          "assets/manga/akutsu-san/chapter-35/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 36,
+        "title": "Bölüm 36",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-36/00.jpg",
+          "assets/manga/akutsu-san/chapter-36/01.jpg",
+          "assets/manga/akutsu-san/chapter-36/02.jpg",
+          "assets/manga/akutsu-san/chapter-36/03.jpg",
+          "assets/manga/akutsu-san/chapter-36/04.jpg",
+          "assets/manga/akutsu-san/chapter-36/05.jpg",
+          "assets/manga/akutsu-san/chapter-36/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 37,
+        "title": "Bölüm 37",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-37/00.jpg",
+          "assets/manga/akutsu-san/chapter-37/01.jpg",
+          "assets/manga/akutsu-san/chapter-37/02.jpg",
+          "assets/manga/akutsu-san/chapter-37/03.jpg",
+          "assets/manga/akutsu-san/chapter-37/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 38,
+        "title": "Bölüm 38",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-38/00.jpg",
+          "assets/manga/akutsu-san/chapter-38/01.jpg",
+          "assets/manga/akutsu-san/chapter-38/02.jpg",
+          "assets/manga/akutsu-san/chapter-38/03.jpg",
+          "assets/manga/akutsu-san/chapter-38/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 39,
+        "title": "Bölüm 39",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-39/00.jpg",
+          "assets/manga/akutsu-san/chapter-39/01.jpg",
+          "assets/manga/akutsu-san/chapter-39/02.jpg",
+          "assets/manga/akutsu-san/chapter-39/03.jpg",
+          "assets/manga/akutsu-san/chapter-39/04.jpg",
+          "assets/manga/akutsu-san/chapter-39/05.jpg",
+          "assets/manga/akutsu-san/chapter-39/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 40,
+        "title": "Bölüm 40",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-40/00.jpg",
+          "assets/manga/akutsu-san/chapter-40/01.jpg",
+          "assets/manga/akutsu-san/chapter-40/02.jpg",
+          "assets/manga/akutsu-san/chapter-40/03.jpg",
+          "assets/manga/akutsu-san/chapter-40/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 41,
+        "title": "Bölüm 41",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-41/00.jpg",
+          "assets/manga/akutsu-san/chapter-41/01.jpg",
+          "assets/manga/akutsu-san/chapter-41/02.jpg",
+          "assets/manga/akutsu-san/chapter-41/03.jpg",
+          "assets/manga/akutsu-san/chapter-41/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 41.5,
+        "title": "Bölüm 41.5",
+        "pages_count": 6,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-41.5/00.jpg",
+          "assets/manga/akutsu-san/chapter-41.5/01.jpg",
+          "assets/manga/akutsu-san/chapter-41.5/02.jpg",
+          "assets/manga/akutsu-san/chapter-41.5/03.jpg",
+          "assets/manga/akutsu-san/chapter-41.5/04.jpg",
+          "assets/manga/akutsu-san/chapter-41.5/05.jpg"
+        ]
+      },
+      {
+        "chapter_num": 42,
+        "title": "Bölüm 42",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-42/00.jpg",
+          "assets/manga/akutsu-san/chapter-42/01.jpg",
+          "assets/manga/akutsu-san/chapter-42/02.jpg",
+          "assets/manga/akutsu-san/chapter-42/03.jpg",
+          "assets/manga/akutsu-san/chapter-42/04.jpg",
+          "assets/manga/akutsu-san/chapter-42/05.jpg",
+          "assets/manga/akutsu-san/chapter-42/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 43,
+        "title": "Bölüm 43",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-43/00.jpg",
+          "assets/manga/akutsu-san/chapter-43/01.jpg",
+          "assets/manga/akutsu-san/chapter-43/02.jpg",
+          "assets/manga/akutsu-san/chapter-43/03.jpg",
+          "assets/manga/akutsu-san/chapter-43/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 44,
+        "title": "Bölüm 44",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-44/00.jpg",
+          "assets/manga/akutsu-san/chapter-44/01.jpg",
+          "assets/manga/akutsu-san/chapter-44/02.jpg",
+          "assets/manga/akutsu-san/chapter-44/03.jpg",
+          "assets/manga/akutsu-san/chapter-44/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 45,
+        "title": "Bölüm 45",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-45/00.jpg",
+          "assets/manga/akutsu-san/chapter-45/01.jpg",
+          "assets/manga/akutsu-san/chapter-45/02.jpg",
+          "assets/manga/akutsu-san/chapter-45/03.jpg",
+          "assets/manga/akutsu-san/chapter-45/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 46,
+        "title": "Bölüm 46",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-46/00.jpg",
+          "assets/manga/akutsu-san/chapter-46/01.jpg",
+          "assets/manga/akutsu-san/chapter-46/02.jpg",
+          "assets/manga/akutsu-san/chapter-46/03.jpg",
+          "assets/manga/akutsu-san/chapter-46/04.jpg",
+          "assets/manga/akutsu-san/chapter-46/05.jpg",
+          "assets/manga/akutsu-san/chapter-46/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 47,
+        "title": "Bölüm 47",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-47/00.jpg",
+          "assets/manga/akutsu-san/chapter-47/01.jpg",
+          "assets/manga/akutsu-san/chapter-47/02.jpg",
+          "assets/manga/akutsu-san/chapter-47/03.jpg",
+          "assets/manga/akutsu-san/chapter-47/04.jpg",
+          "assets/manga/akutsu-san/chapter-47/05.jpg",
+          "assets/manga/akutsu-san/chapter-47/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 47.5,
+        "title": "Bölüm 47.5",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-47.5/00.jpg",
+          "assets/manga/akutsu-san/chapter-47.5/01.jpg",
+          "assets/manga/akutsu-san/chapter-47.5/02.jpg",
+          "assets/manga/akutsu-san/chapter-47.5/03.jpg",
+          "assets/manga/akutsu-san/chapter-47.5/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 48,
+        "title": "Bölüm 48",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-48/00.jpg",
+          "assets/manga/akutsu-san/chapter-48/01.jpg",
+          "assets/manga/akutsu-san/chapter-48/02.jpg",
+          "assets/manga/akutsu-san/chapter-48/03.jpg",
+          "assets/manga/akutsu-san/chapter-48/04.jpg",
+          "assets/manga/akutsu-san/chapter-48/05.jpg",
+          "assets/manga/akutsu-san/chapter-48/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 49,
+        "title": "Bölüm 49",
+        "pages_count": 11,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-49/00.jpg",
+          "assets/manga/akutsu-san/chapter-49/01.jpg",
+          "assets/manga/akutsu-san/chapter-49/02.jpg",
+          "assets/manga/akutsu-san/chapter-49/03.jpg",
+          "assets/manga/akutsu-san/chapter-49/04.jpg",
+          "assets/manga/akutsu-san/chapter-49/05.jpg",
+          "assets/manga/akutsu-san/chapter-49/06.jpg",
+          "assets/manga/akutsu-san/chapter-49/07.jpg",
+          "assets/manga/akutsu-san/chapter-49/08.jpg",
+          "assets/manga/akutsu-san/chapter-49/09.jpg",
+          "assets/manga/akutsu-san/chapter-49/10.jpg"
+        ]
+      },
+      {
+        "chapter_num": 49.5,
+        "title": "Bölüm 49.5",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-49.5/00.jpg",
+          "assets/manga/akutsu-san/chapter-49.5/01.jpg",
+          "assets/manga/akutsu-san/chapter-49.5/02.jpg",
+          "assets/manga/akutsu-san/chapter-49.5/03.jpg",
+          "assets/manga/akutsu-san/chapter-49.5/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 50,
+        "title": "Bölüm 50",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-50/00.jpg",
+          "assets/manga/akutsu-san/chapter-50/01.jpg",
+          "assets/manga/akutsu-san/chapter-50/02.jpg",
+          "assets/manga/akutsu-san/chapter-50/03.jpg",
+          "assets/manga/akutsu-san/chapter-50/04.jpg",
+          "assets/manga/akutsu-san/chapter-50/05.jpg",
+          "assets/manga/akutsu-san/chapter-50/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 51,
+        "title": "Bölüm 51",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-51/00.jpg",
+          "assets/manga/akutsu-san/chapter-51/01.jpg",
+          "assets/manga/akutsu-san/chapter-51/02.jpg",
+          "assets/manga/akutsu-san/chapter-51/03.jpg",
+          "assets/manga/akutsu-san/chapter-51/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 52,
+        "title": "Bölüm 52",
+        "pages_count": 9,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-52/00.jpg",
+          "assets/manga/akutsu-san/chapter-52/01.jpg",
+          "assets/manga/akutsu-san/chapter-52/02.jpg",
+          "assets/manga/akutsu-san/chapter-52/03.jpg",
+          "assets/manga/akutsu-san/chapter-52/04.jpg",
+          "assets/manga/akutsu-san/chapter-52/05.jpg",
+          "assets/manga/akutsu-san/chapter-52/06.jpg",
+          "assets/manga/akutsu-san/chapter-52/07.jpg",
+          "assets/manga/akutsu-san/chapter-52/08.jpg"
+        ]
+      },
+      {
+        "chapter_num": 53,
+        "title": "Bölüm 53",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-53/00.jpg",
+          "assets/manga/akutsu-san/chapter-53/01.jpg",
+          "assets/manga/akutsu-san/chapter-53/02.jpg",
+          "assets/manga/akutsu-san/chapter-53/03.jpg",
+          "assets/manga/akutsu-san/chapter-53/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 54,
+        "title": "Bölüm 54",
+        "pages_count": 9,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-54/00.jpg",
+          "assets/manga/akutsu-san/chapter-54/01.jpg",
+          "assets/manga/akutsu-san/chapter-54/02.jpg",
+          "assets/manga/akutsu-san/chapter-54/03.jpg",
+          "assets/manga/akutsu-san/chapter-54/04.jpg",
+          "assets/manga/akutsu-san/chapter-54/05.jpg",
+          "assets/manga/akutsu-san/chapter-54/06.jpg",
+          "assets/manga/akutsu-san/chapter-54/07.jpg",
+          "assets/manga/akutsu-san/chapter-54/08.jpg"
+        ]
+      },
+      {
+        "chapter_num": 55,
+        "title": "Bölüm 55",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-55/00.jpg",
+          "assets/manga/akutsu-san/chapter-55/01.jpg",
+          "assets/manga/akutsu-san/chapter-55/02.jpg",
+          "assets/manga/akutsu-san/chapter-55/03.jpg",
+          "assets/manga/akutsu-san/chapter-55/04.jpg",
+          "assets/manga/akutsu-san/chapter-55/05.jpg",
+          "assets/manga/akutsu-san/chapter-55/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 56,
+        "title": "Bölüm 56",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-56/00.jpg",
+          "assets/manga/akutsu-san/chapter-56/01.jpg",
+          "assets/manga/akutsu-san/chapter-56/02.jpg",
+          "assets/manga/akutsu-san/chapter-56/03.jpg",
+          "assets/manga/akutsu-san/chapter-56/04.jpg",
+          "assets/manga/akutsu-san/chapter-56/05.jpg",
+          "assets/manga/akutsu-san/chapter-56/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 57,
+        "title": "Bölüm 57",
+        "pages_count": 5,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-57/00.jpg",
+          "assets/manga/akutsu-san/chapter-57/01.jpg",
+          "assets/manga/akutsu-san/chapter-57/02.jpg",
+          "assets/manga/akutsu-san/chapter-57/03.jpg",
+          "assets/manga/akutsu-san/chapter-57/04.jpg"
+        ]
+      },
+      {
+        "chapter_num": 58,
+        "title": "Bölüm 58",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-58/00.jpg",
+          "assets/manga/akutsu-san/chapter-58/01.jpg",
+          "assets/manga/akutsu-san/chapter-58/02.jpg",
+          "assets/manga/akutsu-san/chapter-58/03.jpg",
+          "assets/manga/akutsu-san/chapter-58/04.jpg",
+          "assets/manga/akutsu-san/chapter-58/05.jpg",
+          "assets/manga/akutsu-san/chapter-58/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 59,
+        "title": "Bölüm 59",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-59/00.jpg",
+          "assets/manga/akutsu-san/chapter-59/01.jpg",
+          "assets/manga/akutsu-san/chapter-59/02.jpg",
+          "assets/manga/akutsu-san/chapter-59/03.jpg",
+          "assets/manga/akutsu-san/chapter-59/04.jpg",
+          "assets/manga/akutsu-san/chapter-59/05.jpg",
+          "assets/manga/akutsu-san/chapter-59/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 60,
+        "title": "Bölüm 60",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-60/00.jpg",
+          "assets/manga/akutsu-san/chapter-60/01.jpg",
+          "assets/manga/akutsu-san/chapter-60/02.jpg",
+          "assets/manga/akutsu-san/chapter-60/03.jpg",
+          "assets/manga/akutsu-san/chapter-60/04.jpg",
+          "assets/manga/akutsu-san/chapter-60/05.jpg",
+          "assets/manga/akutsu-san/chapter-60/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 61,
+        "title": "Bölüm 61",
+        "pages_count": 9,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-61/00.jpg",
+          "assets/manga/akutsu-san/chapter-61/01.jpg",
+          "assets/manga/akutsu-san/chapter-61/02.jpg",
+          "assets/manga/akutsu-san/chapter-61/03.jpg",
+          "assets/manga/akutsu-san/chapter-61/04.jpg",
+          "assets/manga/akutsu-san/chapter-61/05.jpg",
+          "assets/manga/akutsu-san/chapter-61/06.jpg",
+          "assets/manga/akutsu-san/chapter-61/07.jpg",
+          "assets/manga/akutsu-san/chapter-61/08.jpg"
+        ]
+      },
+      {
+        "chapter_num": 62,
+        "title": "Bölüm 62",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-62/00.jpg",
+          "assets/manga/akutsu-san/chapter-62/01.jpg",
+          "assets/manga/akutsu-san/chapter-62/02.jpg",
+          "assets/manga/akutsu-san/chapter-62/03.jpg",
+          "assets/manga/akutsu-san/chapter-62/04.jpg",
+          "assets/manga/akutsu-san/chapter-62/05.jpg",
+          "assets/manga/akutsu-san/chapter-62/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 63,
+        "title": "Bölüm 63",
+        "pages_count": 7,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-63/00.jpg",
+          "assets/manga/akutsu-san/chapter-63/01.jpg",
+          "assets/manga/akutsu-san/chapter-63/02.jpg",
+          "assets/manga/akutsu-san/chapter-63/03.jpg",
+          "assets/manga/akutsu-san/chapter-63/04.jpg",
+          "assets/manga/akutsu-san/chapter-63/05.jpg",
+          "assets/manga/akutsu-san/chapter-63/06.jpg"
+        ]
+      },
+      {
+        "chapter_num": 64,
+        "title": "Bölüm 64",
+        "pages_count": 6,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-64/00.jpg",
+          "assets/manga/akutsu-san/chapter-64/01.jpg",
+          "assets/manga/akutsu-san/chapter-64/02.jpg",
+          "assets/manga/akutsu-san/chapter-64/03.jpg",
+          "assets/manga/akutsu-san/chapter-64/04.jpg",
+          "assets/manga/akutsu-san/chapter-64/05.jpg"
+        ]
+      },
+      {
+        "chapter_num": 65,
+        "title": "Bölüm 65",
+        "pages_count": 6,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-65/00.jpg",
+          "assets/manga/akutsu-san/chapter-65/01.jpg",
+          "assets/manga/akutsu-san/chapter-65/02.jpg",
+          "assets/manga/akutsu-san/chapter-65/03.jpg",
+          "assets/manga/akutsu-san/chapter-65/04.jpg",
+          "assets/manga/akutsu-san/chapter-65/05.jpg"
+        ]
+      },
+      {
+        "chapter_num": 66,
+        "title": "Bölüm 66",
+        "pages_count": 8,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-66/00.jpg",
+          "assets/manga/akutsu-san/chapter-66/01.jpg",
+          "assets/manga/akutsu-san/chapter-66/02.jpg",
+          "assets/manga/akutsu-san/chapter-66/03.jpg",
+          "assets/manga/akutsu-san/chapter-66/04.jpg",
+          "assets/manga/akutsu-san/chapter-66/05.jpg",
+          "assets/manga/akutsu-san/chapter-66/06.jpg",
+          "assets/manga/akutsu-san/chapter-66/07.jpg"
+        ]
+      },
+      {
+        "chapter_num": 69,
+        "title": "Bölüm 69",
+        "pages_count": 12,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-69/00.jpg",
+          "assets/manga/akutsu-san/chapter-69/01.jpg",
+          "assets/manga/akutsu-san/chapter-69/02.jpg",
+          "assets/manga/akutsu-san/chapter-69/03.jpg",
+          "assets/manga/akutsu-san/chapter-69/04.jpg",
+          "assets/manga/akutsu-san/chapter-69/05.jpg",
+          "assets/manga/akutsu-san/chapter-69/06.jpg",
+          "assets/manga/akutsu-san/chapter-69/07.jpg",
+          "assets/manga/akutsu-san/chapter-69/08.jpg",
+          "assets/manga/akutsu-san/chapter-69/09.jpg",
+          "assets/manga/akutsu-san/chapter-69/10.jpg",
+          "assets/manga/akutsu-san/chapter-69/11.jpg"
+        ]
+      },
+      {
+        "chapter_num": 70,
+        "title": "Bölüm 70",
+        "pages_count": 6,
+        "pages": [
+          "assets/manga/akutsu-san/chapter-70/00.jpg",
+          "assets/manga/akutsu-san/chapter-70/01.jpg",
+          "assets/manga/akutsu-san/chapter-70/02.jpg",
+          "assets/manga/akutsu-san/chapter-70/03.jpg",
+          "assets/manga/akutsu-san/chapter-70/04.jpg",
+          "assets/manga/akutsu-san/chapter-70/05.jpg"
+        ]
+      }
+    ]
+  }
+]

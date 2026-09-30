@@ -386,7 +386,7 @@ function handleRouting() {
   }
 
   if (hash === "#/manga") {
-    document.title = "Manga - Unmei Çeviri";
+    document.title = "Manga ve Light Novel Çevirilerimiz - Unmei Çeviri";
     showView('view-manga');
     return;
   }

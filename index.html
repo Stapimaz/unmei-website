@@ -57,7 +57,7 @@
 
       <nav class="main-nav">
         <a href="#/anime" class="nav-link active" id="nav-anime">Anime</a>
-        <a href="#/manga" class="nav-link" id="nav-manga">Manga</a>
+        <a href="#/manga" class="nav-link" id="nav-manga">Manga ve LN</a>
         <a href="#/hakkimizda" class="nav-link" id="nav-about">Hakkımızda</a>
       </nav>
     </div>
@@ -288,11 +288,73 @@
       </div>
     </div>
 
-    <!-- 3. SUBPAGE: MANGA -->
+    <!-- 3. SUBPAGE: MANGA CATALOG -->
     <div id="view-manga">
-      <div class="subpage-box">
-        <h2>Manga</h2>
-        <p>Manga arşivimiz yakında paylaşılacaktır.</p>
+      <div class="manga-catalog-container">
+        
+        <!-- Header -->
+        <div class="static-page-header">
+          <h1 class="static-page-title">Manga ve Light Novel Çevirilerimiz</h1>
+        </div>
+
+        <!-- Manga Grid (Anime List Style) -->
+        <div class="manga-grid" id="manga-grid">
+          
+          <div class="manga-item" onclick="MangaReader.openManga('please-go-home-akutsu-san', 1)" role="button" tabindex="0" title="Please Go Home, Akutsu-san! Oku">
+            <!-- 3D Standing Manga Book -->
+            <div class="manga-book-container">
+              <div class="manga-book-3d">
+                <div class="book-cover">
+                  <img src="assets/manga/akutsu-san/cover.jpg" alt="Please Go Home, Akutsu-san!" class="book-cover-img" loading="lazy">
+                  <div class="book-crease"></div>
+                  <div class="book-shine"></div>
+                  <span class="status-badge incomplete">Yarım Kaldı</span>
+                </div>
+                <div class="book-spine">
+                  <span class="spine-text">Akutsu-san! • Vol. 1</span>
+                </div>
+                <div class="book-pages-right"></div>
+                <div class="book-pages-top"></div>
+                <div class="book-pages-bottom"></div>
+                <div class="book-back"></div>
+                <div class="book-shadow"></div>
+              </div>
+            </div>
+
+            <!-- Title & Meta (Matching Anime Item) -->
+            <div class="item-title" title="Please Go Home, Akutsu-san!">Please Go Home, Akutsu-san!</div>
+            <div class="manga-item-meta">71 Bölüm</div>
+          </div>
+
+          <!-- 2. Light Novel Item: Toaru Majutsu no Index: New Testament -->
+          <div class="manga-item" onclick="LNReader.openNovel('index-new-testament', 1)" role="button" tabindex="0" title="Toaru Majutsu no Index: New Testament Oku">
+            <!-- 3D Standing Manga/LN Book -->
+            <div class="manga-book-container">
+              <div class="manga-book-3d">
+                <div class="book-cover">
+                  <img src="assets/light-novel/index-nt/cover.jpg" alt="Toaru Majutsu no Index: New Testament" class="book-cover-img" loading="lazy">
+                  <div class="book-crease"></div>
+                  <div class="book-shine"></div>
+                  <span class="status-badge incomplete">Yarım Kaldı</span>
+                </div>
+                <div class="book-spine">
+                  <span class="spine-text">Index: NT • Vol. 1</span>
+                </div>
+                <div class="book-pages-right"></div>
+                <div class="book-pages-top"></div>
+                <div class="book-pages-bottom"></div>
+                <div class="book-back"></div>
+                <div class="book-shadow"></div>
+              </div>
+            </div>
+
+            <!-- Title & Meta -->
+            <div class="item-title" title="Toaru Majutsu no Index: New Testament">Toaru Majutsu no Index: New Testament</div>
+            <div class="manga-item-meta">4 Bölüm</div>
+          </div>
+
+        </div>
+
       </div>
     </div>
 
@@ -375,11 +437,152 @@
     </div>
   </div>
 
+  <!-- Manga Reader Modal -->
+  <div id="manga-reader-modal" class="manga-reader-modal" style="display: none;">
+    <!-- Minimal Top Bar -->
+    <header class="reader-top-bar">
+      <div class="reader-header-left">
+        <button type="button" id="reader-close-btn" class="reader-back-btn" title="Kapat (Esc)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Geri</span>
+        </button>
+        <span class="reader-series-title" id="reader-series-title">Please Go Home, Akutsu-san!</span>
+      </div>
+
+      <div class="reader-header-center">
+        <select id="reader-chapter-select" class="reader-chapter-dropdown" aria-label="Bölüm Seç">
+          <option value="1">Bölüm 1</option>
+          <option value="2">Bölüm 2</option>
+          <option value="3">Bölüm 3</option>
+          <option value="4">Bölüm 4</option>
+          <option value="5">Bölüm 5</option>
+        </select>
+      </div>
+
+      <div class="reader-header-right">
+        <!-- 2 Okuma Modu Butonları: Sayfa Sayfa vs Kesintisiz Kaydırma -->
+        <div class="reader-mode-toggle">
+          <button type="button" id="reader-mode-single" class="reader-mode-btn active" title="Sayfa Sayfa Çevirme">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <line x1="12" y1="3" x2="12" y2="21"></line>
+            </svg>
+            <span>Sayfa</span>
+          </button>
+          <button type="button" id="reader-mode-scroll" class="reader-mode-btn" title="Kesintisiz Dikey Kaydırma">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <rect x="5" y="2" width="14" height="20" rx="2"></rect>
+              <line x1="8" y1="7" x2="16" y2="7"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+              <line x1="8" y1="17" x2="16" y2="17"></line>
+            </svg>
+            <span>Kaydırma</span>
+          </button>
+        </div>
+
+        <span id="reader-page-indicator" class="reader-page-indicator">1 / 5</span>
+      </div>
+    </header>
+
+    <!-- Viewport Supporting Both Modes -->
+    <div id="reader-viewport" class="reader-viewport">
+      
+      <!-- 1. Single Page 3D Flip View -->
+      <div class="reader-single-view" id="reader-single-view">
+        <div class="reader-stage" id="reader-stage">
+          <!-- Underlying Base Page -->
+          <div class="reader-page-sheet base-sheet" id="reader-base-sheet">
+            <img src="" alt="" class="reader-sheet-img" id="reader-base-img">
+          </div>
+
+          <!-- Active / Turning Page -->
+          <div class="reader-page-sheet active-sheet" id="reader-active-sheet">
+            <img src="" alt="" class="reader-sheet-img" id="reader-active-img">
+            <div class="page-curl-shadow"></div>
+          </div>
+        </div>
+
+        <!-- Click Zones (Left / Right) -->
+        <div class="reader-click-zone zone-prev" id="zone-prev" title="Önceki Sayfa"></div>
+        <div class="reader-click-zone zone-next" id="zone-next" title="Sonraki Sayfa"></div>
+
+        <!-- Minimal Floating Arrows -->
+        <button type="button" id="reader-arrow-prev" class="reader-nav-arrow arrow-left" title="Önceki Sayfa (Sol Ok)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button type="button" id="reader-arrow-next" class="reader-nav-arrow arrow-right" title="Sonraki Sayfa (Sağ Ok)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+      <!-- 2. Continuous Vertical Scroll View -->
+      <div class="reader-scroll-view" id="reader-scroll-view" style="display: none;">
+        <div class="reader-scroll-container" id="reader-scroll-container"></div>
+        <div class="reader-scroll-footer">
+          <button type="button" id="reader-scroll-next-btn" class="reader-scroll-next-btn">Sonraki Bölüme Geç →</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Light Novel Reader Modal -->
+  <div id="ln-reader-modal" class="ln-reader-modal" style="display: none;">
+    <!-- Minimal Top Bar -->
+    <header class="ln-top-bar">
+      <div class="ln-top-left">
+        <button type="button" id="ln-close-btn" class="ln-back-btn" title="Kapat (Esc)">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Geri</span>
+        </button>
+        <span class="ln-series-title" id="ln-series-title">Toaru Majutsu no Index: New Testament</span>
+      </div>
+
+      <div class="ln-top-center">
+        <select id="ln-chapter-select" class="ln-chapter-dropdown" aria-label="Bölüm Seç">
+          <option value="1">Prolog: Yanlışlıkla Ana Karakter Olan Adam -- Savaş?</option>
+          <option value="2">Bölüm 1: ''O''nsuz Huzurlu Bir Akademi Şehri -- Şehir.</option>
+          <option value="3">Bölüm 2: İleride Ne Var, Ne Seçilmeli -- Rüya.</option>
+          <option value="4">Bölüm 3: Ufak Bir Pay ve Geleceğe Bağlanan Bir Alamet -- Kız.</option>
+        </select>
+      </div>
+
+      <div class="ln-top-right">
+        <div class="ln-font-control">
+          <button type="button" id="ln-font-smaller" class="ln-font-btn" title="Yazıyı Küçült">A-</button>
+          <button type="button" id="ln-font-larger" class="ln-font-btn" title="Yazıyı Büyüt">A+</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Continuous Scroll Viewport -->
+    <div id="ln-reader-viewport" class="ln-reader-viewport">
+      <div class="ln-content-wrapper">
+        <div id="ln-body-container"></div>
+        <div class="ln-reader-footer">
+          <button type="button" id="ln-next-chapter-btn" class="ln-next-chapter-btn">Sonraki Bölüm →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="js/rating.js"></script>
   <script src="js/disqus.js"></script>
   <script src="js/leaderboard.js"></script>
   <script src="js/flappy.js"></script>
+  <script src="js/manga-reader.js"></script>
+  <script src="js/ln-reader.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

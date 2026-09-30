@@ -1,0 +1,2230 @@
+[
+  {
+    "id": "index-new-testament",
+    "slug": "index-new-testament",
+    "title": "Toaru Majutsu no Index: New Testament",
+    "romaji_title": "Shinyaku Toaru Majutsu no Index",
+    "japanese_title": "新約 とある魔術の禁書目録",
+    "author": "Kamachi Kazuma",
+    "artist": "Haimura Kiyotaka",
+    "type": "light-novel",
+    "cover_image": "assets/light-novel/index-nt/cover.jpg",
+    "status": "Yarım Kaldı",
+    "total_chapters": 4,
+    "demo_chapters": 4,
+    "year": 2011,
+    "genres": [
+      "Aksiyon",
+      "Bilim Kurgu",
+      "Doğaüstü",
+      "Büyü"
+    ],
+    "synopsis": "Üçüncü Dünya Savaşı'nın sona ermesiyle Akademi Şehri'nde yeni bir dönem başlamıştır. Kamijou Touma'nın ortadan kayboluşunun ardından Accelerator ve Hamazura Shiage kendi yollarında ilerlerken, Şehir yeni tehditlerle karşı karşıya kalır.",
+    "chapters": [
+      {
+        "chapter_num": 1,
+        "short_title": "Prolog",
+        "title": "Prolog: Yanlışlıkla Ana Karakter Olan Adam -- Savaş?",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "“Quenser! Geçen sefer karşımıza çıkan adam bu! Bir Object! O garip silah gerçekmiş!! Şimdi ne yapacağız, anti-tank mermileri ona işler mi ki?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yeterince açık değil mi, Heivia? Yapabileceğimiz tek şey bu!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Tamam…Hey bekle!! Nasıl bu sonuca vardın? Aptalca olduğu çok açık!! Düşman elli metreden daha geniş ana gövdeye ve her boyutta yüzden fazla topu olan bir canavar! Ayrıca, bir veya iki nükleer bombanın hedefi olsa bile dayanabilecek bir makine bu! Biz saldırsak da saldırmasak da bu şey önüne gelen her şeyi yok edecek zaten!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ana topu biliyor musun? Şu gereksiz büyük ve düşük stabilizasyonlu iyon topu. Topun içi tamamen boş, ve yaydığı ısı, manyetik bir alan onu korumasa kendi kendini patlatmasına yol açar… ve buna rağmen başka çaremiz yok mu diyorsun? Ana topu sabote etmenin bir yolu!?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Oh? Aniden aklıma işe yarayabilecek bir fikir geldi. Harikayım! Bekle, yoksa dahi miyim!?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şimdi ne yapacağız, Heivia?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Mükemmel. Bu kesinlikle mükemmelt!! Eğer bunu yapabilirsek, kurtuluruz!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Acele et de anlat artık!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Savaş alanına git ve ölü taklidi yap.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Git ve ezil, seni piç!!!”[1]"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…” Büyük ekranı seyrederken, Hamazura’nın patlamış mısır kutusunu tutan eli, istemsizce titredi. Yanlış seçim yapmıştı. Bu aptal film, bir sevgiliyle izlenmezdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Peki, bu Kinuhata’nın önerdiği Kinuhata tarzı bir film sonuçta.” Konuştuğu kişi, yanındaki sevgilisiydi. Adı Takitsubo Rikou. Sinemaya film izlemeye gelmiş olsa da, hala o pembe spor ceketini giyiyordu.. Elinde olsa bir düğünde ve hatta bir cenazede bile giyerdi. Takitsubo’ya göre kıyafetle ilgili en önemli konu rahatlıktı. Yine de, Hamazura içten içe onun yerine güzel bir mayo veya tavşan kız kıyafeti giydiğini hayal ediyordu. Rikou, filmden sıkıldığını gösteren bir bakışla birlikte Hamazura’ya seslendi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazura, şimdi ne yapıyoruz?” Ne yazık ki, planlanan yemeğe çok az vakit kalmıştı; Mugino ve Kinuhata ile buluşmalılardı. Ne olursa olsun halletmeleri gereken bir iş vardı zira. Yine de, Hamazura düşündü. Aklı, şuan önündeki ekranda oynayan savaş sahnesinden uzaktaydı, ‘’gerçek’’ savaştaydı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Bir şekilde hayatta kaldık, 3. Dünya Savaşı’nda” Daha ana karakterin kim olduğunu bilmiyordu."
+          }
+        ]
+      },
+      {
+        "chapter_num": 2,
+        "short_title": "Bölüm 1",
+        "title": "Bölüm 1: ''O''nsuz Huzurlu Bir Akademi Şehri -- Şehir.",
+        "content": [
+          {
+            "type": "heading",
+            "text": "Part 1"
+          },
+          {
+            "type": "paragraph",
+            "text": "Akademi Şehri. Batı Tokyo’nun gelişmemiş topraklarında kurulan gelişmiş şehir. Tokyo’nun üçte biri kadar olan şehrin etrafı uzun surlarla çevriliydi. 2,3 milyonluk nüfusunun yüzde sekseni öğrencilerden oluşuyordu. Akademik başarıların, teknolojinin ve bilimin zirvesinde bir şehir olmasının yanı sıra, başka bir tarafı da vardı - yapay ve bilimsel yollarla geliştirilen esper yetiştirme enstitüsü. Öğrencileri merkeze alarak geliştirilen bu “güçler’’ her öğrencinin kendi kişisel gerçekliğine göre çeşitlere ayrılıyordu. Her beceri, uygulanabilirlik miktarına, gücüne ve kullanışlılığına göre altı seviyeye ayrılır: Seviye 0 (Gücü olmayanlar), Seviye 1 (Gücü zayıf olanlar), Seviye 2 (Sıradışı güçleri olanlar), Seviye 3 (Dikkate değer güçleri olanlar), Seviye 4 (Müthiş güçleri olanlar), ve Seviye 5 (Süper güçleri olanlar). Not olarak, Hamazura Shiage bir Seviye 0. Açık konuşmak gerekirse, gözle görülür bir gücü yoktu, fakat onun bile farkında olmadığı ufak bir gücü olması mümkün diyebiliriz. Diğer Seviye 0 esperlerde olduğu gibi, dünya üzerindeki varlığı belli belirsizdi. Ama bu şekilde umutsuzluğa düşmek için fazla erken. Bu zavallı adam, 3. Dünya Savaşı’nın en yoğun olduğu yerde nice badireler atlattı. Aynı zamanda Seviye 5 esperler arasında dördüncü sırada olan kişiyi tek başına yendi. Sevdiği kız için kaosun ve savaşın tam ortasına atladıktan sonra hayatta kalmayı başardı, yani şu an, sıradan bir liseliden bir tık daha yukarıda diyebiliriz. Rus kuvvetleri tarafından dümdüz edilmek üzere olan bir köyü koruyan, Akademi Şehri’nden gelen suikastçılarla savaşan adam, mükemmel mükafatlarla savaş alanından geri dönmüştü. Bu yüzden artık İmparator Hamazura çağının sonu gelmiş ve her zamanki günlük hayatına geri dönmüştü…"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazura!! O enerji içeceklerini alman neden bu kadar uzun sürüyor!?” Hamazura Shiage’nin savsaklığına sinirlenen ve restoranı inleten bu sesin sahibi olan kız, elinde içecek bardaklarını tutan çocuğun omzunu sarsmıştı. (…Hiçbir şey, bir şey bile değişmemiş!! Yaşanan onca şeyden sonra hayatım bir gıdım bile değişmemiş!!) Altın çağının sonu gelen imparator, eskisi gibi tekrar “hergele” çocuğa dönüşmekten şikayet ediyordu, eh hayat böyle. Ne kadar savaş tecrübesi kazanmış olursa olsun, bir yan karakter anca yan karakter kadar muamele görebilirdi. Not düşmek gerekirse, içecekleri isteyen kişi Mugino Shizuri idi. Bütün hikayesini anlatmak uzun zaman alırdı, ama her neyse, Seviye 5’ler arasında 4. sıradaki kişiydi o. Uzun ince vücut yapısına, açık kahverengi saçları eşlik ediyordu. Suratının üçte biri yapay, kozmetik bir makyajla düzeltilmişti ve gözlerinden biri gerçek değildi. Masada oturan iki kız daha vardı. Bir tanesi Kinuhata Saiai. Kısa boylu, kısa saçlı olan bu ortaokullu kız, yün bir kazak giyiyordu. Bacaklarını sergilemek konusunda oldukça istekli davranan bir kızdı, genellikle özel çaba sarf eder, etmese bile bilinçsizce bunu yapmaya devam ederdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Diğeri ise Takitsubo Rikou, az önce Hamazura ile birlikte film izleyen kız. Eğer nasıl biri olduğuna değinmek gerekirse, omuzlarına uzanan siyah saçları ve her zaman giydiği pembe spor ceketini betimlemek oldukça yeterli olurdu. Kinuhata telefonundan forumlarda dolaşıyor, fakat “Rusya ve Akademi Şehri’nin askeri birliklerini sahaya çıkarması savaş alanlarını tekrar şiddetlendirdi” tarzı haberleri görünce sıkılıp bırakıyordu. Telefonunu kenara attıktan sonra ilgisini önünde duran büyük tabaktaki patates kızartmalarına yönlendirmişti. Bir eliyle kızartmaları ağzına atarken diğer eliyle Mugino’nun yüzündeki sahte kısmı dürtüyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Dibinde olmama rağmen bile farkı süper göremiyorum. Yara bir yana, gözaltı torbası bile göremiyorum. Ne tür bi’ plastik cerrahi bu? Sanki fotoğrafmışsın gibi düzenlemişler; Farkı süper söyleyemiyorum bile!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Terleme olmadığı için, cildim uğraması gereken değişimlere uğramıyor. Ten rengim sıcaklıkla birlikte değişmiyor, ve tüylerim asla diken diken olmuyor. Tüm bu normalliklere maruz kalamıyorken farkı rahatsız edici biçimde anlıyorum. Taze ve dertsiz olsa da, bu pek isteyebileceğin türden bir his değil… Bir saniye, neden bunun hakkında konuşuyoruz ki?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şöyle ki, CG efektlerini kullanarak filmlerde yara izi, boynuz, kanat gibi şeyler ekleyebildiğimiz bir çağda, sadece kozmetik ve makyaj kullanarak böyle bir şey yapabilmeleri müthiş. Tutkulu bir film fanı olan benim, kanım çoktan kaynamaya başladı bile!! O eski aksiyon filmlerini izlerken bile kanımın kaynadığını hissedebiliyorum!” (…Cidden aralarına girmek istemiyorum…) Hamazura tüm samimiyetiyle iç geçirmişti, ama böyle giderse, o malum kişi kafayı sıyırarak suratındaki makyajı mahvedip bir cinayet işleyebilirdi. Her neyse, tam içecekleri masaya koyarken..."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Çok hantalsın, Hamazura!! Ve bu ne böyle!? Şu buzu düzgünce koysana! Buzu böyle getirirsen içecekler soğuk kalır mı sence!? İçecekler konusundaki en basit olay bu, tekrar getir!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ah, boş versene. Hamazura süper Hamazura işte, her şeye rağmen. Hem zaten tekrar getirmesi boşa zaman kaybı olur. Yetişkinler olarak bazı şeylere katlanmamız gerekiyor...”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ağzım son zamanlarda biraz bozuldu sanırım.” Hamazura iç geçirip ona laf sokmayan tek kıza döndü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bunların her şey için benden şikayet ediyor olmasına rağmen, asla beni hor görmeyen prensesimle hala en iyi ikiliyiz, değil mi, Takitsubo? Takitsubo?” Hamazura sevgilisine bakarken, hayatına dair son umut kırıntısını bulmayı umuyordu. Ama o an yarı açık olan gözleri hareket etmiyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Uyuyor…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“U-Uyuyor mu!? O uzun süren randevu seni yordu değil mi!?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yani, Hamazura’yla beraber olduğu için, böyle sonlanacağı süper belliydi değil mi? Asıl sıkılmasa garipserdim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Senin önerdiğin film yüzünden! Salak saçma bir film önermişsin!!\""
+          },
+          {
+            "type": "paragraph",
+            "text": "“Finalden hemen önceki o heyecanlı yerde, bütün üyelerle birlikte atlayan süper büyük Hint filinin görüntüsü süper efsaneydi. Değil mi, Hamazura?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Anlaması en zor yerdi…” Manyak bir film hayranı olan Kinuhata için, Hamazura’nın aklındaki düşünceleri anlamak oldukça zor geliyor olmalıydı."
+          },
+          {
+            "type": "paragraph",
+            "text": "Hamazura’nın getirdiği içecekten bir yudum aldıktan sonra %100 memnuniyetsizlik ile homurdandı, “…Mugino’nun süper söylediği gibi, bu içecek olması gereken sıcaklığın oldukça üstünde. Ne kadar bu durumu pek takmasam da, ceza verilmesini teklif ediyorum.” Sözün üstüne, Mugino hemen yanında duran, az önceye kadar işlevi somon pişirmek olan tavayı nazikçe aldı ve sanki yavru kedi sahiplendirmeye çalışan bir kızmış gibi şirin ama sinir bozucu bir sesle konuşmaya başladı, “O zaman~ Hamazura-chan’ın suratını tavayla tokatlasak güzel olur mu~?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Kes şu dehşet verici sesi, çok rahatsız edici!! Neyse, o buz gibi ses tonundan yeterince etkilendim zaten! İliklerim ürperdi!!\" Hamazura ızdırap içinde söylenirken, Kinuhata tam tersine sıkılmış bir şekilde iç çekti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“İmkanı yok, bu sadece Hamazura’yı süper teşvik eder. Bu adam anca insanlara çıplak önlük giydirmek falan gibi tahrik edici şeyler düşünebiliyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Bu, korkunç bir ithamdı!! Siz ikiniz, eğer bir daha “aile’’ kelimesini duyarsam zıvanadan çıkarım, anladınız mı!? Ayrıca, böyle bir vaziyette çıplak vücut düşünebilmek mümkün değil!!\" Hemen karşısında oturan Kinuhata sinir bozucu bir yüz ifadesiyle, Hamazura’nın bağırışlarına karşılık kulaklarını kapatıyordu. Büyük ihtimalle Kinuhata’nın dirseği çarptığı için düşen sinema bileti, masadan aşağı süzülmüştü."
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Süper Hamazuuurrrraaa!!\""
+          },
+          {
+            "type": "paragraph",
+            "text": "“Lan bu da mı benim hatam!!? …Neyse, alacağım tamam mı? Ben alırım! Bu yüzden o Seviye 4 güçlerini böyle bir restorandayken kullanmaya kalkışma sakın!!” Köle işçi Hamazura Shiage, iç çekerek masanın altına girmişti. Masanın altına iner inmez hedefini tespit etmişti, o bileti. Üstünde filmin ismi yazıyordu, \"Wildman’s N Zombie Escape Madness\". Bu orijinal ismi miydi yoksa saçma sapan bir yerelleştirme falan mı diye düşünmeden edememişti. Filme en ufak ilgisi yoktu, bu yüzden gözlerini başka yere çevirmişti. Ve o anda, işte tam önündeydi. Kinuhata Saiai'nin bacaklarını örtmesi gerekse de örtmeyen yünden mini etek ve yasak bölgeyi kapatan ufak, şirin kumaş parçasının manzarası. Tam oradaydı. Hem kişisel hem de iş hayatını tüm şevkiyle yaşayan ve sırf şaka olsun diye birilerinin bacağına dokunup eğlenebilecek bir adamdı. Ama Hamazura süper Hamazura idi. Bir anlık şaşkınlıkla, geriye atılmaya çalışmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kinuha- Ahhhh!!” Bu aptal adamın kafasını masaya çarpması işten bile değildi. Bu seferki kurbanlar ise yayılarak, dikkatsizce içeceğini tek eliyle tutan Mugino ve içi geçmiş şekilde koltukta uyuyan Takitsubo’ydu. Herkesin anlayabileceği şekilde açıklamak gerekirse, Mugino’nun içeceği doğrudan Takitsubo’nun üstüne dökülmüştü. Takitsubo gözlerini yavaşça araladı ve kollarını açıp gerinerek kendine geldi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Hamazura…?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Olay hakkında hiçbir şey bilmemesine ve tamamen uyuyor olmasına rağmen yine de gözünü açtığında suçlu olarak ilk beni düşündü. Neden bu kadar bahtsızım?” Yavaşça bileti alarak masanın altından çıkıp, ayağa kalkan Hamazura, şok edici bir görüntüyle karşılaşmıştı. Sırılsıklam olan Takitsubo, bir yandan mırıldanırken bir yandan da pembe spor ceketini çıkarıyordu. Ceketin altında ise, sadece bir atletle örtülmüş olan iki tepe vardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“(…Tahmin edilebileceği üzere, büyükler.)”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“(…Hayır, bütünlemesine değerlendirirsek, benim süper vücut hatlarım daha iyi.)”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“(…Olamaz, sakin kalmalıyım.)” O anda sadece Takitsubo, baygın gözlerle etrafa bakınıyordu. Duygu belirtmeyen, tamamen sade bir yüz ifadesiyle konuştu, “Artık gitsek iyi olur, değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Evet… Pekala, ufak işleri hallettiğimize göre, ana konuya geri dönmenin zamanı geldi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Mm.” Mugino, sıkılmış görünen bir yüz ifadesiyle, kişiliğine hiç uymayan bir ses tonuyla cevap vermişti. Hamazura masanın başında dikildi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ee, neresi olduğunu biliyor musun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şey, o konuda.. süper araştırmam sayesinde, tam olarak 10. Bölgede süper yer aldığını buldum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yola çıkalım o zaman.” Mugino, soğuk bir tonla konuşmuştu. Hamazura ses tonunda terslik olduğunu sezmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“İyi misin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Evet.” Bu grup, normalde \"Item\" denilen bir takımın üyeleriydi. Fakat o an, orada olması gereken bir üye eksikti. Kısa süreli sessizlikten sonra Mugino, huzur verici bir vurgu ve yumuşak bir ses tonuyla konuşmuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Hadi, gidelim ve Frenda’nın mezarını ziyaret edelim.”"
+          },
+          {
+            "type": "heading",
+            "text": "Part 2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Tekrar buluştuklarında, kadın sağlam bir yumruk atmıştı. Yumruğun hemen ardındansa sıkıca sarılmıştı. 3. Dünya Savaşının en yoğun olduğu cepheden dönen, Seviye 5’lerin en güçlüsü Accelerator, böyle içten duygularla karşılanmıştı. Not düşmek gerekirse, yumruğu atan ve hemen ardından ona sarılan kişi, beden öğretmeni olan Yomikawa Aiho’ydu. Accelerator şu anda onun evinde kalıyordu. Bembeyaz olan, bir renge dair hiçbir ton barındırmayan eşsiz saçlarıyla ve anormal derecede kırmızı olan gözleriyle adeta bir canavarı andırıyordu. İnce, zayıf bedeni, modernize edilmiş bir koltuk değneği ile destekleniyordu. Yine de bunun Accelerator’ın yaydığı “sıska’’ izlenimine pek katkısı olduğu söylenemezdi. Bedeni en gelişmiş bilimsel yollarla güçlendirilmiş ve Seviye 5 adı verilen bir silah haline gelmişti. Yumruklamak ya da sarılmak bir yana, Akademi Şehri’nde ona bu tarz “insani’’ hareketlerde bulunabilecek sayılı insan vardı. Bu evdekiler, o sayılı insanlara birer örnekti. Mesela."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ah!! Bu yoğun lazer saldırısı nasıl sağ, üst, yukarı, sol, aşağı, ön ve arkadan, her yerden gelebiliyor!? Der Misaka, bu dehşet verici görüntüyle titrerken!!” 10 yaşında gibi gözüken kız Last Order, oyun kolunu iki eliyle sıkıca tutarken, bir yandan da anlamsız şeyler söylüyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kehkehkeh, bu lazerler Misaka’nın sana karşı son kozuydu, Devasa Lazer!!” Bu sefer konuşan Misaka Worst’tü. Last Order’la aynı surata sahip olan fakat liseli gibi gözüken bu kız, Last Order’ın karanlık bir versiyonu denebilirdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Benim dahil olmadığım bir proje kapsamında üretilen başka bir klon mu..?” Misaka Worst’ün varlığını öğrenmenin şaşkınlığını yaşayan bu kişi, bilim insanı Yoshikawa Kikyou idi. Hazır lafı açılmışken, Misaka Worst’ün bazı nedenlerden dolayı bir kolu kırıktı. Oyun kolunu tek elle kullanmasına rağmen, çift elle tutup tüm gayretiyle oynayan Last Order’a karşı net bir şekilde kazanıyordu. Bu, neden bilinmez, pembe bir ao dai giyen Misaka Worst’ün gösterdiği müthiş performanstı, bu işte gerçekten iyiydi. (ao dai geleneksel bir kıyafet.)"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Oho, demek öyle, o zaman Misaka, Misaka Network’ü kullanarak Misaka’nın beynine, kötü oynamasını emreden beyin dalgaları gönderecek! Der Misaka, ama… Neden işe yaramıyor!?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hehehe, Üçüncü Seri Projesi kapsamında, Misaka’nın beynine senin komutlarını reddedecek bir aygıt yerleştirildi.” İkisi de yoğun bir şekilde sohbetlerine devam ediyorlardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu arada, o geleneksel kostümü nereden buldun? Der Misaka, soru sorarak.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Cidden mi? Bu Misaka’nın hafızası “komut blokesi’’ yüzünden senin hafızana aktarılmıyor mu?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ben verdim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "Yoshikawa, yüzünde şeytani bir gülümsemeyle duran Misaka Worst’ün cevap vermeye niyeti olmadığını anlayınca kendisi söylemişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Çekilişten kazanmıştım, ama ölçüleri pek uymadı.” Ve bu da Misaka Worst’ün neden o şeytani gülümsemeyle etrafa baktığını açıklıyordu. Ama Last Order’ın şikayet ettiği şey bu değildi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Ve o da yetişkin göğüslerini sergiliyor, der Misaka, gardını düşürmeden.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Tek konu o değil, bel ve kalça ölçüleri de buna dahil. Lafı açılmışken, eğer göğüsler hakkında konuşuyorsak, o çocuğun daha büyük değil mi?” Last Order, ekrana bakan gözlerini Misaka Worst’e çevirip, yadırgayıcı bir sessizlikle gözlerini üzerine dikmişti. Hemen ardından konuştu, “Öyle olsun bakalım, der Misaka, yumruğunu sıkarken.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hayır, Misaka Üçüncü Seri Projesiyle üretildi, yani büyüme hızlarımız farklı olmalı değil mi?” Last Order sinirle oyun koluna vurmaya başlamıştı, fakat ekrandaki karakteri yine de dayak manyağı olmaya devam ediyordu. Birbiriyle uygunsuz şekilde konuşan kızları görünce, Yomikawa kaşlarını çattı. Kanepede yatmakta olan Accelerator’a dönüp konuşmuştu, “Ee, bu liseli kız kim? Küçüğün ablası mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hayır.” Cevabı veren Accelerator değil, Misaka Worst’tü. Oyun sonu ekranını beklemekte olan kız, yüzünü Yomikawa’ya çevirdi ve tek gözünü kapatarak konuşmaya başladı. Herkese salak muamelesi yaptığını belli eden o ses tonuyla konuşmuştu, “Asıl soru, Misaka bu çocuğun küçük kardeşi olacak mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“?”"
+          },
+          {
+            "type": "heading",
+            "text": "Part 3"
+          },
+          {
+            "type": "paragraph",
+            "text": "Parametre Listesi. (System Scan tarzı bir esper sıralama listesi, potansiyelleri baz alınarak yapılan bir sıralama.) Akademi Şehri’nin karanlık tarafıyla ve etrafındakilerle mücadele eden Hamazura Shiage’yi sağlama alan o veri tabanı. Hamazura, farklı amaçlarla kullanıldığında Akademi Şehri’ne verebileceği zararı düşünmüştü, ama yine de bundan paçasını kurtaramayacağının da farkındaydı. Açıkçası, Akademi Şehri ve “dışarısı’’ arasındaki teknoloji farkı oldukça fazlaydı, ve bilgilerin şehirde yayılmasını istemeyen bir sürü araştırma merkezi vardı. Sadece istihbarattan ibaret olsa bile, oldukça hassas bilgiler barındırıyor olmalıydı. Zaten Hamazura’nın da öyle bir niyeti yoktu. Amacı Akademi Şehri’ni devirmek değil, huzurla yaşamaya devam etmekti. Ve kıçını kurtarmak için şehri bile terk edebilirdi. Gerçi, şu anda öyle bir hamle yapmaya hazır olmadığı aşikardı. Kendi canından çok sevdiği Takitsubo, malum olaydan dolayı Akademi Şehri’nde tedavi görmek zorundaydı. Şimdi. Akademi Şehri, diğer şehirlere kıyasla oldukça gelişmiş ekipmanlara, kurumlara ve imkanlara sahipti. Enerji üreten rüzgar gülleri, devriye gezen güvenlik ve temizlik robotları, tarla hatta çiftlik görevi gören fabrikalar. Tek fark bunlar değildi tabii. Bu şehirde, oldukça az mezarlık vardı. Nüfusun yüzde sekseni, ebeveynleri tarafından yurtlarda kalıp okumaları için gönderilen öğrencilerden oluşuyordu. Biri ölse bile, naaşları ailesine geri gönderilirdi. Yani işin özünde, şehirde mezarlık olması için bir sebep yoktu. Akademi Şehri’ndeki tek mezarlık 10. Bölge’dekiydi ve asansörlü, çok katlı otopark alanlarına benziyordu. İçinde kül kapsülünün bulunduğu ufak mezar taşları, bir çeşit asansörlü sistem kullanarak, ziyaretçilerle erişimi sağlıyordu. Su geçirmez bir tepsi kullanma şartıyla, çiçek ve çeşitli hediyeleri bırakabiliyordunuz. Fakat sistem, limiti aşan miktarda mikrop tespit ederse hediyeyi imha ediyordu. Mezarlık olmasına rağmen, gerçekten ölülerin külleri nadiren burada olurdu. Açıkça söylemek gerekirse, buradaki ölüler genelde isimsiz olurdu. Suçlular, Child Errors olarak bilinen terk edilmiş çocuklar, ve Anbu’ya karışıp “yeryüzünden” silinenler."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Şu Mugino da amma yavaş.” Hamazura hayıflandı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Mezarlık” kulesine daha girmemişlerdi, girişin hemen yanındaki bankta, herhangi bir duygusallık göstermeden oturuyorlardı. Bu alan genelde sigara içmek için kullanılırdı, fakat ortadaki kül tablasını kimsenin kullanmıyor oluşu, yalnızlık hissiyatını arttırıyordu. Mezarlığa giren tek kişi Mugino’ydu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Frenda’yı bizzat öldüren kişi, Mugino. Aslında, daha söylenebilecek çok şey vardı. Ama ne söylediklerini dinlemeye, ne de yüzüne bakmaya niyeti vardı. Hamazura yavaşça yüzünü gökyüzüne çevirdi ve konuştu, “Frenda’nın, sevdiği bir şey var mıydı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Uskumru.” Sorusunu cevaplayan kişi, hemen yanında oturuyor olan Takitsubo’ydu. Kinuhata iç çekti. “Konserve uskumru yemeği süper severdi, hatta tüm parasını ona harcıyordu.” Biri hakkında konuşurken geçmiş zaman kullanmanın verdiği garip his, hala etkisini koruyordu. Gerçi, bu hissin kaybolmasını istemek normal miydi? Hamazura buna karar verebilecek kadar olgun değildi."
+          },
+          {
+            "type": "heading",
+            "text": "Part 4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Oyun Misaka Worst’ün kesin zaferiyle son bulmuştu ve Last Order asık bir suratla oyun kolunu masaya koydu. Last Order, on yaşındaki bir çocuğun görünümüne sahip olan kız, yerde yuvarlanmaya başlamıştı. Misaka Worst’ün malum yerini işaret ederek konuşmaya başlamıştı, “O göğüsler Misaka’nın dikkatini dağıttı, der Misaka, mağlubiyetinin sebebini analiz etmeye çalışırken.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hey, sinirini insanların özellikleriyle dalga geçerek çıkarma. Misaka cidden Misakalar’ın komutanı olduğunu hissediyor. Gerçekten karanlık bir kişiliğin var” Misaka Worst onu kışkırtıyor olsa da, Last Order umursamamıştı. Yanında duran klon bilimi araştırmacısına, yani Yoshikawa Kikyou’ya döndü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Lütfen Misaka’ya, Misaka’nın da o kadar büyümesi için ne yemesi gerektiğini söyle, der Misaka, net bir rapor beklerken.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Herkes aynı şeyleri yiyor, Aiho’nun yaptıklarını.” Aiho, hem evin sahibi, hem de beden eğitimi öğretmeni olan Yomikawa Aiho. Dikkat çekici bir güzelliği olmayan, orta yaşlı, yeşil spor ceketi giyen kadın… Ama Last Order’a göre, göğüsleri büyük olan herhangi bir kadın, vücudunun başka bir yerine bakılmaksızın güzel fiziği olan biri sayılırdı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu çok mantıksız… der Misaka, bu açıklanamayan beslenme farkına şaşırarak.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Aman, bu herkesin aynı şeyleri yediğinde ortaya çıkan sonuç. Yani bu, işleri senin için de mümkün hale getirmiyor mu?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…!?!?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yani endişelenmen gereken bir şey yok. Diğer insanlara kıyasla daha farklı hızda büyüyorsun sadece. Yeterince zaman geçtiğinde, senin de güzel bir vücudunun olacağına eminim.” Yoshikawa’nın sözleri, Last Order için adeta bir umut ışığı olmuştu. Tam o anda... Yoshikawa’nın arkasından bir şey düşmüştü. Garip görünüşlü bir sağlık ürünüydü. Beli sarmaya yarayan aletlere benziyordu, ama aslında kadın bedenindeki, özellikle bir yerin şeklini değiştirmeye yarayan bir şey gibi görünüyordu. Açıkça söylemek gerekirse. Göğüs büyütücü bir alete benziyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…………………” Yetişkinlerin kirli tarafına şahit olan Last Order, hüzünlü bir bakış attı. Ardından, ufak ağzını açarken hafifçe titredi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Daha az önce, “doğal yollarla’’ güzel bir vücuda sahip olmakla ilgili bir şey diyordun, değil mi? Der Misaka, teyit etmeye çalışırken.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ho, hohoho. Aslında, hayır, bu sadece üniversite arkadaşımın bilim insanı olduğum için incelememi istediği bir şey. Görünüşe göre bu şey bilimsel değil, sahte…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Misaka bu yetişkin yalanlarına asla kanmaz!! Diye bağırır Misaka, o şeye uzanmaya çalışırken!!\""
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hayır, olmaz, Last Order!! Bu tehlikeli bir alet, eğer kullanan yetişkin bir kadın değilse, göğsünde patlama ihtimali var!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Misaka bu sözlere asla kanmaz!! Diye bağırır Misaka, seni durdurmaya çalışırken! Zaten yetişkin bir kadının vücuduna sahip olsan ona gerek kalmaz!!\" Diğer yandan, Misaka Worst, kanepede yatmakta olan Accelerator’la konuşuyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Biyologlar, garip bir şekilde o şüpheli şeylere ilgililer. Bu arada, bu kadar gürültücü olmaları normal mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Rahatsız edici…” Tekrar uyumaya çalışırken, şikayet ettiği tek şey bu rahatsız edici sesti. Ardından, arabulucu olması gereken, iri göğüslü ev sahibi ve öğretmen Yomikawa Aiho, Yoshikawa ve Last Order’ın arasına atılmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Tamam, tamam, yeter artık. Bu şey, Kikyou’nun işe yaramadığından yakındığı şey değil mi? Ha bir de şu bel inceltici alet var. Bu berbat alışkanlıklarına bir el atmam gerekiyor artık.” Sözü bitince, ikilinin kavga etmesine sebep olan göğüs büyütücü aleti kapmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Senin o umut ışığına ihtiyacın yok ki!! Diye bağırır Misaka, sinirle tepinerek!\""
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bunu yapamazsın, Aiho! Eğer göğüslerini o aletle büyütmeye kalkarsan, dünya ikiye ayrılır-Ah!!” Fakat işler umdukları gibi gitmemişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Eh? Ama… Ben bir şey yapmadım, neden duman çıkıyor?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Belki de, geriye kalan göğüs gücü tersine dönmüştür, der Misaka, bu açıklanamayan olay karşısında şaşırarak!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu bilimle açıklanabilir mi… suuu!?!? Bu mümkün olamaz! Ama söz konusu Aiho’ysa!!” Yoshikawa’nın bilime olan inancı, bu akıl almaz görüntü karşısında sarsılmıştı. Not düşmek gerekirse, kadınlar arasında, cihazla ilgili olmayan tek kişi Misaka Worst’tü. Accelerator uyurkenki pozisyonunu bozmadan konuşmaya başladı, “Katılmayacak mısın?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"İlgilenirdim normalde, tabii gerçekten işe yarıyor olsaydı.\""
+          },
+          {
+            "type": "heading",
+            "text": "Part 5"
+          },
+          {
+            "type": "paragraph",
+            "text": "10. Bölge, mezarlığın önü, Akademi Şehri. Hamazura, Takitsubo ve Kinuhata bomboş diyaloglarını sürdürürken, mezarlığın kapısı açılmıştı. Hamazura ve arkadaşları, Mugino’yu kendilerine doğru ilerlerken görmüşlerdi. Görünürde değişen bir şey yoktu. Ağladığına dair bir işaret, veya kızarmış gözler yoktu. Yine de, içeride gerçekten bir şeyler olmuştu. Her ne olduysa, Hamazura ve diğerlerinin öğrenmesini istemiyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bitti mi?” Hamazura’nın sorusunu, basit bir şekilde cevaplamıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bitti.” Aslında, hiçbir şey bitmemişti. Ama Mugino yine de “bitti’’ demekte kararlıydı. Sanırım sadece bazı şeylerden kaçınmak istiyordu. Not düşmek gerekirse."
+          },
+          {
+            "type": "paragraph",
+            "text": "Yine de, sükuneti sürdürmek pek mümkün durmuyordu, 10. Bölge, Akademi Şehri’nin en gelişmemiş yeriydi, bu yüzden de kötü güvenlik şartlarıyla tanınırdı. Çoğu şirket buraya yatırım yapmak veya mağaza açmak istemediği için, en sonunda mezarlığı kurmak için en elverişli yer olarak belirlenmişti. Hamazura Shiage-kun’un, üç genç kızla beraber dolaştığından, etrafta cirit atan serserilerin hedefi haline gelmesi işten bile değildi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Otobüs mü daha hızlı olur tren mi?” Tam Hamazura konuşmaya başlamışken, beş kişilik bir grup önlerini kesmişti. Eğer bizimkiler bir tür asker grubu olsaydı, bu serseriler kahraman birer dövüşçü gibi gözükebilirdi. Adamlarla yüzleşen tek kişi, Hamazura, büyük ihtimalle cesaretlerini kırmak veya olayların büyümemesini sağlamak için tehditkar bir bakışla karşılık vermişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Azcık dur bakalım, parlak oğlan. Şu anda iş üstündeyiz de, yardım edebilir misin acaba? İş derken, adam dövüp haraç kesmekten bahsediyoruz.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne söylersen söyle, ne kadar yalvarırsan yalvar, hatta istersen tüm paranı ver, seni yine de dayak manyağı yapacağız. Durumu şimdi daha iyi kavrıyor musun?” (Hay sokayım… Olay büyüyecek.) Serserilerin, ölümü pek de önemsemeyen gençlerden ibaret olduklarını düşünürsek, Hamazura bir süper kahraman falan değildi, ziyadesiyle de titremesine hakim olamamıştı. Hemen yanındaki adam özellikle tehlikeli gözüküyordu, hareketleri ve duruşu, bu işte profesyonel olduğunu kanıtlar nitelikteydi. Sokakta kurallar olmazdı ve Hamazura karşısındaki adamların, kafa göz girmek yerine bir bıçak veya silah kullanacaklarının da bariz farkındaydı. Bunu daha önce ilk elden tecrübe etmişti. Yine de. Diğer yandan, Hamazura oldukça rahatlamıştı. Bu serserilerin de aynı kendisi gibi kaba kuvvete ve silahlara güvenen birer suçlu haline gelmelerinin sebebi, hiç becerilerinin olmamasıydı. Yani, yer çekimini kontrol edebilen veya bir güreşçinin on katı kadar kuvvet uygulayabilen insanlar olmadıkları sürece, korkacak ne olabilirdi ki? Ayrıca, Takitsubo haricinde; Akademi Şehri’nin en korkunçlarından sayılabilecek Mugino ve Kinuhata onunlaydı. Mugino en güçlü 4. Seviye 5’ti, Kinuhata ise sniper mermisini bile engelleyebilecek Seviye 4 bir esperdi. O salaklar adeta bir tankla veya bombardıman uçağıyla karşı karşıyaydılar. Dünyanın en iyi dövüşçüsü, Judo ustası veya bir ayıboğan olsalar da, bu Kinuhata ve Mugino karşısında anlamsızdı. Bu nedenle."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Hey, neden konuşarak anlaşmıyoruz?” Hamazura, bariz bir şekilde kavga arayan serserilere karşı mülayim bir tavırla karşılık vermişti. Yani doğal olarak, çoktan sona ermiş olan “tehlikeli’’ adam günlerini yad etme zamanıydı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Beyler, bunu sizin iyiliğiniz için söylüyorum, yani pür dikkat dinleyin, aksi takdirde buradan canlı ayrılacağınızı garanti edemem… Bu dünyada, bulaşmaman gereken belli kişiler vardır. Ve şu anda o kişilerden birine sadece bir adım uzaktasınız. Tek bir adım daha, ve sonunuz gelir. Eğer bu kişiyi tanıdıysanız, çığlık atarak kaçmalısınız!” Her neyse. Her nedense, Mugino ve Kinuhata, suratlarında ilginç bir ifadeyle birbirlerine bakmışlardı."
+          },
+          {
+            "type": "image",
+            "src": "assets/light-novel/index-nt/ch_2_p12_0.jpg",
+            "width": 431,
+            "height": 599,
+            "aspect": 0.72
+          },
+          {
+            "type": "paragraph",
+            "text": "“Amanın, bu çok korkunç. Hamazura, kurtar beni.” Bu sözlerin arkasındaki anlam belirsizdi. Ardından, Mugino ve Kinuhata birdenbire Hamazura’nın kollarına yapışmışlardı. Neyin peşinde olduklarını fark eden Hamazura’nın tüyleri diken diken olmuştu. Nasıl olduysa, gerçek mi değil mi emin olmamalarına rağmen beş serseri ve Takitsubo az önce gerçekleşen olaya inanmış gibi gözüküyorlardı. Durumdan hoşnut olmayan spor ceketli kız, bir anda arkadan yaklaşarak Hamazura’nın boynuna sarılmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…İzinsiz dokunmayın. Hamazura benim.” Tam o anda... Hamazura Shiage, tepesi atan adamların halini görmüştü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“He-ha.” Bir süre sonra, ağzı şaşkınlıktan açık olan serseri, konuşmaya başlamıştı, \"Ulaaaan!! Amacın ne lan senin!? Sevgililerini sergileyerek nereye varmaya çalışıyorsun, şerefsiz evladı!?\" Adamın haykırırken çıkardığı ses fok balığını andırıyordu, fakat öfkeden patladığı oldukça belli oluyordu. Bir anda öne çıkan adam, Hamazura’yı bizzat dövmeye geliyor, ve yumruğunu suratına savuruyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Tam o anda, Hamazura’nın koluna kasten yapışmış olan Mugino, yavaşça(!) çekiştirerek Hamazura’yı yönlendirmeye çalışmıştı. Dirseğine saplanan acı yüzünden karşı koyamayan Hamazura, tıpkı açılan bir kapıymış gibi bedenini yana döndürmüştü. Bu sayede, doğruca surata gelen yumruk, hedefinden şaşmıştı. Omzuna çarpmıştı. Yumruk hedefinden şaşarken, adamın parmakları beklenmedik şekilde bükülmüştü."
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Aaaaaa! Acıdı ulan!!\""
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kya~ Hamazura çok~ havalısın~” Mugino ince, aptal kız sesiyle konuşurken, bir yandan da Hamazura’nın bileğini sertçe çektikten sonra, beline tekme atarak zavallı adamı serserilerin arasına yollamıştı. Bir yandan da Kinuhata, Hamazura’ya yapışmış olan Takitsubo’yu geri çekiyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“N-Ne…?” Hamazura daha neler olduğunu bile anlayamadan, serseriler çoktan harekete geçmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Demek işi ciddiye bindirmenin zamanı geldi, eeeeeeeehhhhhhhhhhhhhhhhhhhhhhhhhhhhh!!\""
+          },
+          {
+            "type": "paragraph",
+            "text": "\"O şeytani kadına dersini vermeliyiz, eeehhhhhhhhhhhhhhhhhhhhhhh!!\" Hamazura’nın tek bir çaresi vardı. Kaçmak. Hemen yanındaki saksılardan avuçladığı toprakları serserilerin üzerine atarak zaman kazanmaya çalışmıştı."
+          },
+          {
+            "type": "heading",
+            "text": "Part 6"
+          },
+          {
+            "type": "paragraph",
+            "text": "Duman çıkarmaya başlayan göğüs büyütme cihazına Yomikawa tarafından el koyulduktan sonra, Yoshikawa evinden bir çeşit kayıt cihazı getirmişti. Salondaki televizyonda başka bir program oynuyorken, Yomikawa, beklediği dizinin yayınlanma vaktinin geldiğini hatırlamış, ve kaydetmeye hazırlanmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Keşke iki kanalı aynı anda izlememizi sağlayan bir televizyon falan olsaydı.” diye mırıldanmıştı Yoshikawa. Televizyonda bir çeşit haber kanalı açıktı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Yirmi gün süren 3. Dünya Savaşı’nın sonlanmasıyla, çeşitli doğaüstü fenomenlere şahit olan insanların varlığı ortaya çıktı. Uzmanlar buna üçüncü savaş sendromu diyor. Bu, şiddetli savaşın etkileriyle ortaya çıkmış olup, kaynağının stres olduğu düşünülen bir çeşit kitlesel sıkıntı (Burada sıkıntı derken, bir çeşit hastalık veya halüsinasyon anlamında diyor.), ve bu fenomen, İngiliz politik krizi sırasında gerçekleşen “Anormal İngiliz Cadılar Bayramı Olayı’’ ile benzerlik gösteriyor. Bazı uzmanlar, en yakın zamanda cömertçe ödüllendirilmeleri gerektiğini savunuyor.” Accelerator etrafta savsaklık ediyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Kanepede uzanırken, bir anda yattığı alanın oldukça daraldığını fark etmişti. Etrafına bakındığında, Last Order’ın yanına sıkışmaya çalıştığını gördü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Ne yapıyorsun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka uyumak istiyor, der Misaka, net bir şekilde açıklama yaparak.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hey.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…” Bir numara (Güç sıralaması anlamında, Accelerator için bazı yerlerde böyle bahsediyor.), daha itiraz bile edemeden, küçük kızın çoktan uyuduğunu fark etmişti. Accelerator dilini şıklatırken başka bir ses duymuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Huzurunu geri kazanmak nasıl hissettiriyor?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Ne demek istiyorsun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hiçbir şey.” Dese de, oldukça imalı bir ses tonu vardı. Eskiden Akademi Şehri’nde, “karanlık’’ denilen bir şey vardı. Muazzam bir güce sahipti, fakat bir kere buna karışan kişilerin topluma tekrar adapte olabilmesi imkansız hale geliyordu. Bazı zamanlar kendi hayatları için arkadaşlarını bile satmaya hazır oluyorlar, istihbarat, bilgi, kendi statülerini teklif ediyor ve hatta çeşitli “işler’’de görev alıyorlardı… Bu tür bir dünyaydı. Accelerator da bunun bir parçasıydı. Fakat bu sistemi yok eden de, Accelerator’dan başkası değildi. Tsuchimikado Motoharu. Musujime Awaki. Unabara Mitsuki… Ya da, ismi her neyse. Accelerator, bu sıkıcı barışı yaratmasına yardımcı olanların seslerini duyar gibi olmuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Bunun yanı sıra, doğaüstü bir fenomen olup olmadığı kesin olmamakla beraber, dünyanın her köşesinden şehirlerde büyük altın halkalar ve kemik benzeri şeylerin bulunduğu kanıtlandı- hayır, aslında tamamen altın olarak tanımlamak daha doğru olur. Birleşmiş Milletler, bu bulunan parçalardan birini Pasifik Okyanusu’nda oksijen eksikliği çeken bir alana bıraktı, ve bu işlemin sonunda, o bölgedeki oksijenin yenilendiği, hatta deniz ürünlerinin ve balıkların tekrar canlanmaya başladığı gözlemlendi, Ben ise, onları araştırmadan, bu tarz kullanmanın başka yolları olduğunu da düşünmekteyim…” GROUP, o karanlıkta çalışan dörtlü ekip, şu an durumları neydi? Accelerator’ın bu konuda çok net olduğu söylenemezdi, ama yine de bu yozlaşmış şehirde “kararlılıklarını’’ korumak için çok çalışmaları gerekiyordu. Yine de, eksik bir şeyler vardı. Bir şeyler eksikmiş gibi hissediyordu. Savaştan sonra, Accelerator, karanlık tarafla olan bağını tamamen koparmıştı, bu yüzden de artık önemli istihbaratlardan mahrum kalıyordu. Tabii ki hala neler döndüğü hakkında ufaktan duyum alıyordu ama, hiçbir şekilde o karanlığa tekrar karışmak istemiyordu. Bu sebepten dolayı da, diğerlerinin ne durumda olduğunu bilmiyordu, tabii bunun iyi bir şey mi kötü bir şey mi olduğuna daha karar verememişti. Savaşta yer almış kişilerden hangileri kurtulabilmişti?"
+          },
+          {
+            "type": "paragraph",
+            "text": "Savaşın en şiddetli yerinde bulunan “o adam’’ evine tek parça dönebilmiş miydi?"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Akademi Şehri’nin zaiyatı sıfır olarak açıklandı, ama yine de çoğu teknolojisi ve askeri bilgileri açığa çıktı. Bu yönden, Akademi Şehri’nin izole ve gizli kalma çabasına darbe vurulmuştu…” Sadece boş sözlerin sarf edildiği haberleri izlemenin bir anlamı yoktu. Ama o zaman, güvenilir kim vardı ki?"
+          },
+          {
+            "type": "heading",
+            "text": "Part 7"
+          },
+          {
+            "type": "paragraph",
+            "text": "Önceden, en güçlü 3. Seviye 5 olan Misaka Mikoto’nun hücreleri kullanılarak yapılan bir klonlama projesi vardı. Sonuca bakmak gerekirse, başarısızlıktan ibaretti. Zaten çok geçmeden iptal edilmişti. Bununla birlikte, klonlama teknolojisi başka bir proje için kullanılmıştı, sürüsüyle klon üretmekte. The Sisters. Last Order, hala yaşamakta olan yaklaşık on bin klonun komutanıydı, Misaka Worst ise farklı bir kapsamda olan Üçüncü Seri projesinin ürünüydü. Elektronik dalgalarla birbirine bağlanmış on bin beynin oluşturduğu o müthiş beyin, Misaka Network. Ağ, bütün Misaka’ların bilgilerini birbirine aktarmakta ve onun dışında “belirli bir amaç’’ için kullanılıyordu. Bir yanda “insan kontrol kumandası’’ olarak yaratılmış Last Order, diğer tarafta da “belirli bir amaç’’ için beynine “şeytani düşünce ve hisler’’ yerleştirilmiş olan Misaka Worst. Böylece…"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Alışverişe gidecek misin?” Kanepede yatmakta olan Accelerator, şaşkınlık içinde kafasını çevirmişti. Spor ceketi giyen bayan öğretmen Yomikawa ise başını sallamıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Savaş alanından veya her nereden dönmüş olursan ol; dönmüş olduğun sürece, bu toplumun bir parçası, yani bir insan olarak davranmaya başlaman gerekiyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yani can sıkıcı şeyler mi yapmalıyım?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha?” Bir anlığına şaşıran Yomikawa, hemen ardından konuşmaya devam etmişti. “Bu toplumda en acı şey, birilerine yardım edemiyor olmak veya kimsenin sana ihtiyacı olmaması, değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Çıh!” Diyecek bir şeyi olmayan Accelerator, yattığı yerden kalkmıştı. “Hep karmaşık bir psikolojik açıklamayla cevap vermek zorundasın değil mi? Lanet öğretmen!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Tabii ki hayır, yaşam koçluğu yapmaya niyetim yok. Olayın özü şu ki, karşımıza çıkan her sorunu bu demir yumruğumla çözeceğim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ee, ne almam gerekiyor?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yemek. Listede kırmızıyla altını çizdiklerimi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Yine böyle bir iş veriyorsun. Cidden bunu yapmak hiç benim tarzım değil.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“O zaman, çok çalış ve alışmak için çabala.” Yomikawa tarafından azarlanan Accelerator gönülsüzce koltuk değneğine uzanmış ve ayağa kalkmıştı. Hareketlilik yüzünden, Misaka Worst ile oynadığı uzay gemisi oyunundan dolayı sinirleri bozulmuş ve uyumuş olan Last Order, gözlerini açmış, yüzünü Accelerator’a çevirmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka gelmek istiyor!! Misaka gelmek istiyor!! Diye bağırır Misaka, senin tek başına beceremeyeceğini düşünüp, yardımcın olmayı talep ederek!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Çok gürültü yapıyorsun!! Ayrıca gelecek hakkında saçma tahminlerde bulunmayı kes!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "\"Misaka gelmek istiyor, Misaka gelmek istiyor\" diye bağıran Last Order bir yana, Misaka Worst neden olduğu bilinmez, ergence tavırlar sergiliyordu. Aslında o kız için, bilgisayarda savaşmaktan farklı bir savaş daha vardı. Gerçek bir savaş. Daha önce, Misaka Worst’ün beynine, “belirli bir amaç’’ için kötü niyetli duygular ve hisler yerleştirilmiş olduğundan bahsetmiştik. Ve bu duygular sadece öfke ve nefret olarak dışa vurulmuyordu. Kıskançlık da dahildi. Sürekli Accelerator’la rahatça konuşabilen Yomikawa’yı kıskanıyordu. O da onun gibi iyi anlaşmak istiyordu. Last Order’ın düşünceleri tüm Misaka’lara iletilirdi. Lakin belirli bir sebepten dolayı, bu sefer Misaka Worst de bundan etkilenmişti. Normalde Last Order’dan emir almıyor olan Misaka Worst, bu sefer kaçınılmaz bir şekilde etkilenmişti. Bir sebepten... (…Uvaah!? Gelmek istiyorum. Alışverişe gelmek istiyorum!! Sıçayım, Accelerator umurumda değil, ama ağ, ağ dayanılmaz bir duygusal dalga boyu gönderiyor, Uuvvvvaaahhhhhhhhhhhhhh Hayır, hayır, hayır, hayır, olmaz, olmaz, olmaz—!!) Misaka Worst, içinde kabaran bu hislere karşı direnmeye çalışsa da, karşı koyamıyordu. Bunun sebebi, kontrol edemiyor olmasından ve yapısından dolayı ortaya çıkan kötücül hislerdi. Kısa devre yapmış Misaka Worst, Accelerator’ın pantolonuna tutunmakta olan Last Order’a fırlayarak, kızı kenara itmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka, Misaka da! Misaka da beraber alışverişe gitmek istiyor!!” Birkaç dakika sonra. Yomikawa’dan para aldıktan sonra yola çıkan Accelerator, gayet basit bir soru yöneltmişti:"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Az önce ne yapıyordun lan sen?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Bunu Misaka da bilmiyor…”"
+          },
+          {
+            "type": "image",
+            "src": "assets/light-novel/index-nt/ch_2_p17_0.jpg",
+            "width": 412,
+            "height": 600,
+            "aspect": 0.69
+          },
+          {
+            "type": "heading",
+            "text": "Part 8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Serserilerden kaçan Hamazura, etrafta rastgele koşturuyordu. Hedefe ve duruma göre değişkenlik gösterse de, yayan şekilde kaçmanın püf noktası, sürekli farklı yollara ve sokaklara sapmaktı. Eğer bisiklet veya araba kullanmıyorlarsa, tek bir yol seçme imkanları vardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "Daha da önemlisi, eğer Anti-Skill gibi birinden kaçıyorsanız, tenha yerleri tercih etmek daha mantıklı olurdu. Ama konu serseriler olunca, kalabalık yerleri seçmek gerekirdi. Kabalık ortamları seçmenin diğer önemli yanı ise görüş menzili ve kovalayanları durdurabilecek yollar bulmak için daha fazla fırsatın olmasıydı. Bu göz önüne alınırsa, düz bir rota izleyerek koşmaktan kaçınılmalıydı. Ufacık bir dönemeç bile olsa farklı yönler izlemek, kovalayan adamların seni gözden kaybetmesine yol açardı. Bu yöntemler, kovalayanları savuşturmakta oldukça etkiliydi, fakat tek bir sorun vardı. (…Sokayım! 10. Bölge’yi bilmiyorum ki! Şu an kuzeye mi gidiyorum!?) Bilmediğiniz yerlerde rastgele koşuşturduğunuzda, kaybolma riskiniz artıyordu. Kaçmaya çalışıyor olsa da, çember çizdiğini fark etmeyip, bir anda kovalayanların önüne çıkma ihtimali vardı. Bundan kaçınmak için de belirlediği bir yolda ilerleyip, azami dönüşler yaparak kaçmaya devam edecekti. Aynı yöne koşarken bu taktiği uygulamak etkili olacaktır diye düşündü. Mentalitesi sağlam biri olarak düşünürsek, Hamazura için, son hızda koşmaya devam ederken zihnini çalıştırmak pek zor gelmiyor olmalıydı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha!! Ha!! ...Ulan, Mugino, Kinuhata… Bunu soracağım ama onlara. Şu kızlar! Hele bir kurtulayım yüz kez kıçlarına şaplak atacağım. Ve eğer Takitsubo’ya bunu üstünde kıyafetleri yokken yapsam, oldukça güzel olurdu.” Son hızda koşarken, bacakları acımaya ve nefesi kesilmeye başlamıştı. Durdu ve etrafına bakındı. Kovalayan adamları göremiyordu. Hemen yakınındaki tabelayı gördü, 7. Bölge yazıyordu. Görünüşe göre 10. Bölge’den çıkmayı başarmıştı. Bir anlığına, sadece bir saniyeliğine, Hamazura, Mugino ve diğerlerini düşünmüştü fakat endişesi anında dağılmıştı. Serseriler bunca zaman onu kovalıyordu, ki zaten diğerlerine bulaşmaya kalksalar, Seviye 5 ve Seviye 4 birleşimi onlar için son olurdu. (İyiyim diye mesaj atmalı mıyım ki?) Hamazura, övülmeye değer kaçışı konusunda derin düşüncelere dalmıştı. (Yok, hayır, eğer iyi olduğumu söylersem yine saçma sapan bir şey yaparlar. Ölmek üzereymişim gibi davransam daha iyi…) Hamazura, yanlışlıkla birine çarpmıştı. Ortaokullu gibi gözüken, kısa kahverengi saçlı bir kızdı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“P-Pardon.” Hamazura hafifçe eğilerek özür diledi, fakat kız cevap vermemişti. İnanılmaz bir hızla, kız kalabalığın içinde ortadan kaybolmuştu. (…Bu neydi şimdi? Tokiwadai Ortaokulu üniforması giyiyordu değil mi…?) Hamazura kızın gözden kaybolduğu yöne doğru bakıyordu. (Önemli bir işi olmalı… Neyse, boş ver.) Bir anlığına endişelenmiş olsa da, ona yardım edemeyeceği barizdi.."
+          },
+          {
+            "type": "image",
+            "src": "assets/light-novel/index-nt/ch_2_p19_0.jpg",
+            "width": 2500,
+            "height": 1323,
+            "aspect": 1.89
+          },
+          {
+            "type": "image",
+            "src": "assets/light-novel/index-nt/ch_2_p19_1.jpg",
+            "width": 2500,
+            "height": 1317,
+            "aspect": 1.9
+          },
+          {
+            "type": "paragraph",
+            "text": "Mesaj gönderip göndermemek üzerine düşündükten sonra, telefonunu cebine geri atmıştı. Susuzluğunu dindirebilecek soğuk bir içecek almak için etrafa bakınıyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hey, Hamazura. N’aber?” Arkasından biri seslenmişti. Derin bir nefes alarak arkasına döndü. Tanıdık bir yüzdü bu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Hanzou?”"
+          }
+        ]
+      },
+      {
+        "chapter_num": 3,
+        "short_title": "Bölüm 2",
+        "title": "Bölüm 2: İleride Ne Var, Ne Seçilmeli -- Rüya.",
+        "content": [
+          {
+            "type": "heading",
+            "text": "Part 1"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hamazura ve Hanzou, fiyatlar dışında her şeyin berbat olduğu lokantaya girmişlerdi. Köşedeki masalardan birine oturduktan sonra Hanzou, yığınla meze sipariş etmişti. Hemen ardından da tahmin edilebileceği üzere birkaç bardak bira. Hamazura, Komaba ve Hanzou, hala birer Skill-Out üyesiyken, bu lokantaya sıkça uğrarlardı. Lokantanın köşesine ufak bir televizyon yerleştirilmişti. Hamazura’nın, katoliklerin başı olan papalık makamının Matthai Reese’den, Pietro Yogdis’e devredilmesiyle yeniden yapılanmaya giren Roma Katolik Kilisesi’nde neler olduğuna dair konuşulan bir tartışma programına gözü takılmıştı. Hanzou konuşmaya başladı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sen bir şey sipariş etmeyecek misin, Hamazura?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Aslında, daha yeni yedim,” diye cevap veren Hamazura, sadece birkaç şiş yakitori söylemekle yetinmişti. “…Her zaman japon yemeği sipariş ediyorsun. Ne tarz bir restoranda olduğun senin için fark etmiyor değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Öyle mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yakiniku restoranında bile balık sipariş eden adamsın sen.” Yemekler gelince, Hanzou bir süreliğine tıkınmakla meşgul olmuştu. Sanırım daha öğle yemeği yememişti. Hamazura, tavuk parçalarını şişten çıkarıp, derilerini dikkatlice soyarak tek tek yemeğe başlamıştı. Hanzou hayvan gibi tıkınırken, Hamazura şaşkın gözlerle adama bakmaya başlamıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne o? Günlerdir yemek yemedin mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eh, son zamanlarda o kadar meşguldüm ki yemek yemeğe bile vakit ayıramadım. Vaktim olmadığından da her öğün jöle ve kurutulmuş et yemekten gına geldi. Bayağıdır böyle oturup düzgünce yemek yiyememiştim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hey, bayağıdır sana ulaşamıyorum, Hamazura. Nerelerdeydin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ben… Savaştan dönen, saltanatı sona ermiş bir imparatorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne?” Bu sefer şaşkın gözlerle bakma sırası Hanzou’daydı. Akabinde, Hamazura ve Hanzou, gördükleri ve duydukları şeyler hakkında konuşmaya başlamışlardı. Hikayelerden bir tanesi, pachinko makinesine sinirlenen bir müşterinin, makinenin üstünden kamyonla geçmesiyle ilgiliydi. Diğeri ise, ATM’lerin sıkılaşan güvenlik önlemleriyle ilgiliydi, son zamanlarda güvenlik o kadar artmıştı ki, hırsızlar artık bankaları değil yiyecek otomatlarını hedef almaya başlamıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hee, demek kız arkadaş buldun, Hamazura.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şey, evet. …Ama şöyle ki, bu konu hakkında endişelerim var.” dedi Hamazura, tavuk parçalarından arta kalan derileri şişlerken. “Sen de bilirsin, zarar vermek neyse de, korumak konusunda pek iyi değilim ve ben bu ilişkinin birkaç ayda biten türden bir şey olmasını istemiyorum. Bu yüzden de, verdiğim her kararın sonucunu uzun vadeli düşünmeliyim”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Para sıkıntısı mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Kilit açma yeteneğimi değerlendirmeyi düşünüyorum aslında. Araçlardan bir şeyler çalmak için değil tabi, daha çok, anahtarını arabasında unutanlar falan için bir yol yardım servisi gibi"
+          },
+          {
+            "type": "paragraph",
+            "text": "çalışırım, ya da öyle bir şey. Eğer hırsızlık becerilerimi bu yönde geliştirirsem, insanları korumak için de kullanabilirim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Öyle bir şeyler, ha ha,” Hamazura, kendi dediklerinden utanarak tebessüm etmişti. Ardından, cebinden mini rehber tarzı ufak bir kitap çıkarıp masaya koymuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Becerilerimi, meslek icra edecek düzeyde geliştirmenin kolay olmadığını biliyorum. Güvenlik konuları hakkında bilgi veren bir kitapçık okudum, fakat yine de elektronik kilitler hakkında zerre bilgim yok.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Yani, en azından hangi alana ilgi duyduğunu biliyorsun değil mi? Sanata mı yoksa bilime mi yönelmek istediğini düşünmek gibi, sen de ilgi duyduğun bir alana yönelmelisin. Sonuçta, ilgili olduğun sürece gösterdiğin çaba boşa gitmez. Kendine kattığın her tecrübe, seni yükseltecektir.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“O kadar emin değilim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sen ki, iki dakikalık zaman zarfında, ATM’den ihtiyacımız olan cihazı salaklamış adamsın. Demem o ki, ‘’kilit’’ yolunda ilerlemek tam senlik.” Tam o anda telefon çalmıştı. Hanzou telefonu cebinden çıkarıp kimin aradığına baktı, hemen ardından da cebine geri koydu.. Hesabı aldı ve ayaklandı. Hamazura şaşırmış gözüküyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“N’oldu?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Para kazanma fırsatı,” Hanzou, acı bir gülümsemeyle bakmıştı. “Ama, az önce bahsettiğin"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’zarar verme’’ kısmına dahil. Bu yolla kimseyi koruyamazsın. Senlik bir şey yok.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Anlıyorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Neyse, gitmem gerekiyor. Görüşürüz, Hamazura”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hey, kendi hesabımı kendim öderim”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Az önce para kazanma fırsatından bahsetmedim mi? Bu seferki benden.” Sözünü bitiren Hanzou, arkasını döndü ve hesabı ödemeye gitti. Hamazura, davet edilmediği için biraz kötü hissetmişti, fakat…"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Ha? Kasiyer burada değil. O zaman tüyebilirim!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Lan şerefsiz! Benim üzerime mi yıkmaya çalışıyorsun?!!” Sonrasında, Worcestershire sosundan yudumlar alırken, düşüncelerine gömülmüştü."
+          },
+          {
+            "type": "heading",
+            "text": "Part 2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Akşam yemeği için manav alışverişi yapmaya, markete gitmişlerdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…” Accelerator ve Misaka Worst, modası geçmiş bir pop müzik dinlerken, aralarından biri sorgulamıştı,"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne bokuma bunu seçmişler ki?” Normalde sahada olması gerekirken, bir sebepten dolayı kendini karşı takımın tribününe yakın olan yedek banklarında otururken bulan, hayal kırıklığı içerisindeki bir oyuncu gibi hissediyorlardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu, seni ve Misaka’yı etraftaki normal insanlara ‘’bakın ne kadar çarpık kişileriz’’ diye gösterme planın mı?” diye sordu Misaka, bir oraya bir buraya kayan alışveriş arabasını tek eliyle sürerken.\" Accelerator, sinirlerinin bozulduğunu belli eden bir ses tonuyla konuşmuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Bizi, huzurlu bir yaşama alıştırmaya çalışıyorlar.” Saçma bir fikir gibi görünüyordu belki, fakat savaştan dönmüş insanlar için bu oldukça önemliydi. Eğer, savaşın bıraktığı rahatsız edici etkiden kurtulamayıp, eski huzurlu günlere tekrar alışamazlarsa, toplumdan soyutlanmış, savaş dışında herhangi bir şey düşünemeyen insanlar haline gelirlerdi. Tabii, Accelerator ve Misaka Worst, insanlığın yarattığı şeytani varlıkların başını çekiyorlardı. Kan dökmeyi ve süregelen toplumsal kuralları yıkmayı gerekli, hatta tek yaşam biçimi olarak gören, o pis çamurla daha önce kaplanmışlardı. Yaşadıkları tecrübeler, güçlenmelerini sağlamıştı tabii, fakat aynı zamanda huzura olan yakınlıklarını da azaltmıştı. Canavarlar. Korkunun özü. Öldürmedikleri zaman boş hissedenler. Eğer, onlardan biri haline gelmek istemiyorlarsa, bu tür tatsız durumları yaşamak zorundalardı. Ve bu tarz durumların artık normal geldiği bir noktaya ulaşmaları gerekiyordu. (Normal insanlar gibi yaşamaya alışmaktan bahsediyor.) Ama…"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hey, hey, Örnek Öğrenci bey.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kes.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“O indirim kataloğu önemli değil. Çalarsan beleştir.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Yumruk mu istiyorsun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Niye? Neyse. İnsanların raflardan bir şeyler çalması konusunda oldukça tedbirli davranıyorlar, peki ya istediğimiz şeyi yiyip, paketini rafa geri koyarsak, bunun üzerine pek düşünmemişler sanki he?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ciğersizin tekisin, değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Aslında, insanların hala bir şeyler almak için sıraya girip, para bayıldıklarına inanamıyorum. Her şeyi kolay ve ucuz şekilde elde etmek, ‘’iş’’ mantığının temeli değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eğer ödemiyorsan, ‘’iş’’ olmaktan çıkıyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Aha! Ya şey yapsak… Şu eşantiyonlardan yiyip, zehirlenmiş gibi yapsak?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Öyle bir şey yaparsan seni canlı canlı gömerim.” Azarlarken, Accelerator’ın suratına tuhaf bir ifade yerleşmişti. (…Nasıl böyle sağduyulu hale geldim lan ben?) Böyle davranmak pek onluk bir şeymiş gibi durmuyordu, ama aynı zamanda, ona uyuyordu da. Birini, sağduyulu davranmak konusunda azarlamak, şöyle bir düşününce cidden onluk bir şey değildi. Yine de, sağduyudan yoksun olmanın pek de övünülecek bir şey olmadığında karar kılmıştı."
+          },
+          {
+            "type": "heading",
+            "text": "Part 3"
+          },
+          {
+            "type": "paragraph",
+            "text": "Lokantadan ayrıldıktan sonra, Hamazura cebindeki telefonun titreştiğini hissetti. Telefonunu çıkardı ve “Takitsubo Rikou” yazan ekrana baktı. Buna rağmen, telefonu açıp kulağına koyduğunda duyduğu ses Takitsubo’ya ait değildi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazuraaa! Sadece gereksiz işler yapabilen birine göre süper geç kaldın! Nereye süper kaçtın sen!?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eh, kim takar; O serserileri dayak manyağı yaparken sıkıntımı biraz unuturum diye düşünüyordum, fakat hepsi senin peşinden gitti. Ve hala dönmediğin için, bu saatten sonra dönmeye kalksan bile sen gelene kadar akşam olur, bu yüzden biz seni almaya geliyoruz” diye ekledi, Mugino."
+          },
+          {
+            "type": "paragraph",
+            "text": "“A-Anlıyorum. Şey, ben—”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hayır, hayır,” Mugino sözünü kesmişti. “Canım sıkılıyor, bu yüzden bu vaziyeti, ‘’Hamazura’yı Bulma’’ oyunu haline getirdim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kinuhata’nın, benim ve Takitsubo’nun seni aradığı, son bulanın ise ceza alacağı bir oyun. Bakalım, ceza ise…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kaybeden süper tavşan kostümü giysin, nasıl?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha!!!???” Hamazura tepki göstermişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazura, son zamanlarda oldukça depresifsin, bu da Takitsubo-san’ın neden hala seninle takıldığını merak etmeme sebep oluyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Merak etme. Hamazura’nın iyi yönleri derinlerde saklı…” (Ha!? Tavşan kostümü kısmını es mi geçti!?) Tehlikeyi sezen Hamazura, merak etse de, detayları sormamıştı. İçinden, daha sonra bu konuyu onunla baş başa konuşacağına dair yemin etmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Tamamdır, süper Hamazura Arama etkinliği başlıyor. Hazır, başla!” Tık sesiyle, telefon kapanmıştı. Hamazura kendini, telefonun ufak ekranıyla bakışıyor halde bulmuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Hanzou’yla aynı yoldan ilerleyemezdi. Skill-Out’a da geri dönemezdi. 3. Dünya Savaşı’nın üstesinden gelse de, hala, basit serserilere karşı, kaçmaktan başka bir şey yapamayan eziğin tekiydi. Tanıdıkları haricinde tabii. Mugino, Kinuhata ve Takitsubo’yla. Frenda şu an aralarında olmayabilirdi belki, ama yine de Item olarak birbirlerine tekrar bağlanmışlardı. Kaybolduğunda onu aramaya gelecek, merak edecek insanlar vardı. Bu öyle çok büyütülecek bir şey olmasa da, Hamazura’nın kalbindeki boşluğu doldurmaya yetiyordu. Her şeyin tekrar farkında vardı. (…Bu şekilde kaçmaya devam edemem.) Huzurlu dünyadaki mücadeleler, kaba kuvvetle kazanılamazdı. Ve zaferi, başkasından zorla alamazdı. Onun yerine, değer verdiği şeyleri koruyabilecek biri haline gelmeliydi. Bu, her şeyin çaresi buydu. Tüm bu derin düşüncelere dalmışken, aklına başka bir şey gelmişti. (…Ha? Takitsubolar beni aramaya geleceklerini söylediler söylemesine de, benim ne yapmam gerekiyor?) Etrafta istediği şekilde gezebilir miydi? Yoksa olduğu yerde mi beklemesi gerekiyordu? Oyun, herhangi bir kural açıklaması olmaksızın başlamıştı. Hamazura ileri gidemezsin, geriye de gidemezsin, boktan bir sanat eseri gibi olduğun yerde dikilmen gerekiyor, tarzı bir kural."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha?” Biri, “Hamazura” adlı bu mahçup sanat eserine seslenmişti. Kız sesiydi. Arkasını döndüğünde gördüğü şey…betimlemesi zor bir kızdı. Gereksiz biçimde kısa bir mini-yukata(?) giyiyordu, kahverengi saçlı, yoğun makyajlı, her yerinde takısı olan bir kızdı. Yaşlı bir köylüye, şehirli bir liseli kızı betimlemesini istediğinde ortaya çıkacak hisle benzeşiyordu. Onu tanıyordu. Gerçek adını bilmiyordu, ama takma adı Kuruwa’ydı. Kız, Hamazura’ya yaklaşırken, omzundan bacağına kadar her yerine sarılı olan zincir şakırdıyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ah, Hamazura-shi. Burada ne arıyorsun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Saltanatı sona ermiş imparatorun sınırtaşıyım”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“?” Güzel bir gönderme yapmıştı, fakat açıklamak yerine ufak bir tebessümle yetinmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne yapıyorsun, Kuruwa-chan? Hanzou’yu mu arıyorsun?” Hamazura’nın bildiği kadarıyla, Kuruwa, ninja olaylarına oldukça takıntılıydı ve bu yüzden Hanzou’yu çeşitli yollarla takip edeceğini düşünmüştü. Konuyla alakası olmasa da, eskisinden daha nazik konuşan kız, kendine çeki düzen vermiş gibi gözüküyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yok, hayır. Hanzou-sama oldukça meşgul gözüküyordu, o yüzden başka bir şey yapıyorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Cidden mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Aynen. Eğer Hanzou-sama’nın peşinde olsaydım, bildiğin her şeyi anlatman için seni baştan çıkarırdım, Hamazura-shi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Baştan…çıkarmak….?” Normalde bu, duymaktan memnuniyet duyacağı bir şey olurdu, ama onun yerine nefesi kesilmişti, zira daha önce Kuruwa’nın ‘’baştan çıkarıcı’’ tekniklerine karşı gafil avlanmıştı. (Kuruwa’dan bunu duymak, tehlikenin habercisi,) diye aklından geçirdi Hamazura, bu sefer hazırlıklıydı. Kuruwa, Hamazura’nın yüzündeki bakıştan rahatsız olmuş olmalıydı ki, alınmış gibi gözükerek elini kimonosunun kuşağına yerleştirmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Pek inandırıcı gelmedi herhalde. Belki de ufaktan göstermeliyim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“D-Dur!! Sakın çıkarma!! Giysilerin üstünde kalsın!! ‘’Baştan çıkarıcı’’ teknikleri boş yere kullanmak, bu hiç hoş olmaz!!” Kuruwa, Hamazura’nın tedirginliğini görünce elini kuşağından çekmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hanzou-sama’yla birlikte olmak istediğim doğru, fakat yoluna çıkmak da istemiyorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eh, evet. Yapması gereken bir şey olduğunu söyledi. O kadar meşgulüm ki yemek yiyecek vakit bile bulamıyorum dedi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hanzou-sama mı dedi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Az önce şu lokantadaydık. Her zamanki gibi, sadece ucuz japon yemeklerinden sipariş etti.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yani, Çin restoranında bile kızarmış sebze söyleyebilecek bir adam sonuçta .”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ya da Yakiniku restoranında balık.” İkili, akıllarında canlanan Hanzou görüntüsüyle kahkaha atmışlardı. İkisi de aynı hisleri paylaşıyor olmalıydı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ee, Hanzou-sama neyle meşgul olduğundan bahsetti mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Birazcık. Para kazanma fırsatı olduğunu söyledi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hmm. Bunun, üzerinde çalıştığım olayla pek ilgisi yok.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne üzerinde çalışıyorsun, Kuruwa-chan?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ah, Hanzou-sama’nın karıştığı, ve benim de maydanoz olduğum bir olay. Ama, bu iş hala bitmemişken, başka bir işe mi karıştı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şey, zaten birazını duydun. O yüzden tamamını da anlatabilirim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Neden bahsediyorsun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eh, şey, şu olay işte...”"
+          },
+          {
+            "type": "heading",
+            "text": "Part 4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Accelerator ve Misaka Worst, indirim kataloğundan seçerek aldıkları eşyaları arabaya atıyorlardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Furikake, nori tsukudani, şu ufak balıklardan, mentaiko, ve umeboshi…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka şu ana kadar sadece sentetik yiyeceklerle beslendiğinden yorum yapma hakkına sahip olmayabilir fakat, bu kadarı da fazla değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kolaya kaçmaya çalışıyor. Donmuş yiyeceklerden daha iyi olduğu kesin.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka donmuş yiyeceklerin bile lüx olduğunu düşünüyor.” Ardından, Misaka Worst’ün boş sohbeti yarıda kesilmişti. Accelerator listede olmayan bir ürüne bakmak için durmuştu. Hediyeli, şişelenmiş furikake’nin kapağına iliştirilmiş oyuncak maskota bakıyordu. Eğer Accelerator, o oyuncağı kendisi için istiyor olsaydı, bu gerçekten kahkaha atmak için iyi bir fırsat olurdu, ama Misaka Worst bu seferlik gülünecek bir şey bulamamıştı. Yine de, bu onu muzip bir gülümseme takınmaktan alı koymadı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Küçük tavuk maskotu, biraz klişe… Bayım, bu Last Order için bir hediye mi yoksa?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“O veledin zevkleri fazla sıradan.” diye söylendi Accelerator, furikake şişesini sallarken."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Misaka Ağı’nın bir parçası olduğundan sen de onun düşüncelerinden etkileniyorsun, değil mi? Yani zevkleriniz benziyor olmalı, doğru mudur?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Tabii Misaka’nın ağdan nasibini aldığı doğru, fakat sadece kötü duygular içeren karanlık kısmından. Misaka ona masum küçük kız muamelesi yapmamanı tercih eder”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka daha çok, seni yerde süründürmek tarzı bir amaca yönelik ayarlandı. Misaka da bunu Rusya’da en acı şekilde zaten tecrübe ettiğini düşünüyor. Yani Misaka’nın öyle saçma maskotlara ilgisi olm—” Accelerator şişeyi hafifçe yana sallarken, Misaka Worst, gözlerini şişeye dikmişti. Şişeyi tekrar yana salladığında, ao-dai kıyafetli kızın bakışları yine şişeyi takip etmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Maskottan gözünü alamıyorsun, değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Khğ!!” Misaka Worst dehşete düşmüş bir yüz ifadesi takınmıştı. “…M-Misaka ona Last Order’a baktığın gibi bakıp, bedeni ve zihni arasındaki dengesizlikle dalga geçmek istediğine inanamıyor…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Teknik olarak, küçük kardeş olan sensin”"
+          },
+          {
+            "type": "heading",
+            "text": "Part 5"
+          },
+          {
+            "type": "paragraph",
+            "text": "Accelerator ve Misaka Worst, alışverişlerini yapıp marketten ayrılmışlardı. Listede yazılı olmayan tek bir ürün almışlardı, o da furikake’ydi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ahh, Misaka hiç beklemediği bir şeyle karşılaştı. Huzur dolu günler, Misaka’nın tahmin ettiğinden daha yorucu.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "Accelerator, Misaka Worst’ün söylediklerine gülüp geçememişti. Böylesi gerçekten iyi miydi? Basit bir market alışverişi bile onu bu kadar strese sokuyorken, bu yaşama gerçekten alışabilir miydi? Bu rahatlık dolu huzurun ona göre bir şey olmadığını kabul etmek kolaydı. Bir zamanlar, bu düşünceyle yaşamayı kafasında yüceltmişti, sanki havalı bir şeymiş gibi. Peki ya, sonrasında ne yapmalıydı? Ya arkasını dönmüş olduğu bu yolda, onu daha parlak bir gelecek bekliyorsa? Eğer, öldürmekten başka bir şey bilmeyen o canavar olmayı istiyorsa, arkasını dönmüş olduğu yolda ilerlemesi gerekiyordu. Ama Accelerator’ın istediği bu değildi. Ve bu huzura alışmadığı sürece, istediği şeyden uzaklaşması işten bile değildi. Bunu gerçekten yapabilir miydi? (…Şu an ne yapıyor acaba?) Aklına, o seviye 0 çocuk gelmişti birden. Akademi Şehri’nin en güçlüsü unvanını elinde tutan Accelerator’ın mücadele ettiğinden bile daha büyük bir karanlıkla mücadele eden o çocuk. Ve tabii ki, onun da bir evi vardı. Geri dönebilmiş miydi? Tekrar uyum sağlayabilmiş miydi? Eğer, sürekli savaş ve barış arasında geçiş yapan biriyse, karanlıkta sıkışıp kalan Accelerator’dan daha müthiş biri olduğu söylenebilirdi. Bir anlığına, Accelerator yorgunluğuna yenik düşmüştü, fakat Misaka Worst, kolundan çekiştirerek kendine getirmişti. Accelerator, şaşkın gözlerle bakmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hadi gidip tatlı bir şeyler alalım, dönüş yolunda yeriz. Misaka bunun kötü bir şey olduğunu duymuştu.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Cidden, her fırsatta kötü bir şeyler yapmaya odaklanıyorsun, değil mi?” Yani, tüm Misaka Ağı’ndan negatif duyguları kendine çektiğinden, büyük ihtimalle Last Order’ın muzurlukları da o kötücül duyguların arasına karışıyordu. Ve nihayetinde, Misaka Worst’ün ısrarı sonucunda aslında, seyyar bir tüccardan dondurma almışlardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka dondurmayı yalarken, dilini tahrik edici biçimde mi kullanmalı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kimi tahrik etmeyi planlıyorsun? Kendini mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yani, o da var. Eğer Last Order’la ilişkine zarar verecekse, Misaka göğüslerine ve kalçasına dokunmana izin verebilirdi, ama bunu şu an yapmak oldukça mantıksız .”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“İstediğin boku söyle, zaten dinlemiyorum.” diye cevapladı Accelerator, bıkkın gözüküyordu. Elinde dondurmasıyla kalabalığı izlerken, gördüğü şey karşısında bir anlığına duraksamıştı. Gümüş saçlı, rahibe kıyafetli birini görmüştü. Bitkinliği ve sabırsızlığı yüzünden okunan kızın tatlı suratı cansız gözüküyordu. (O kız…?) Accelerator bu suratı hatırlamıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "Fakat kızın hali, geçmiştekinden biraz farklıydı. Bir kaç saniye sonra, kalabalığın arasına karışmıştı. (Gözden kaçırdım. Neyse, gidip onu aramak gibi çılgınca bir şey yapmaya niyetim yok. Ve zaten benimle tanışması hayatını kötü etkileyebilir.) Bir numaranın yanında oturan haşin bakışlı kız, olanları fark etmemiş gibi gözüküyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka buna alışamıyor.” Misaka Worst’ün içten duyguları, dondurmasını yalarken dışa vurmuştu. “Misaka şu gün ışığı eşliğinde eve dönerken dondurma yeme olayına alışamıyor. Bu olmamalı, normal değil. Hiçbir şey olmadığı için rahatsız hissetmiyor musun? Yani, sanki büyük bir olayın habercisiymiş gibi hissettiriyor”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bir şey olmasını mı isterdin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kim bilir. Belki. Belki de değil. Misaka kimsenin kendi düşüncelerini tam anlamıyla bilmesinin mümkün olmadığını düşünüyor. Bir psikolog kendi testini çözse, o bile cevapları kendi isteğine göre çarpıtırdı büyük ihtimalle. Eğer gerçekten kendi düşüncelerini tam anlamıyla çözebilen biri varsa, delirmiş falan olmalı” Misaka Worst gülümsedi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sence?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Umrumda değil.” diye cevapladı Accelerator, isteksizce. “O savaşta ihtiyacım olan her şeyi aldım. Ve şu an ihtiyacım olan her şeye sahibim. Ve konu sahip olduklarımı korumaya gelecekse, alışık olmadığım yolları denemeye hazırım.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka aslında tam olarak neye alışamadığımızı bulmanın, her şeyin merkezinde yatan şey olduğunu düşünüyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Alışamadığımız ne, bu huzurlu atmosfer mi, yoksa başkasının belirlediği sınırlar içerisinde sıkışıp kalmak mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Nesin sen? Velet falan mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka bunun gülünecek bir şey olmadığını düşünüyor. Misaka, başkaları tarafından belirlenen sınırlar içerisinde sıkışıp kalmanın, ne kadar yetersiz kişiler olduğumuzu anlamamız için gerekli olduğunu düşünüyor. Sonra da, gereksiz olan her şeyden kurtulmalıyız. Bize asıl garip gelen, kişiliklerimizin, bir başkasının boyundurluğu altında olunca gösterdiği rahatsızlık değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“O zaman düşünce şeklini değiştir.” Accelerator, Misaka Worst gibi karmaşık düşünmüyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bazıları bunu yapamayacağımızı düşünüyor. Bazıları bizim gibi canavarların sadece kan dökerek yaşayabileceğini düşünüyor. Bu yüzden de, onların belirlediği sınırlar içerisinde yaşamak sence de onlara karşı bir meydan okuma olmaz mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ah-ha. Misaka bunu beğendi.” Misaka Worst dondurmasını bitirdikten sonra, külahın kalan kısımlarını ısırmaya başlamıştı. “Sen de kötü bir koku almıyor musun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka bunun nostaljik bir koku olduğunu söyleyebilir, sanırım.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…” Kızın sözlerini işiten Accelerator, gözlerini hafifçe kıstı. Koltuk değneğini tutarken, bakışlarıyla etrafı süzdü. Huzurlu ve sıradan bir şehir görüntüsü vardı çevrede."
+          },
+          {
+            "type": "paragraph",
+            "text": "Bir sebepten dolayı, bir şeyler ters gibiydi. Rengi ve şekli mükemmel şekilde uyum sağlasa da, fark hala belliydi. Bu, bir uzaylının, insan derisi giyerek gezmesi gibiydi. Son bir bakış attıktan sonra…"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şu turist otobüsü.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Evet, gizlenmiş bir izleme aracı olabilir,” dedi Misaka, gülümserken. “Akademi Şehri yine bildiğimiz gibi. Ah? Ama bu tuhaf. Misaka o malum kişinin, tıpkı onların insanları ve nesneleri kalkan olarak kullanarak pis işlerini yaptırdıkları gibi, kirli işlerden kurtularak, o karanlık örgütlerin sonunu getirdiğini düşünüyordu.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şu noktadan sonra izleyebileceğimiz iki yol var.” Misaka Worst işaret ve orta parmağını Accelerator’a doğru kaldırmıştı. “Ya, bize oluşturdukları tehdidi görmezden gelmeyip, ortadan kaldırırız, ya da güvenli bir mesafeden izlemeye devam ederiz.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Cevap açık.” diye net bir şekilde cevaplamıştı Accelerator. “Onları geri postalıyoruz. Kendi anlaşmalarını bozdular. Onları hala etrafta kol gezen karanlıkla ilgili uyarsam iyi olur. İnsanların işine burnumu sokmayı pek sevmem ama, konu Akademi Şehri’nin karanlık tarafı olunca başka çarem kalmıyor” Misaka Worst ıslık çaldı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Peki, bu ‘’karanlık geri dönüyor’’ hamlesi, birileri ciddi şekilde yaralanacak gibi hissediyorum. Görünüşe göre bir numara, insanlara yardım etmek isteyen iyi kalpli bir oğlan.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Çok biliyormuş gibi konuşma. Ee, sen n’apacaksın?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Misaka tabii ki tehlikeli yolu seçecek. Böylesi daha eğlenceli.”"
+          },
+          {
+            "type": "heading",
+            "text": "Part 6"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hamazura Shiage duvara yaslandı. Yavaşça kaydı, ve popo üstü yere oturdu. Kuruwa gitmişti. Az önceki konuşmalarını, zihninde tekrar canlandırıyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eh, olay şu ki, Hanzou-sama küçük bir kızı koruması altına aldı.” Dürüstçe söylemek gerekirse, Hamazura Shiage, Akademi Şehri’ndeki hayatından yüzsüzce eğlenebileceği bir durumda değildi. Şehirden kaçıp, 3. Dünya Savaşı’na girdiğinde, “Akademi Şehri’nin karanlık tarafı hakkında çok fazla şey bilen, yabancı bir etmen” olarak tanımlanmış, ve yönetim tarafından hakkında öldürme emri çıkartılmıştı. Savaş sırasında Hamazura, önemli bir bilgiyi elinde tutuyordu. Parametre Listesi olarak bilinen şey, doğru kullanıldığı takdirde Akademi Şehri’ni derinden sarsabilirdi. Ama mükemmel değildi."
+          },
+          {
+            "type": "paragraph",
+            "text": "İşleri dengede tutmayı başarmıştı, fakat gösterdiği cüretkarlık, sınırı biraz bile aşsaydı, Akademi Şehri onu canlı bırakmazdı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Fazla bir şey bildiğim söylenemez, ama yukarıdakiler o kızı arıyormuş. Etrafta yarım saat dolaşsa, ölmesi işten bile olmaz.” En iyi ihtimalle bile, terazinin dengesinin şaştığı söylenebilirdi. Bir başka büyük olaya karışırlarsa, bu onları geri dönüşü olmayan bir yola sokardı. Bu yüzden de bundan kaçınmak için dikkat çekmemeleri gerekiyordu. Hayatını riske atabilmesi için, olayların kendi lehine gelişip gelişmeyeceğini gözlemlemeliydi. Kısacası, boş yere sorun çıkarmaya niyeti yoktu. Hanzou’yu ve hedef alınan kızı terk etmesi gerekiyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ah, kızın adını hatırlayamıyorum.” Aslında, bu mantıklı çıkarım etik açıdan yanlış değildi. Eğer konu kendi güvenliğiyse, geriye tek çaresi kalıyordu. Takitsubo Rikou’yu korumaya yemin etmişti. Onu tehlikeden olabildiğince uzak tutmalıydı. Ne pahasına olursa olsun, onun bu şehrin karanlığı tarafından tekrar yutulmasını engellemeliydi. Bu yüzden, onları terk etmek yanlış değildi. Yanlış değildi. Ama…"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sanırım şeydi…Fre…Fre…mea? …Evet, Fremea Seivelun’du. On yaşlarında ve sarı, kabarık saçları var. Komaba-shi’ye duygusal olarak bayağı bağlanmıştı, değil mi?” Sokakta yere çöküp düşünen Hamazura, dişlerini gıcırdattı. Komaba Ritoku, seviye 0’lar uğruna şehrin karanlığıyla savaşıp, bunun için canını veren Skill-Out lideriydi. Fremea ise, onun sonuna kadar korumak için mücadele ettiği kızdı. Hanzou büyük ihtimalle Komaba’nın son isteği olduğu için o kızı koruyordu. Fremea Skill-Out’la hiçbir bağlantısı olmayan, zararsız bir seviye 0’dı. Bu kadar savunmasız olması, Komaba’nın onu korumasının asıl sebebiydi. Aynı zamanda Hamazura, Seivelun soyadını biliyordu. O zamanlar, Komaba’ya duygusal olarak bağlanmış olan kızın soyadını bilmiyordu. Ona en yakın olan Komaba bile, adını duyduğundan beri ondan ‘’önemli’’ diye bahsederdi. Fakat, Hamazura kendini daha fazla kandıramazdı. Şimdi bunu bildiğine göre, kaçarak kurtulamazdı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Frenda Seivelun.” diye mırıldandı Hamazura. Ufak bir duraksamadan sonra tekrar konuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Demek kız kardeşiydi…!!” Frenda bir zamanlar, Mugino Shizuri, Kinuhata Saiai ve Takitsubo Rikou ile yan yana savaşmış olan, Item’in önemli bir üyesiydi. Şehrin karanlık tarafına nasıl karıştığını veya nasıl Item’in bir parçası haline geldiğini bilmiyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Yani, Frenda yalnızca savaşmaktan zevk alan biri de olabilirdi tabii. Ama… Her şeyin sebebi Fremea da olabilirdi. Gerçekten onu bu kadere terk etmekle doğru şeyi mi yapıyordu? Arkadaşı Hanzou, şu an şehrin karanlık tarafı ile mücadele ediyordu. Fremea’nın ölmesine izin vermek, Komaba’nın da Frenda’nın da duygularını ayaklar altına almak anlamına gelirdi. Tüm bu şeyler göz önüne alındığında, gerçekten onu terk etmek doğru muydu? (…Bu doğru.)"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bunda yanlış olan bir şey yok” Hamazura mırıldandı. Kendini ikna etmek için düşüncelerini sesli şekilde dile getirmeye başlamıştı. Sesi yavaşça yükselmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bunda yanlış bir şey yok. Takitsubo’yu ve Item’i tehlikeden uzak tutmaya çalışmakta yanlış olan bir şey yok!! O savaşın üstesinden geldim. Boğazıma kadar pisliğe batmış olsam da, tırnaklarımla kazıya kazıya kendime bu yeni hayatı kazandım!! Ellerimden kayıp gitmesine hayatta izin vermem. Elde ettiğim şeyleri, ne olursa olsun koruyacağım!!” Hala yerde çömelmekte olan Hamazura, başını ellerinin arasına aldı. Bu doğru. Mantıklı şekilde düşünüldüğünde, Takitsubo ve diğerlerini tehlikeden uzak tutmanın en iyi yolu Hanzou ve Fremea’dan uzak durmaktı. Bu seçenek, değer verdiklerini en iyi ve en kolay şekilde koruyabilmesini sağlayacaktı. Eğer gerçekten sevdiklerini korumak istiyorsa, bu yolu seçmeliydi. Hislerini katmadan düşündüğünde, gözlerinin önünde, ona doğru yaklaşmakta olan sorunun geçip gitmesine izin vermesi gerektiğini biliyordu. Seçmeliydi. Seçmek zorundaydı. Şimdi. Hamazura dilini şaklattı ve kafasını tırmaladı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sokarlar!! Sanki onları öylece bırakabilirim de!!” Elini duvara yasladı, ve son gücüyle ayağa kalktı. Şehrin karanlık karanlık tarafını simgeleyen o dar sokaktaki gölgelere doğru koştu. Ölümcül bir tehlikeyle karşı karşıya olan arkadaşını kurtarmak için koştu. Bu dünyadan göçüp gidenlerin duygularını önemsediği için koştu. Takitsubo ve diğerleriyle iletişime geçmemişti. Bu Hamazura’nın sorunuydu. Olaylar bu kadar dengesiz bir hal almışken, onları da bu işin içine sokamazdı. Geri döneceğinden emin şekilde koştu. Hamazura Shiage karanlıktaki gölgelere meydan okuyordu."
+          }
+        ]
+      },
+      {
+        "chapter_num": 4,
+        "short_title": "Bölüm 3",
+        "title": "Bölüm 3: Ufak Bir Pay ve Geleceğe Bağlanan Bir Alamet -- Kız.",
+        "content": [
+          {
+            "type": "heading",
+            "text": "PART 1"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Bu taraftan.’’ Hanzou’nun yolu işaret etmesiyle, on yaşlarındaki ufak kız onu takip etmeye başlamıştı. Yeraltı alışveriş merkezinin girişine yönelmişlerdi. Serseri tipli gençle, adeta oyuncak bebek gibi gözüken kızın uyumu, kahveyle suşi ne kadar uyumluysa anca o kadardı. Kız, Fremea Seivelun, oldukça tuhaf giyimliydi. Fırfır ve dantellerle dolu kıyafetinde beyaz ve pembe renkler hakimdi. Alt kısmında ise sadece şarap kırmızısı bir taytın üzerine giyilmiş mini etek vardı, üst kısmına göre oldukça sade kalıyordu. Tam bir idol görünüşü vardı, ama gerçek hayatta görebileceklerinizden ziyade oyunlarda karşılaşabileceğiniz bir idol gibiydi. Sanki bu kıyafetleri kendi isteği ile değil de sırf kendisine çok iyi uyduğu için etrafındakilerin baskısı ile giyiyormuş izlenimi veriyordu. Kısacası, bu kıyafetler tam ona göreydi. Kıyafetler hadi neyse de, incecik kolları ve bacakları, kabarık sarı saçları, beyaz teni ve cam gibi mavi gözleri de oyuncak bebek izlemine hatrı sayılır derecede katkıda bulunuyordu. Basitçe söylemek gerekirse, giydiği herhangi bir şey, moda haline gelebilirdi. Barışçıl dönemlerde, bunlar olumlu özellikler olarak sayılabilirdi. Ama şu an pek barışçıl bir dönem değildi. Birilerinden kaçarken, dikkat çeken özelliklerin olması iyi bir şey değildi. Hanzou bunu biliyordu. Serserilerden oluşan Skill-Out’un bir üyesi olsa bile, gizlenip uyum sağlamada yetenekliydi. Fremea kadar dikkat çekici birini de bu sebeple yeraltı alışveriş merkezine getirmişti. Çünkü Fremea’yı takip edenler, nerde olduğunu öğrenmişlerdi. Aslında, Hanzou’nun yığınla saklanma yeri vardı. Bunu hobi haline getirdiği bile söylenebilirdi. Boş zamanlarında saklanma yerleri hazırlardı. Karton kutudan evlerden birinci sınıf apartmanlara kadar şehrin her yerinde geceyi geçirecek yerler hazırlar, bilgi toplamak için kullanabileceği genellikle boş internet kafeleri arar, ucuz bisiklet ve arabaları gizler ve birçok farklı kimliği de hazırda bulundururdu. Bu tür şeylerden ne kadar bol o kadar iyiydi. Az olması sorun olurdu fakat çok olması göz çıkarmazdı, en azından düşünce şekli böyleydi..."
+          },
+          {
+            "type": "paragraph",
+            "text": "(Şimdi sıçtım işte.) Hanzou’nun aklından geçenler bunlardı. (Sığınaktaki düzenli bakımım sırasında yakalanmış olmalıyım, ta oradan takip etmişler. Lanet. Depoladığım onca şey boşa gitti!!) İster birinci sınıf bir apartman dairesi, ister karton kutudan bir ev olsun, uzun süre uğramazsa genelde bakıma muhtaç hale gelirdi. Ve düzenli olarak saklanma yerlerine uğrayıp bakımlarını yapardı, tam da bu sırada görülmüş olmalıydı. Peşindekilerin kendisi hakkında ne kadar şey bildiğini bilmiyordu fakat diğer saklanma yerlerini de gözden çıkarması gerektiğini anlamıştı. Bu nedenle Hanzou ve Fremea, başka bir saklanma yerine gitmek için yeraltı alışveriş merkezinden geçiyorlardı. Aslında Hanzou’nun aklında belirli bir yer yoktu. Hanzou’nun telefonunun parçaları, telefon dışındaki cihazlardan da sinyal alabilecek şekilde değiştirilmişti. Örneğin, şehrin huzurunu korumakla görevli olan Anti-Skill’in telsizlerinden sinyal alabilirdi. (Önemli bir suçlunun nakli için buradan geçecekler. Yani buradan gidersek, peşimizdekiler geri çekilmek zorunda kalacak!!) Hanzou düşünce tarzı olarak saf biri sayılabilirdi. Eğer peşindekiler serserilerden ibaret olsaydı, bu yöntem işe yarayabilirdi. Ve kendilerini burada kaybettirirlerse, peşindekileri savuşturmak kolay olurdu. Fakat… Yeraltı alışveriş merkezinin çatısı aniden çöktü ve peşindeki adamlar birer birer gedikten inmeye başladılar. Anti-Skill umurlarında bile değildi. Büyük bir toz bulutu etrafı kaplamıştı. Hanzou’dan üçyüz metre uzağa inen şeyin, insana benzer hiçbir yanı yoktu. (O şey ne lan…?) Toz bulutunun arasından gördüğü siluet, koca bir böceğin üstüne yarım bir insan binmiş gibi gözüküyordu. Çok büyüktü. Yüksekliği, yeraltı alışveriş merkezinin zemininden tavanına kadar varıyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Bir robot gibi pürüssüz hareket eden parçalarıyla, Hanzou’nun aklına bir yaratık izlenimi getirmişti fakat, hemen ardından karşındaki şeyin ne olduğunu anlamıştı. Bu bir güçlendirilmiş zırh. Sekiz bacaklı ve başsızdı. Lensler ve sensörler doğrudan makinenin vücuduna yerleştirilmişti. Alt ve üst gövdenin birleşim kısmı 360 derece dönebiliyordu. Hanzou’nun nasıl çalıştırıldığına veya içindeki insanın uzuvlarının hareketleri ile makinenin hareketlerinin nasıl bağlantılı olduğu hakkında hiçbir fikri yoktu, ancak giysinin boyu beş metreden fazla olduğu için pilot büyük olasılıkla gövde kısmındaki bir boşluktaydı. Ancak zırhın en dikkat çekici parçası bacaklarıydı. Sol ve sağ kolları aynı boyutta değildi. Sol kolu ortalama bir insan kolunun iki katı büyüklüğündeyken, sağ kolu onun dört katıydı. Ayrıca, iki kolunun da dirseği silindirik bir yapıdaydı. Dirseklerinde birleşim noktası vardı, yani bu da takılabilecek başka silahların da olduğunu gösteriyordu. (BURAYA RESİM GELCEK https://www.baka-tsuki.org/project/images/6/62/NT_Index_v01_093.jpg) Sol kolundaki silah makineli tüfekti. Sağ kolu ise..."
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Top mu lan o?!’’ Tanklardaki gibi bir namluya sahipti. Hanzou’nun bağırmasıyla, topun namlusundan ışık saçılmaya başladı. Fremea’yı yana itmek için bile vakit yoktu. Gülle hemen yanlarındaki duvara isabet edince, darbenin etkisiyle etrafa güçlü bir şok dalgası yayılmıştı. Hemen ardından, Hanzou’nun kulakları çınlamaya başlamıştı. Şok dalgasının onu geçici olarak sağır ettiğini sansa da, çok daha rahatsız edici bir ses kulaklarını çınlatıyordu. Ancak böyle ufak bir acıdan şikayet edemezdi. Dalganın etkisiyle metrelerce havaya fırlayıp yere çakılmıştı. Hemen ardından ise kendinden geçti. Ve birkaç saniye sonra bilinci yerine geldi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Sebebi ise barizdi. (…Görüşüne göre beyin dalgalarımın seviyesine göre otomatik olarak göğsüme şok veren Shield AED bayağı bir yardımcı oldu.)"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ağhh… ğğhh…. !! F-Fr-Fremea… !!” Beyin sarsıntısı nedeniyle ayağa kalkamayan Hanzou, yerde yatarken kısık gözlerle etrafa bakıyordu. Panikleyerek çıkışa koşan öğrenciler çığlık çığlığaydılar. Tiz sesleri ve yankılanan ayak sesleri Hanzou’nun kafasının zonklamasına neden oluyordu. Anti-Skill birkaç saniyeliğine afallasa da çok geçmeden çatışmaya başlamışlardı. Sekiz bacaklı güçlendirilmiş zırha ateş açsalar da, mermileri o yıkım makinesine işlemiyordu bile, bu sebeple taktik değiştirmek zorunda kalmışlardı. Sivil kaybını en azda tutma amacıyla öğrencilerin tahliyesine yardım etmeye başladılar. Çatışmada işlevsiz kalmalarına rağmen bir şeyler yapmaya çalışmaları takdire şayan olsa da Hanzou ve Fremea’ya yardımlarının dokunmasını beklemek fazla optimist olurdu. Anti-Skill, sivilleri kurtarmaktan fazlasını yapacak durumda değildi, üstelik eğer yıkım makinesi onlara odaklanacak olsa saniyesinde toz duman olurlardı. (Fremea nerede?! Hay sokayım!!) Hanzou yerde sürünürken kızı aramaya devam ediyordu. Duvar parçalanmış ve şok dalgasının etkisi etraftaki camları ve sütunları harap etmişti. Enkazın arasında yatan küçük bir benden gördü. Bu oydu. On metre ötedeydi. Bulunduğu yerden iyi olup olmadığını anlayamıyordu ama en azından tek parçaymış gibi görünüyordu. Top mucizevi bir şekilde kötü nişan aldığından, hala tek parçalardı. Ardından gelen diğer patlama sesleri Hanzou’nun kulaklarını bir kez daha çınlatmıştı. Sekiz bacaklı makine, Anti-Skill’i kontrol altında tutmak için ateş açıyordu. Top her patlayışında, boş bir disk gürültüyle yere düşüyor, ardından diğer koluyla bir başka gülleyi yüklüyordu. Gülleleri, sırt kısmında duran bir çantadan alıyordu. Fakat Anti-Skill’i doğrudan hedef almak yerine sadece uzak durmalarını sağlıyordu. Ya pilotun vicdanı vardı, ya da zırh delici silahları olanlara karşı direkt bir çatışmaya girmek yerine şarapnellerle uzak tutmaya oynuyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Anti-Skill’in koruyucu yelekleri ve diğer koruyucu ekipmanları, şarapnel parçalarına karşı koruyordu, ancak şok dalgaları konusunda hiçbir işe yaramazlardı. Sözde güçlü Anti-Skill üyeleri, başlarına bir kova tuzlu su döktükten sonra şok tabancasıyla vurulmuşlar gibi teker teker yere yığıldılar. Sekiz bacaklı güçlendirilmiş zırhın sağ kolu, metal bir diski küllerle birlikte dirsek bölgesinden attı. Top ateşlendiğinde, boş kovan yere yuvarlandı."
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Ahh…’’ Bir şok dalgası tarafından geriye doğru fırlayan Fremea, şok dalgasının ardından onun inlemesi duyulmuştu. Bilinci yerine gelmişti… ya da daha doğrusu, sarsıntıdan dolayı uyanmıştı. Hanzou sonunda kollarını ve bacaklarını oynatabilecek enerjiyi bulmuştu (Hedefe ulaşmadan önce, şarapneller tavana ve duvara fırlıyordu ... Şu kullandığı mermiler, APFS miydi… ya da öyle bir şey işte. Birkaç anlamsız harf işte. Güçlü zırhları delmek için yığınla patlayıcı güç kullanmak yerine basınç kuvvetini kullanıyordu. Ve verdiği hasar aşamalıydı. Zırhı deldikten sonra şarapneller ve şok dalgası devreye giriyor ve iki aşamalı tahribat veriyordu.) Bu mermiler insan üzerinde kullanmak için tasarlanmamıştı. Daha çok, bir tank veya zırhlı aracın içindekileri öldürmek için kullanıldığı barizdi. Eğer dört tarafı kapalı bir yerde olsalar, etrafa atılan şok dalgası ve şarapneller kesinlikle ölümcül olurdu. Hanzou ve Fremea’nın hala yaşıyor olmalarının yegane sebebi de buydu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“… Fremea. Dayanabilir misin, Fremea!?’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’…’’ Kız hafifçe hareket etse de cevap verememişti. Hanzou yerde sürünerek kıza doğru ilerledi. Güçlendirilmiş zırh harekete geçti. Sekiz bacağıyla tiksinç bir şekilde ikiliye doğru ilerledi ve sağ kolundaki silahı doğrulttu. Hanzou molozların üstünden kayarak Fremea’ya doğru ilerledi ve bir çırpıda kızı kollarına alarak koridorun köşesinden kendini kaybettirdi. Patlama ansızın ikiliyi bulmuştu. Adeta bir ölüm marşı gibi gelen, sesten hızlı büyük mermi güçlendirilmiş zırh ve Hanzou’nun arasındaki duvarı paramparça etti. Dahası da geliyordu. Duvarı yıkan mermiden çıkan şok dalgası etrafa yayılmıştı. Binayı beşik gibi sallamıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "Hanzou ve Fremea’nın kulakları, patlamanın sesiyle tırmalanmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ağhh! Bğğh!?” Yere düşmüşlerdi ve şokun etkisine dayanamayarak yıkılan duvardan fırlayan parçalar Hanzou’nun vücuduna saplanmıştı. Patlamanın sesiyle aniden atılarak Fremea’yı koruyan Hanzou, bu hareketinin hayatında yaptığı en havalı ve profesyonel hissettiren hareketlerinden biri olduğunu düşünmüştü. (Zamklı ve ölümcül olmayan şok mermisi mi… !?) Hanzou, hayatta kaldığı gerçeğinden çok bu soruya öncelik vermişti. (Ateşlediği mermilerin tipini değiştirebiliyor mu? Anlaşılan çeşitli mermi türleri arasında geçiş yapabiliyor!!) Bu tür pompalı benzeri gülleli silahlar son zamanlarda füze ve uçarksavar mermilerini ateşleyebilecek düzeye gelmişlerdi, bu yüzden güdümlü olması pek şaşırtıcı bir durum değildi. (Bir dakika, son zamanlarda demişken…) Hanzou yavaşça ayağa kalkarken düşündü ve Fremea’yı kollarında sıkıca tutarken güvende olduğundan emin oldu. Akademi Şehri’nin ürettiği bir top, hedefi beş bin metre uzakta olsa bile %95 gibi bir başarılı nişan alma kapasitesi vardı. Sırf küçük hedefleriz diye bizi ıskalamış olmasına imkan yok... Tabii o canavarın kendini tutmak gibi bir gayesi yoksa. Ve bu güçlendirilmiş zırhın sıradan bir tanktan daha kullanışlı olduğu su götürmez gerçekti. Kaçırdıkları bir şey olmalıydı. Aralarındaki mesafe sadece üç yüz metreyken, yer altı alışveriş merkezindeki iki savunmasız canlıyı vuramamasının bir sebebi olmalıydı. (… Yer altı alışveriş merkezi…)"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’işte bu!’’ Hanzou başını kaldırdı. (Nişan alırken bir elektromanyetik sinyal aracılığıyla hedefini buluyor olmalı, bu açık alanda yapılan bir çatışmada sorun olmazdı, ancak her yere yansıyan karmaşık elektromanyetik sinyallerle dolu bir ortamda büyük bir dezavantaj.)"
+          },
+          {
+            "type": "paragraph",
+            "text": "Bu yüzden de güçlendirilmiş zırh şehirde savaşmaya uygun değildi. Büyük olasılıkla III.Dünya Savaşı sırasında, Rusya’nın geniş ovalarında çatışmaya yönelik geliştirilmiş bir silahtı. Fakat olay şehre gelince işler değişiyordu Eğer durumu gerçekten buysa... (Sinyalini kasıtlı olarak yansıtmak için kullanabileceğim bir şeye veya alıcısına güçlü bir elektromanyetik sinyal gönderebilecek bir şeye sahip olsaydım, o makineyi işe yaramaz hale getirebilirdim.) Bu, ya şimdi ya hiç durumuydu. Ya şimdi riski alarak çatışmayı kazanır, ya da başarısız olarak her şeyini kaybederdi. Yaklaşan sekiz bacağın iğrenç takırtısını duyan Hanzou, şimdilik buradan uzaklaşmaya karar verdi. Bir arabası olsa bile o makineyi etkisiz hale getirebileceğinden emin değildi, ama en azından orantısız boyunu lehine kullanabilirdi. (Etrafta fütursuzca dolaşmak, zırhın sol kolundaki makineli tüfekle vurulma ihtimalini beraberinde getirirdi. Topun aksine, o makineli tüfek insanları avlamak için tasarlanmıştı.) Her iki durumda da, zırhın yaklaşmasına izin vermek hiçbir şey kazandırmazdı. Dar bir yoldan geçmek standart strateji olabilirdi, ancak o yıkıcı topa sahipken yolunu kolayca açabilirdi. (Bir çıkış…) Hanzou, Fremea’yı kollarında tuttu ve yavaşça ayağa kalktı. (Keşke bütün çıkışlar bildiğimiz standart kapılardan olmasaydı, yanıma yaklaştırmak için onu kandırabilirdim…) Tabii ki, çözüm birdenbire önüne gelmeyecekti. Hanzou’nun daha önce yer altı alışveriş merkezinde hazırladığı çeşitli çıkışlar aklına geldi. Düşmanı tarafından en kolay şekilde öngörülebilecek ama aynı zamanda bacaklarını asgari düzeyde hareket ettireceği seçeneği seçti. Ve sonra… Aniden Hanzou’nun dizleri güçten düşmüştü. Ayakta duramayıp dizlerinin üzerine düştü ve Fremea’nın küçük bedenini kaldıramadı. Bir şekilde yere yığılmamayı başardı, ancak artık dümdüz yürüyemiyordu ve güçlendirilmiş zırh yaklaşmaya devam ediyordu. Nedeni barizdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "Fremea ve kendisinin aldığı yaralar öldürmeye yetmese de ciddi şekilde zarar vermişti. Şok dalgaları, Hanzou’nun tüm enerjisini tüketmiş ve en sonunda bacaklarını oynatacak takati bile kalmamıştı. (Hay sokayım.) Hanzou nefes almaya çalıştığında çenesinin kitlenmiş olduğunu fark etti. (Ne kadar yaralı olduğumu fark edemedim mi cidden?) Birkaç metre önündeki yer altı alışveriş merkezinin çıkış artık eskisinden daha uzak görünüyordu. Kaçamadı. Ancak bir sümüklü böcek kadar hızlıyken o makineden kaçması imkansızdı. Anti-Skill’e bile tereddütsüz saldırdığını düşünürsek, kalabalık bir yere kaçtıklarında pes edeceklerini düşünmek mantıksız olurdu. Bu saldırganlar, Fremea’yı öldürmeye kararlıydı. Hanzou, hareket eden sekiz bacağın takırtısını duydu. Ayağının altındaki molozları ezerek, köşeden devasa bir figür belirdi. Sanki insanmış gibi suratını Hanzou’ya çevirmesi, altına sıçması için yeterli gelmişti. Ve, ağzından tek bir söz çıkmamıştı. Makine, sol kolunu kaldırarak ikiliyi hedef almıştı. Sağ kolundaki top yerine, insan avlamak için tasarlanmış makineli tüfeği kullanıyordu. (Khğğ… !!) Aslında, kızı korumak için bu kadar ileriye gitmesine gerek yoktu. Kızı asıl korumak isteyen Komaba Ritoku’ydu. Ama bu yalnızca duygusal bir nedendi. Hiçbir şey onu bunu yapmaya zorlamıyordu. Her zamanki mantığıyla düşündüğü takdirde, hayatta kalma şansını azaltan tüm etmenlerden uzak durması gerekirdi. Ancak… En az 18 mm kalibreli bir makineli tüfeğe karşı işe yaramayacağını biliyordu ama Hanzou hemen kendini Fremea’nın üzerine attı. Bunu neden yapmıştı? Bunu yaparak eline ne geçecekti ki? Fakat bu sorular için vakti yoktu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Hemen ardından, makineli tüfek ateş açmaya başlamıştı. İsabetliydi. Acımasızcaydı. Ama Hanzou ya da Fremea’yı hedef almıyordu. Çatışma sırasında sıradan bir araba, yer altı alışveriş merkezinden çıkan merdivenlerden aşağı kaydı. 18 mm’lik bir kalibre, zırh delmek için kullanılan mermilerden daha büyüktü. On saniyede elli mermi ateşliyordu ve sıradan bir arabanın bu yıkıcı güç karşısında ne hale geleceği belliydi. Araba merdivenlerden ön tekerlekleri yere değecek kadar indiğinde kaputu ezilmiş, motor çatlamış ve benzin alev almıştı. Bir anda patladı. Araba Hanzou’ya ulaşacak kadar ilerleyememişti, güçlendirilmiş zırha daha yakındı hatta. Ona ulaşan tek şey ısı, duman ve teninde hissettiği rüzgârdı. (Bu ne boktan bi’ hamleydi lan böyle!? Böyle mazoşist bir intihar denemesiyle daha önce karşılaşmamıştım!) Her şeye rağmen, araba metal bir iskelet halinde ilermeye devam ediyordu. Lastiksiz"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’tekerlekleri’’ dönerken, araba hızını koruyordu. Sekiz bacaklı makine, sağ kolundaki topu hazırlamaya başladı. Araba mevcut hızıyla doğrudan zırha çarpsa bile, hasar makinenin içindeki pilota ulaşmayacaktı. Pilot, arabada patlayıcı olması ihtimaline karşı temkinli davranıyordu. Makine, tereddüt etmeden topu ateşledi. Bir parıltıyla, mermi Hanzou ve Fremea’nın kafalarının üzerinden uçtu ve arabanın kalıntılarını bir kez daha havaya uçurdu. Araba daha fazla ilerlemeyecekti. Patlama, kalan metal iskeleti de parçalara ayırmaya yetecek kadar kuvvetliydi. Patlama, Hanzou yerde yatarken dahi yuvarlamaya yetecek kadar büyük bir şiddete neden olmuştu. Yıkım, gözlerini zorla kapattırmıştı Arabanın sürücüsüne ne olduğunu hayal etmek bile içini titretmişti. Ancak…"
+          },
+          {
+            "type": "paragraph",
+            "text": "(... Ha…?) Arabanın yanan kalıntılarında, sürücü koltuğunun bulunduğu alanda hiçbir insan formu göremedi. İlk başta, kişinin patlamada parçalara ayrıldığını düşündü, ancak böyle olmamıştı. (Ne yani sürücü yok muydu…?) Alevler daha da parlamaya başladı ve sıcak hava Hanzou’nun yanağını okşadı. Yerde yatarken içgüdüsel olarak yüzünü başka tarafa çevirdi. Bunu fark etmesinin nedeni bu olabilir. Hanzou tam da çıkıştan uzaklaşıp güçlendirilmiş zırha doğru döndü. Ve orada makinenin arkasından yaklaşan başka bir siluet gördü. Hamazura Shiage idi. Genç, Anti-Skill ekipmanı taşıyordu ve güçlendirilmi zırha gizlice yaklaşıyordu. Normalde, sekiz bacaklı makine, çevresinden 360 derecelik açıyla bilgi toplar ve ne kadar sessizce hareket ederlerse etsinler kaç kişinin yaklaştığını ve tam olarak nerede olduklarını bilirdi. Araçları veya insanları kolayca tespit edebilirdi. Ne de olsa, sadece birkaç santimetre büyüklüğünde olan ve çimlerin arasından saldırıya geçen roketlerin monte edilmiş olduğu, uzaktan kontrol edilen araçların kullanıldığı bir çağdaydılar. Sekiz ayaklı zırh, büyük bir saklama kabı büyüklüğünde serbestçe hareket eden kara mayınlarını kolay bir şekilde tespit etmek için yapılmıştı, bu yüzden kimse amatör bir lise öğrencisinin fark edilmeden yaklaşabileceğini düşünemezdi. Ancak, bir istisna vardı. Sensörlerin hiçbirinin çalışmadığı bir an vardı. (Geri tepme ve şok dalgası… mermiyi ateşlediği anda mı… !?) Boş araba bunun içindi. Güçlendirilmiş zırha yaklaşması için bir fırsat yaratmıştı. Ayrıca, Hamazura’nın elinde, yer altı alışveriş merkezinde etkisiz hale getirilen Anti-Skill grubundan aldığı ekipmanlar vardı. HsLH-02 olarak adlandırılan bir silahtı. Çelik kapıları yok etmek için kullanılan modern bir koçbaşıydı."
+          },
+          {
+            "type": "paragraph",
+            "text": "İlk bakışta bazukaya benziyordu ama aslında küt uçlu bir kazık gibiydi. Hamazura onu bir sarkaç gibi geri salladı ve namlusu ile güçlendirilmiş zırha vurdu. Tetiğe gerek yoktu. Namlu ağzına uygulanan şokla birlikte, ses hızına yakın şekilde yirmi kilogramlık dev kazık hedefini sarsmıştı. Metalin metale çarpması ile muazzam bir gürültü duyuldu. Hamazura sekiz ayaktan birini hedeflemişti. Spesifik olarak belirtmek gerekirse, hareket ederken makinenin ağırlığını desteklemek için yere indirilen bacağı. Güçlü darbe, makinenin ayağını koparmış de dengesini bozmuştu. Makinenin sağ tarafı yana yattı, ancak düşmekten kurtuldu. Tam o anda ikinci bir darbe inmişti. Hamazura’nın koçbaşı, topun normalde erişilemeyecek kadar yüksek olan dirsek bölgesine acımasızca vurdu. Cihazın içinden bükülmüş gibi gelen korkunç bir ses duyuldu ve dev silah bir olta gibi sallanmaya başladı. Fakat görünürde bir şey yoktu. Silah kırılmamış ya da bükülmemişti. (Bu iyiye alamet değil!) Hanzou dişlerini gıcırdattı. Koçbaşı delmek için değil parçalamak için yapılmıştı. Kazığın ucu düzdü, böylece tüm kapıya kuvvet uygulayabilir ve onu kırabilirdi. Bu bir kapıyı kırmak için uygundu, ama zırhı delmek için iyi bir seçenek değildi. Güçlendirilmiş zırh, sağ kolunun sarsılmasına neden olan kişiye misliyle karşılık vermek amacıyla sağ kolundaki topu Hamazura’ya çevirmişti. Ama sonra sanki bir şey fark etmiş gibi hareket etmeyi bıraktı. Sağ dirseği. Hamazura’nın koçbaşıyla vurduğu nokta. Yeni bir merminin yüklendiği açılır kapanır kısımdı. Normalde sürgülü bir kapı ile korunuyordu, ancak bu koruyucu kapı hafifçe bükülmüştü."
+          },
+          {
+            "type": "paragraph",
+            "text": "Fark edilemeyecek kadar az bükülmüş olsa da bu kapının açılmasını engellemek için yetiyordu. Eğer yeni mermi yüklenemezse, makinenin sağ kolundaki top işlevsiz hale gelirdi. İçeride hala mermi olsa bile, eğer hava geçirmez alan bozulduysa, silah kendi kendini patlatırdı. Güçlendirilmiş zırhın omuzları yukarı aşağı kontrolden çıkmış şekilde hareket etmeye başladı. Bu hareketin özünde, kontrol edilemeyen bir öfke olduğu barizdi Ancak Hamazura’nın aval aval beklemeye niyeti yoktu. Zırh sol kolundaki makineli tüfeği Hamazura’ya doğrulttu ve tam o anda Hamazura elindeki kutu şeklinde olan kül tablasını havaya fırlatıp koçbaşıyla küllüğün altına vurdu. Küllük, çalınmasını önlemek için oldukça ağır yapılmıştı ve muazzam bir hızda ateşlendiği için ezildi. Güçlendirilmiş zırhın sol ayağına vurdu ve makineli tüfeğin hedefini ıskalamasını sağladı. Kısa mermi salvosu Hamazura’yı yok etmek yerine yanındaki duvarı yok etmişti. O zaman aralığında Hamazura, koçbaşını aşağıdan yukarıya savurdu. Elektromanyetik olarak güçlendirilmiş koçbaşının namlusu, makinenin alt kısmına konumlanmış sensörleri hedef almıştı. İnce ayarlı ve en önemli kısım olan radar alıcısı tuzla buz olmuştu. Bu, bardağı taşıran son damlaydı. Sekiz ayaktan biri yukarı doğru sallandı ve koçbaşına aşağıdan vurdu. Onu Hamazura’nın elinden düşürmek ve tavana fırlatmak için bu yeterliydi. Güçlendirilmiş zırh, duruşunu doğru bir şekilde kontrol etmek için elektronik kontrol protokolünü kullandı ve işe yaramaz sağ kolunu bir kez daha hareket ettirdi. Top kullanılmaz halde olsa da, sağ kol hala savurularak kullanılabilen büyük, metal bir makine parçasıydı. Hamazura’nın savrulan bedeni, kendi boyunun iki katı kadar yükselmişti. Saldırı bir yumruktan ziyade kamyon çarpması etkisi vermişti ve Hamazura ancak bir kaç kere sektikten sonra yere yapışarak durabilmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Ğğaaaaaaaaaaaaaaahhhhhhhhhhhh!!’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Hamazura !’"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kkh… Ka…. Kaç. Hanzou, şimdi kaçabiliriz…!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hamazura, Hanzou’nun yanına düşmüş, zorla da olsa ayağa kalkıp Hanzou’nun kolunu tutmuştu. Zira Hanzou şoktan dolayı kaskatı kesilmiş şekilde öylece duruyordu ve Fremea’nın kollarından kayıp gidişini fark edemez hale gelmişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hama… zura. Al… Fremea.’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Saçmalama amına koyayım!! Sen de kaçıyorsun!!’’ Yanan arabanın yanından geçip merdivenden dışarı çıkarken sıcak hava dalgasına aldırış etmeden koşuyolardı. Güçlendirilmiş zırh sol kolunu hareket ettirdi. 18 mm makineli tüfek ateş etmeye başladı. Ancak elektromanyetik vericisini nişan almak için kullanamadı ve yanan arabadan gelen sıcak hava, kızılötesi ekipmanını kullanmasını engelledi. Görsellere dayanan optik hedeflemesi de siyah duman yüzünden işe yaramazdı. Nihayetinde, tamamen şansa bala da olsa kurtulmuşlardı. Hamazura, Hanzou ve Fremea merdivenlerden yukarı koştular."
+          },
+          {
+            "type": "heading",
+            "text": "PART 2"
+          },
+          {
+            "type": "paragraph",
+            "text": "Pilot, sekiz bacaklı güç zırhı sağ kolunun ne durumda olduğunu kontrol etti ve arkalarından peşlerine düşmek için çıkış merdivenine yöneldi. Daha sonra bir ileti aldı."
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Bitirdin, Gümüş Haç.’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Ne yani bu yeterli miydi?’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Hedefine ulaştın.’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Hey, hey. Sadece ikisinin gerekli olduğunu sanıyordum.’’ Pilot, telsizin diğer ucundaki kişinin sözlerine şüphe ile yaklaştı. ‘’Sadece Fremea Seivelun ve Hamazura Shiage olması gerekiyordu. Üçüncüye ihtiyaç yoktu. Fazladan bir koruyucunun hayatta kalmasına izin vermek, işlerin tekrar yoldan çıkmasına neden olabilir.’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "‘’Yeterince çalıştın. Bundan böyle ayrı düşeceklerini sanmıyorum.’’ Telsizin diğer ucundaki kişi küçümseyici, kahkaha benzeri bir sesle cevap verdi. “Avlanması gereken kişi olmak zor, değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Doğru yere parmak bastın. Şarapnel atışını kullansaydım hepsini tek vuruşta indirebilirdim.’’"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kullandığınız model bu tür bir çatışma için uygun değil, değil mi? Geniş alan saptama elektromanyetik alan prensibini kullanılarak tasarlanmış, yani Rusya’nın geniş ovaları düşünülerek, durum böyle olunca da şehir gibi kalabalık bir yerde isabetliliği düşüyor. Onları bu kadar ateş gücüyle öldürememek zoruna gitmiş olmalı.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bir etki yaratmak önemliydi. Bu model, Enemy Blaster, bunun için mükemmeldi. Ve ben doğru zamanda doğru şeyi yapmayı bilen türden bir adamım.” Güçlendirilmiş zırhın sağ kolunu onarmaya çalışmaktan vazgeçti. “Şimdi geri dönüyorum, ama işler sizin tarafınızda ne durumda? O taraf harekete geçmezse, her şey boşa gider.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Merak etme.” Bunu duyan pilot, yer üstünde bekleyen destek personeli ile temasa geçti. O güçlendirilmiş zırhla sokaklarda dolaşamazdı. Şehrin manzarasına uyum sağlamak için büyük bir turist otobüsü kılığına girmiş özel bir araç kullanırdı. Ama yaptığında..."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Cevap ver. Bukalemun? Cevap ver… Ha siktir, ne oldu?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sana endişelenmemeni söylemiştim. Diğer taraf harekete geçti.” Telsizin diğer ucundaki kişi küçümseyici bir tavırla konuşmuştu “Avlanması gereken kişi olmak zor, değil mi?” ***"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne düşünüyorsun?” diye mırıldandı Misaka Worst. Yaklaşık iki yüz metre ötede, bir yer altı alışveriş merkezinin girişinden, sanki bacaymış gibi koyu bir duman yükseliyordu. Ancak, olayın gerçekleştiği yere değil, tam önündeki büyük otobüse dikmişti gözlerini. Teknik olarak, şehrin karanlık yüzü tarafından kullanılan gizli bir araçtı. Accelerator ve Misaka Worst, artık hurda olan araca baktı. İlk bakışta, pencerelerinde koyu güneş filtresi bulunan bir turist otobüsüne benziyordu. Bununla birlikte, iç kısım, sanki tanklar gibi ağır araçları taşımak için oldukça boştu ve bu kadar ağırlığı taşımak için gereken motor ve süspansiyona sahipti."
+          },
+          {
+            "type": "paragraph",
+            "text": "İşçi kıyafetli birkaç adam yerde yatıyordu, aracın içi ise özel aletler, birkaç farklı tipte mermiler, zırh plakaları, büyük batarya kutuları ve benzer şeylerle doluydu. Görünüşe göre aracın büyük bir şey taşıması gerekiyordu çünkü zemine, duvarlara ve tavana çeşitli mandallar yerleştirilmişti, böylece her ne taşınıyorsa devrilmesi engellenecekti. Bu mandalların görünümünden..."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Güçlendirilmiş zırh” dedi Accelerator derin bir nefes verirken. Elbette, bu Anti-Skill’e ait bir zırh değildi. Onların kendi zırhlarını saklamak için hiçbir nedeni yoktu. Dövmüş olduğu adamlara ve uzaktan yükselen siyah dumana bakarak dilini şaklattı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Görünüşe göre işler yine sorunlu hale geliyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Aah…” Bir inilti duydu. Gizli aracın içinde yere yığılmış olan adamlardan birinden çıkmıştı ses. Bilincinin yerinde olmasının nedeni adamın olağanüstü bir güce sahip olması değildi; bunun tek nedeni, Accelerator ve Misaka Worst’ün bilinçli kalmasına kasıtlı olarak izin vermesiydi. Accelerator adama, “Karanlığın dağıldığını sanıyordum” dedi. “Tüm personeli bağlayan rehineler ve müzakere materyallerinin savaşın sonunda halledilmiş olması gerekiyordu. Öyle olduğundan emin oldum zira. Peki siz kimsiniz?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“...The Freshmen.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yakında öğreneceksin.” Cümlesini bitirir bitirmez adamın kolları ve bacakları adeta ölmüş gibi hareketsiz kaldı. Gözleri hâlâ açıktı ama açıkça bilincini kaybetmişti. Misaka worst kıkırdadı ve ardından konuşmaya başladı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kafasında yara izleri var. Bir çip bilincini kesmiş olmalı. İşkence karşıtı bir yöntem. Onu zorlarsak muhtemelen geri getirebiliriz. Ne yapalım?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sal gitsin.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kalıcı iz bırakma vakti geldi mi yani?” Görünüşe göre Misaka Worst, bilinçsiz adamı televizyonda izin verilmeyen"
+          },
+          {
+            "type": "paragraph",
+            "text": "kelimeler olan, Kulaksız Hoichi’ye dönüştürmeye hazırlanıyordu, ama Accelerator onu görmezden geldi. Gizli aracın duvarına döndü. Orada birkaç harita vardı, bazı binalar ve sokaklar fosforlu kalemle işaretlenmişti. Görünüşe göre birinin faaliyetlerini araştırıyorlardı. Accelerator haritaları ve hemen yanlarına yapıştırılmış olan fotoğrafı söktü. Pahalı baskı kağıdındaki fotoğrafta on yaşlarında, sarı saçlı, mavi gözlü bir kız gözüküyordu. Adı yüzünün yanına marker kalemle yazılmıştı. Fremea Seivelun."
+          },
+          {
+            "type": "heading",
+            "text": "PART 3"
+          },
+          {
+            "type": "paragraph",
+            "text": "Hamazura ve diğerleri dar sokaklarda tekrar tekrar dönerek ileri geri manevralarla ilerlemişlerdi. Bu, güçlendirilmiş zırhın hala onları takip ediyor olmasına karşın bir kaçma yöntemiydi. Makinenin hala onları takip ediyor olmamalarına dair bir şey bilmeseler de, bacaklarındaki enerji daha fazla koşmalarına imkan tanımayacaktı. Üçü de nefes nefese kalmıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazura…” Hanzou alçak sesle arkadaşının adını söylemişti. Hamazura yanıt olarak yorgun bir şekilde gülümsedi ama Hanzou yakasını tuttu ve onu duvara doğru itti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“N’oluyor lan!? Neden geldin Hamazura!? Neden kendini bu işe karıştırdın?!” Hanzou dişlerini gıcırdattı. Hamazura’ya kızmamıştı. Hamazura’yı dahil ettiği için kendine kızmıştı. Hamazura ile konuşmasının ve onunla restorana gitmenin bir hata olduğunu düşünüyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Skill-Out’ta hiçbirimizin elde edemediği şeye sahiptin.” Hanzou sesini bir dereceye kadar kısmıştı ama kontrolü kaybetti ve sesi birden patladı. “Bir kız arkadaşın vardı! Gelecekte ne yapacağını düşünüyordun! Düzgün bir yolda ilerliyordun!! Bir yol servisi açmaya çalışıyordun!! Öyleyse neden buraya geldin ve karanlığa geri döndün!? Sen… az önce hayallerini kendi ellerinle yıkmış olabilirsin!! Bunu anlıyor musun, Hamazura!?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“...Umurumda değil…” Hamazura’nın gözünde net bir kararlılık yoktu. Sadece kafasını hafifçe salladı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Buna karışmak istemedim.” Sert davranmaya çalışmadı. Bu ağzından yuvarlanan kelimeler gerçekte nasıl hissettiğinin göstergesiydi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ama seni terk edemezdim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Senin kötü bir durumda olduğunu ve Fremea Seivelun’un da işin içinde olduğunu duyduğumda, Lider Komaba&’nın yüzü aklıma geldi ve... Ve Seivelun soyadıyla ilgili birçok karmaşık sorunum var…” Bu, düşüncelerinin sonu değildi ama Hamazura’nın sözleri orada kesildi. Sonunda düşüncelerini düzgünce ifade etmekten vazgeçti ve en önemli kısmı tekrarladı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“...Seni terk edemezdim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sokayım.” diye tüküren Hanzou ve Hamazura’nın yakasını bıraktı. Sırtı hala duvara dönük olan Hamazura kayarak yere oturdu. Hanzou’nun yüzüne baktı ve bir soru sordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şimdi ne yapacağız?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“En iyisi, saklandığım yerlerin hiçbirinin artık kullanılamayacağını farz etmek. Kuruwa’yı ararsam, muhtemelen bize bir şeyler bulabilir, ama onu beklerken kalacak güvenli bir yere ihtiyacımız var… Hamazura, kısa süreliğine saklanabileceğimiz bir yer biliyor musun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Suçlu birinin isteyebileceği türden bir sığınaktan mı bahsediyorsun...?” Hamazura konuşurken aniden aklına bir fikir geldi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bekle, biliyorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Nerede?” diye sordu Hanzou. Hamazura Shiage’nin suçlu olmayan bir organizasyonla bağlantısı vardı. ITEM. Grup şu anda Academy City’nin piyonları görevini görmese de, eski bağlantılarından bazıları hala mevcuttu. ITEM’in saklanma yeri olarak kullandığı yerlerden biri..."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bölge 3’te özel bir salon, biraz pahalı ama muhtemelen kullanabiliriz.”"
+          },
+          {
+            "type": "heading",
+            "text": "PART 4"
+          },
+          {
+            "type": "paragraph",
+            "text": "Accelerator ve Misaka Worst gizli aracı baştan aşağı aradılar, ancak daha fazla bilgi bulamadılar. Güçlendirilmiş zırha kimin sahip olduğu veya bu ekipmanı hangi kuruluşun kullandığı konusunda hiçbir şey bulamadılar. İkili, araçtan çıktıktan sonra birbirleriyle konuştu. Misaka Worst, otobüste buldukları fotoğrafı elinde sallamaya başladı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Görünüşe göre bu velete saldırmayı planlıyorlar. Bu bizi ilgilendirmez.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…” (Bu kız…) Accelerator, fotoğraftaki kızı tanıdı. Onu, geçmişte şehrin huzurunu tehdit eden bir düşman olarak ortadan kaldırdığı Komaba Ritoku’ya ait cep telefonundaki bir fotoğrafta görmüştü. Komaba, çok sayıda Seviye 0’ı korumak için Akademi Şehri’ne dişlerini geçirmişti. Korumak için sonuna kadar savaştığı bir kişi olmuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Küçük bir veledi öldürmek için neden askeri bir zırh çıkarırlar? Misaka, birinin temsil ettiği tehlikenin bu esper şehrinde her zaman nasıl göründükleriyle eşleşmediğini biliyor, ancak o zaman bu kızın gücü ve bununla nasıl başa çıkılacağı hakkında bir rapor olmalıydı. Bu onun Seviye 0 olduğuna ve buna rağmen aşırı dikkatli davrandıkları sonucunu veriyor… Hm? N’oldu #1?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eve bensiz git.” Accelerator, alışveriş çantalarını Misaka Worst’e verdi ve gizli araçtan aldıkları işaretli haritalara baktı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ben onun peşinden gideceğim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hey, dur şimdi.” Misaka worst öfkeyle içini çekti ve başını salladı. Fremea Seivelun’un fotoğrafını Accelerator’a gösterdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“0 Seviye olduğunu varsaydığımız bu kız Last Order değil.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yani?” Accelerator tükürmüştü. “Onu korumak için gerçek bir sebebim olmadığı doğru, ama bu onun ölmesine izin vermek için geçerli bir sebep değil.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Gözlerindeki o bakışı değiştir, seni sapık!! Onu sadece küçük olduğu için koruyorsun!! Ve yine de Misaka’nın kolunu sorun olmamasına rağmen kırdın!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Şehirdeki karanlık bir şekilde değişti ve ben neler dönüyor bilmiyorum. Ayrıca, o şerefsizin az önce bahsettiği Freshmen olayı hiç hoşuma gitmedi. Bize dişlerini gösterdiler, o yüzden bu işin arkasını bırakamam. Cidden her ufak ayrıntıyı açıklamam gerekecek kadar mal mısın?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“En azından karanlığın güçlendirilmiş zırh ile ortaya çıkacal kadar büyük olduğunu biliyoruz. Misaka neden o Fremea veledini hedef aldıklarını merak ediyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bilmiyorum, ama araştırdığımda öğreneceğime eminim.” Accelerator koltuk değneğiyle oradan uzaklaştı. Misaka Worst, poşetlerden birini boşa çıkarmak için alışveriş poşetlerinin içindekilerini yeniden düzenledi, Accelerator’un arkasından yürüdü ve onu durdurmak için poşeti başına geçirdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bekle.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Gmhğğ!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Seni Showa döneminden başında külotlu çorap olan bir soyguncuya dönüştürdüğüm için üzgünüm.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…” Accelerator, boynuna takılı olan elektrotunun üzerindeki düğmeye bastı."
+          },
+          {
+            "type": "paragraph",
+            "text": "Normal yaşamında koltuk değneği olmaksızın yürümek için yeterli güce sahip değildi, ancak o düğmeye bastığında Akademi Şehri’ndeki en güçlü esper oluyordu. Kafasını içeriden tutan plastik poşeti parçalamak için gücünü kullandı. Vektörleri manipüle edebilmek gerçekten dehşet verici bir güçtü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…O poşetle aynı kaderi paylaşmak ister misin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hehh. İyi ve kötü olayını aştığında, aslında oldukça komik olabiliyorsun.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne istiyorsun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu kadar ileri gitmek için herhangi bir sebebin var mı?” diye sordu Misaka Worst yüzünde kocaman bir sırıtma ile. “Daha önce de söylediğim gibi, Fremea Seivelun Last Order değil.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sen salak mısın?” Accelerator yine tükürmüştü. “Amacım, tehdidin seviyesini ve hedefini değerlendirmek. O velete ne olacağı umrumda değil. Elbette, tehdidi ortadan kaldırmak için gerekirse, ondan faydalanabilirim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha ha. Ne kadar naziksin.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne yapacaksın peki?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ehh? Misaka, her şeyin on kat daha kötü hale gelmesini tercih ederdi. Misaka düşmana kasıtlı olarak yardım edeceğini söyleseydi ne yapardın?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kıçına yüz şaplak yerdin.” Nedense Misaka buna elini ağzına götürerek ve kalçalarını ileri geri oynatarak cevap verdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Peki ya Misaka halka açık olsa bile buna razı olacağını söyleseydi?” Accelerator onu görmezden geldi ve yürümeye başladı. Accelerator, yiyecek otomatı bulmaya gitti ve Misaka Worst çılgınca peşinden koştu."
+          },
+          {
+            "type": "heading",
+            "text": "PART 5"
+          },
+          {
+            "type": "paragraph",
+            "text": "Özel salonlar, Akademi Şehri’nin hizmet sektörünün karakteristik bir yönüydü. Basitçe söylemek gerekirse, süslü bir karaoke kutusu gibi bir şeydi. Müşteriler odaları"
+          },
+          {
+            "type": "paragraph",
+            "text": "zamana göre kiralayıp eğlenebilir, partiler verebilir veya içeride istedikleri her şeyi yapabilirlerdi. Akademi Şehri’nin sakinlerinin yüzde sekseni öğrenciydi ve bunların çoğu yasal düzenlemelere tabi öğrenci yurtlarında yaşıyordu. Derslerde ve okuldan sonra yetişkinlerin gözetimi altında olmak stresli olabilirdi. Özel salonlar, satın alınabilecek gizli sığınaklar gibiydi. Bu sistem, cinsel suçlar için bir yuva olmaktan bir adım uzaktaydı, bu yüzden tamamen hayranlık uyandıracak şeyler değildi. Bununla birlikte, bir özgürlük alanını satma olayı, Akademi Şehri’nin sosyal psikolojisinin etkili bir simgesiydi. Büyük bir binadaki numaralı odalar satılacak bir şey haline gelmişti. Hamazura ve diğerleri o büyük binalardan birinde bir odaya girmişlerdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…” Hamazura bakışlarını cep telefonunun ekranına indirdi. Takitsubo, Kinuhata ve Mugino’nun numaralarını tuşladı. Bu üçü, bilinmeyen bir düşmana karşı, şu anda ellerinde bulunan Seviye 0 sürüsünden daha fazla yardımcı olacaktı. ITEM elbette neler döndüğünü bilmiyordu, şu anda onu bulmak için bir oyun oynuyorlardı, (oyunlarına yeniden başlamak zorunda kalacaklardı gerçi) eğer onlara “çözümü” söylese, hepsi toplanırdı. Ancak… (… Onları buna dahil edemem.) Dişlerini sıktı ve sonra telefonunu kapattı. Fremea Seivelun, Frenda’nın kız kardeşiydi, bu yüzden bu ITEM’mi ilgilendirmeyen bir şey değildi. Yine de bu olay şehrin karanlığıyla ilgisi vardı ve bu işleri değiştirirdi. Hamazura, kendisini korumak için onları dahil etmek istemedi. Sonra Hanzou, düşündüğü konulardan habersiz Hamazura ile konuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazura, bir telefon görüşmesi yapacaksan sahte bir SIM kullan. İhtiyacın olursa birkaç tane var.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hayır bu iyi.” Hamazura başını salladı."
+          },
+          {
+            "type": "paragraph",
+            "text": "Uzaktan kumandayla büyük televizyonu çalıştırırken Fremea’nın sırtına baktı. Hanzou ile alçak sesle konuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne yapacağız? Fremea’nın şehrin karanlık tarafı tarafından hedef alındığını biliyoruz, ama neden bu kadar tehlikeli insanlar tarafından saldırıya uğramak zorunda?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Aslında ayrıntıları bilmiyorum.” dedi Hanzou kısık sesle. “Tam olarak onunla alakalı olduğunu sanmıyorum. Okulun Sistem Taraması onu Seviye 0 olarak belirledi, yani herhangi DNA haritası avı falan değil bu ve karanlıkla da herhangi bir bağlantısı olduğunu sanmıyorum. Tek bildiğim ben ve Komaba ile bir bağlantısı olması.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu yüzden Skill-Out veya eski lideri Komaba Ritoku ile bir ilgisi olduğunu varsayıyorum”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Senin de bildiğin gibi, bu sadece bir grup suçlu.” Fremea kanal değiştirip duruyor ve biraz dolaşıyordu ama hoşuna giden bir şov bulmuş gibi görünmüyordu. Tartışma programları, Akademi Şehri’nin saldırgan politikasının III.Dünya Savaşı’na yol açan şeylerden biri olmasına rağmen, çoğu ülkenin Akademi Şehri’ni hala kabul ettiği hakkında haberler veriyordu. Bunun nedeni, Akademi şehrinin savaştan sonra yeniden inşa için büyük miktarda para ödemiş olmasıydı.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Akademi Şehrinin en tepesindekilerin, idari gücü elinde tutanların, birinin hayatını almak için istemesi yeterli mi yani?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eminim biliyorsundur, Lider Komaba Skill-Out’u yönettiğinde, Akademi Şehrine isyan etmek için büyük ölçekli bir planı vardı. Planı oluşturmada önemli bir rol oynadım. Tabii ki başarısızlıkla sonuçlandı.” Görünüşe göre Fremea, Akademi Şehri hakkında verdikleri fonların dengesini nasıl düzenledikleri konusunda güç dengesini değiştiren bir komplo teorisine devam eden bir yorumcuyla ilgilenmiyor gibiydi. Kanallar arasında dolaşırken komplo teorilerini susturdu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Lider Komaba o zamanlar yedek bir plan hazırlamış olabilir. Kullandığımızın dışında şehirdeki bir güvenlik açığıyla ilgili bir tane.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sonra…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Zirvede olanlar bununla ilgilenmek ister, değil mi? Ve Fremea, Komaba’nın himayesi altındaydı. Her ihtimale karşı ona bir ipucu verdiğini düşünüyor olabilirler.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ama ana plan çok kolay bozuldu. Bu yedek plan bu kadar harikaysa, neden onun en başta kullanmadı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Planımız umurlarında değil. Sadece şehirdeki herhangi bir tehlikeyi tamamen yok etmek istiyorlar.” Bunun, Komaba Ritoku ile bir ilgisi olduğunu varsayıyordu. Ancak Hamazura, Fremea Seivelun ile başka bir temas noktası daha biliyordu. Frenda. Ve Frenda, grubu ITEM’in bir parçasıydı. Bu grup, savaşta etkili bir Seviye 4, yedi Seviye 5’ten biri ve sekizinci 5. seviye olma olasılığına sahip olduğu söylenen bir kız içeriyordu. Şehir içindeki huzursuzluk unsurlarını ortadan kaldırmak için şehrin karanlık tarafının hazırladığı yetenekli bir organizasyondu. Fremea, Frenda’nın kız kardeşi olduğu için, bunun Frenda aracılığıyla ITEM ile yapılması mümkündü. (Frenda ITEM’in bir üyesiydi, ancak 7/24 ne yaptıklarını bilmiyordum. Yan tarafta başka bir proje üzerinde çalışıyor olabilir miydi?) Yeterli bilgisi yoktu. Neden hedef alındı? Kızın peşindeki organizasyon ne kadar büyüktü? Ne kadar ciddiydiler? Neyin peşinde olduklarını bilseydi, hayatta kalmanın bir yolunu bulabilirdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Fremea’nın ne olabileceğine dair hiçbir fikri yok, ancak karanlığın onu hedef almak için bir güçlendirilmiş zırh ortaya çıkardığı konusu da su götürmez bir gerçekti. Kaçarken bu konuyu araştırmalıyız.” Hanzou çıkışa doğru ilerlerken, “Onun güvenliğini sağladığımızda misillememizi yapacağız.” dedi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Nereye gidiyorsun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kuruwa ile iletişime geçeceğim. Buraya tam olarak güvenli demezdim. Bu bizim röle noktamız olacak. Kuruwa’nın ağını taşınacak güvenli bir sığınak bulmak için kullanacağız.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Onunla iletişim kurmak güvenli mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ben zaten söyledim. Telefonuma sahte bir SIM takacağım. Numaramı izliyor olsalar bile, aramamı kullandığı antene kadar izleyemeyecekler.” Hanzou konuşurken kapı kolunu kavradı."
+          },
+          {
+            "type": "paragraph",
+            "text": "Kapıyı açtığında döndü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazura.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ne?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bizi orada gerçekten kurtardın. Yaptıklarından memnun değilim, ama bu kadarını itiraf edeceğim.” Hamazura yanıt veremeden Hanzou odadan ayrılmıştı. Hamazura kendini biraz garip hissetti ve bakışları, Fremea ile gözleri buluşana kadar odada dolaştı. Bu, Komaba Ritoku’nun korumak için hayatını riske attığı kızdı. Aynı zamanda ITEM’in ana üyelerinden Frenda’nın küçük kız kardeşiydi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Uzun zamandır görüşemedik.” Komaba hala hayattayken, Hamazura ve Hanzou onunla konuşmuştu. O zamanlar onun adını bile bilmiyorlardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Beni hatırlıyor musun?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Evet. İlk olarak, sen Komaba-onii-chan’ın adamlarından birisin.”; Hamazura onu kendisini nasıl hatırladığını öğrenince hafifçe gülümsedi. Artık geçmiş zaman haricinde Komaba’yı düşünemiyordu. Ancak zamanın geçmesiyle gelen acı verici şeyleri ona söyleyemezdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Doğru. Ben Hamazura Shiage. Seninle tekrar tanıştığıma memnun oldum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ben Fremea. Fremea Seivelun” Hamazura, soyadını daha önce söylemesi gerektiğini düşünüyordu ama bu konuda hakkında hiçbir şey söylemedi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Orada işler biraz zorlaştı. İyi misin? Yaralandın mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“İyiyim. Kulaklarım biraz önce ağrıyordu, ama şimdi iyiyim. Nya.” (…Japonya’da “Nya’yı” nerede öğrendi?) Daha önce onunla konuştuğunda bunu söylediğini hatırlamıyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Bu, kafasında bir soru uyandırdı, ancak bunu sormak orada hiçbir şeye yardımcı olmaz. Japonca bildiği için yeterince şanslıydı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“İlk olarak, şimdi ne yapacağız?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hanzou bir arkadaşını arıyor, bu yüzden endişelenmene gerek yok.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Komaba-onii-chan nerede?” Fremea mavi gözleriyle ona baktı. “Onu bir süredir görmedim. Telefonuna cevap vermiyor ve onu genellikle gördüğüm yollarda görmedim. Nereye gittiğini biliyor musunuz?” Kelimeler, Hamazura’nın boğazına takılmıştı. Başarılı olup olmadığından emin değildi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“O, şey…” Gülümsemeyi başardı. Ama mavi gözleri onu bir yalan makinesinden daha iyi görüyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“O pek akıllı biri değil. Benim gibi birinin bunu söylemesinin doğru olmadığını biliyorum, ama o gerçekten değil. Yani okuldaki ek derslerde sıkışıp kaldı. Bunu yapmazsa, sınıfta kalabilir. Bunu bir süre sır olarak saklayabilir misin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Evet.” dedi Fremea hafifçe başını salladı. Sesi çöktü, ancak bu yalnızca birinin bir gün söz verdiği oyun oynama günün gelmediği seviyede bir çöküştü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“İlk olarak, anlıyorum.” Fremea, ona kıyasla çok büyük olan kanepeye uzandı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Mh.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Midem guruldadı gibi oldu ama guruldamadı.” Kanepeye yaslandı ve küçük ellerini karnına koydu. Hamazura kaşlarını çattı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“...Yiyecek bir şey ister misin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "Fremea yanıt olarak başını salladı. Tıpkı bir karaoke kutusunda olduğu gibi, özel salon bir iç hat üzerinden yemek sipariş etmenize izin veriyordu. Geniş odada büyük bir buzdolabı da vardı. Hamazura, Fremea’nın ne tür yiyecekleri sevdiğini bilmiyordu, bu yüzden iç hat üzerinden çeşitli şeyler sipariş etmeye karar verdi. Hamazura duvardaki telefonla konuşurken Hanzou geri döndü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kuruwa çok geçmeden burada olacak… Ne yapıyorsun Hamazura?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yemek sipariş ediyorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Daha yeni yedik.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Fremea için.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“He, o zaman biraz satsuma sipariş et.” Yiyeceklerin oraya ulaşması yaklaşık on dakika sürdü. Ana yemekler yerine çoğunlukla patates kızartması ve sebze çubukları gibi garnitürlerdi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Satsuma diğerlerine uymuyor.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kapa çeneni. Hepsini kendim yiyeceğim, bu yüzden önemli değil.” Hamazura ve Hanzou, büyük tabaklardan biraz yiyecekleri daha küçük tabaklarına taşıdılar, ancak Fremea tuhaf davranıyordu. Küçük tabağına biraz kanitama koydu, ama içindeki yeşil renkli fasulyeye benzeyen nesneleri görünce küçük tabağını Hamazura’ya uzattı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yeşil bezelye.” dedi."
+          },
+          {
+            "type": "paragraph",
+            "text": "“N-ne? Neden bana bir sürü bezelye uzatıyorsun?”; Fremea, yeşil bezelyeyi kesin olarak çıkarıyor ve Hamazura’ya veriyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Anlıyorum. Yani yeşil bezelyeyi sevmiyorsun” diye cevapladı Hamazura."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Nyaaoohhn”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ama bunun için fazla büyüksün. Dünyanın her zaman bu kadar nazik olmadığını bilmelisin. Yeşil bezelyeni geri al.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Fgyaaaaaaaahh!?” Fremea, eskisinin iki katı büyüklükte bir bezelye dağına sahip olduğu için çığlık attı. Bundan sonra, Hanzou doğrudan büyük patates kızartması üzerine tuz koyduğunda Hamazura Hanzou ile kavga etti ve sebze çubuklarının üzerlerinde mayonez mi yoksa salata sosu mu olacağı konusunda bir tartışma çıktı, bu sayede karanlık atmosfer dağıldı. O sekiz bacaklı güçlendirilmiş zırh tarafından henüz saldırıya uğramışlardı, ve Fremea herhangi bir duygusal şok geçirmiş gibi görünmüyordu. Duygularının ona henüz etki etmemiş olması muhtemeldi."
+          },
+          {
+            "type": "heading",
+            "text": "PART 6"
+          },
+          {
+            "type": "paragraph",
+            "text": "Bu arada, Hamazura ve diğerlerinin davranışlarını tuhaf bulan başka insanlar da vardı. Mugino Shizuri ve ITEM’in geri kalanı. Şehirde Hamazura’yı aramak için ayrılmışlardı, ancak her biri karanlığın tanıdık kokusunu almıştı. Örneğin Mugino’yu ele alalım. Bilgi toplamak için duvara yaslanmıştı. Daha doğrusu, göz bandına yerleştirilmiş sahte gözden uzanan uzun, ince bir kabloyla binanın güvenlik kameralarına bağlıydı. Elbette binanın kendisiyle hiç ilgisi yoktu, kamera sadece bir paravandı. Bu yolla güvenlik şirketinin ağına girdi ve Hamazura’nın içinde olup olmadığını görmek için görüntü arşivlerine baktı. Et ve kan beyni doğrudan mekanik göze bağlıydı, ancak burada ek bir anlam vardı. Bu, doğrudan makineden bilgi alabileceği anlamına geliyordu. Elbette, bir insanın algılayabileceği bilgilere çevrilmesi gerekiyordu, bu yüzden mükemmel değildi ve çoğunlukla sahte göz sistemi aracılığıyla görüntülere güveniyordu. Bununla birlikte, normal bir arayüzle imkansız olan şeyleri yapabilirdi. Alnının arkasında hızlı bir şekilde görsel arama yapılırken, Mugino cep telefonunu çalıştırmak için yedek elini kullandı. Aynı anda birden fazla hat üzerinden iletişim kurabildiği “Sohbet Modu’ndaydı”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bir güçlendirilmiş zırh, 7. Bölgedeki yeraltı alışveriş merkezini birbirine kattı. Birkaç saat"
+          },
+          {
+            "type": "paragraph",
+            "text": "içinde, tepedekiler muhtemelen görüntüleri silecek ve söylenti olduklarını iddia edip olmamış gibi davranacaklardı.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Anti-Skill radyosuna sızarak, bunu çok hızlı buldum. Başlangıçta, bir erkek ve bir kız hedef alındı. Daha sonra, başka bir çocuk katıldı. Üçü güçlendirilmiş zırhtan uzaklaştı ve alışveriş merkezinden kaçtı. Kameralarda herhangi birinin yüzü çıkmış mıydı?” İlk ikisi o değildi. Daha sonra gelen adam… Söyleyemem. Duman tavanın etrafında toplandı, bu yüzden sadece orada birinin olduğunu söyleyebilirim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ama.” diye ekledi Mugino, “Bence bu çocuk Hamazura’nın konuşacağı biri. Ve kız bir şekilde tanıdık geliyor…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Oh, yani Hamazura’nın tanıdığı tüm insanlara süper baktın mı? Yandereler çok korkutucu olabilir.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Kinuhata, etrafındaki şeyleri görebiliyorum. Şuradaki kalın şeyi alıp kıçına sokabilir misin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Boyut ve kalınlıkla hiç ilgilenmiyorum, bu yüzden hayır, teşekkürler. Neyse, süper Hamazura Araştırmasına devam edelim. Hee hee hee. Bakalım süper doğru yanıtı neyin daha hızlı bulduğunu görelim: güvenlik kameraları veya radyo bilgileri.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Ha? Bu durumda, Takitsubo ceza tavşanı olmayacak mı?” Mugino bu samimi soruyu sorduğunda, tavşan kız Takitsubo Rikou sohbete ilk kez katılarak titreyen bir sesle konuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Kuzey-kuzey-doğudan bir sinyal geliyor… Hamazura’nın başka bir kızla flört ettiğini hissediyorum…!!”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Mugino, en çok o süper belirsiz ortamdan korkuyorum. O aptalın önünde süper çirkin bir tavşana dönüşmememiz için her şeyi tamamiyle öğrenmeliyiz.”"
+          },
+          {
+            "type": "heading",
+            "text": "Part 7"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kuruwa hiç acele etmiyor anlaşılan.” dedi Hanzou, özel salondaki kanepeye yaslanırken. Hamazura ve Fremea, bu büyük odada başka nelerin olduğuna bakıyorlardı. Bazı raflarda kart ve kutu oyunları vardı ayrıca TV’ye yüklü olan bir video oyunu sistemi de vardı. TV nette gezinmek için de kullanılabiliyor gibi duruyordu. Ayrıca uydu bağlantısı da vardı, bu sayede üç yüzden fazla kanala erişim sağlayabiliyordunuz. Bu da izlemek istediğin bir şey olsa bile bulmak için çok fazla zaman harcayacağın anlamına geliyordu. Fremea izleyecek bir şey aramaktan vazgeçince, haber kanalı açık kaldı. Savaşta kullanılan ancak artık lazım olmayan bazı ekipmanların 2. ve 23. Bölgelere taşındığından bahsediyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "Hamazura televizyondan sıkılınca kanepeye uzanarak yol servisi rehberi kitapçığını çıkarıp okumaya başlamıştı, ama o anda birinin kıyafetinden çekiştirdiğini hissetti. Yukarı bakınca Fremea’nın sıkılmış şekilde dikildiğini gördü.. Kızın isteği üzerine çok oyunculu bir oyun aramaya başlamıştı. Bulundukları yerde, çok kişiyle oynanabilecek bir sürü oyun vardı. Böyle bir zamanda oyun oynamaya zaman ayırmak düşüncesizlik gibi olabilirdi, ama herkesin zihnini biraz rahatlatması gerekiyordu. Eğer stresle delirirlerse, her şeyi kaybederlerdi. Günlük hayatlarına dönerek kazanmaları daha olasıydı. O sekiz bacaklı yıkım makinesi kaderlerindeki şey değildi sonuçta."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hamazura, ilk olarak, bunu oynamak istiyorum.” Fremea kollarını uzatsa da, rafların en üstündeki oyuna ulaşamıyordu. Video oyunlarının sıralandığı rafa uzanmaya çalışıyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu mu?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hayır. İlk olarak, o kadar sıkıcı bir şey olmaz.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu o zaman?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Sağda. Biraz sağda. Daha da sağda. Hayır sol. İlk olarak, şurada.” Hamazura Fremea’nın talimatlarına uyarak elini oyunların üzerinde gezdirirken, sırtında ağır bir şey hissetmişti. Fremea onu merdiven gibi kullanarak rafa ulaşmaya çalışıyordu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu.” derken raftan bir oyunu almıştı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Hayır, bu…”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kan & Yıkım oynamak istiyorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“O nasıl isim lan öyle? Korkunç şeylerle dolu bir oyuna benziyor! Baksana, arkasındaki oyun için görüntülerin hepsi kanla kaplı!!” Suratında meymenet olmayan bir adamla zombileri öldürdüğün bir fps oyunu gibi duruyordu. Resmen “Batı pazarı aşkına!!” diye bağırıyordu oyun. Açıklamayı okuduktan sonra, asıl"
+          },
+          {
+            "type": "paragraph",
+            "text": "“yiyicilerin” oynadığımız adam olduğunu anlamıştı (Yani oyunda aslında ana karakter zombileri yiyor.) Sloganı ise “Hadi adalet birliğine sürelim!!” Hamazura kelimelerini dikkatlice seçti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“B-Baksana, şu yumoş hayvanların olduğu oyun da güzel gibi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kan & Yıkım.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Denizkızı Prensesiyle bir Gezinti oyununa ne dersin?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kan & Yıkım.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Çayırlar ve--”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Oynamak istiyorum!!” Fremea kan kırmızısı kutuyu eline aldı ve yüzünün yarısını arkasına saklayarak gözlerini dikti. Hamazura bir saniyeliğine durmuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…İzin vermiyorum, ama şu pozun fotoğrafını çekebilir miyim?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kyaaa!!” İkisi konuşurken, Hanzou kanepeden kalktı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“…Kuruwa fazla gecikti. Tekrar iletişime geçmeyi deneyeceğim.” Fremea telefon ekranına bakarken, Hamazura Hanzou’ya elleriyle işaret etmişti. Burada daha fazla bekleyemeyeceklerini söyleyen bir işaretti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Biliyorum.” diye mırıldandı Hanzou. “Bunu biliyorum.”"
+          },
+          {
+            "type": "heading",
+            "text": "Part 8"
+          },
+          {
+            "type": "paragraph",
+            "text": "Devasa kamyonunun sürücü koltuğu, bir binanın ikinci katıyla aynı seviyedeydi. Arkası bir havuz büyüklüğündeydi ve siyah taşlarla doluydu, fakat bu sadece gizlenme içindi. Yük taşıma alanının dış duvarı öyle gözükmesi için tasarlanmıştı. İçinde, aslında bir bakım alanıydı. Güçlendirilmiş zırh için bir bakım alanı. Kimyasal yayların gıcırtısı duyulabilirdi. Güçlendirilmiş zırhın içindeki yaylar her harekette o gıcırtı sesini çıkarırdı. Kıyafetlerin hışırdama sesi gibiydi, ama uzun süre işitildiğinde insan zihni üzerinde etkisi olduğuna dair söylentiler vardı."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Gümüş Haç.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hazırım, ama bu yol biraz fazla dolaylı değil mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Şu şartlarda, çok fazla seçenek var. Birkaç dal daha kesmek hepimizin yararına olur.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kuroyoru, bunun anlamı…?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Evet, yola çıkıyorum.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Eğer seçenekleri sınırlamaya çalışıyorsak, Item’ı ezerek başlasak daha iyi olmaz mı?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bazı şeyleri sırasına göre teker teker ezmek daha hızlıdır. Ayrıca, geçen sefer başarısız oldun. Yolunu kesen dalların uzayacak olması kötü olurdu.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bunu göze alarak geri çekilirsin sanmıştım.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Olmasa bile sorun olmaz. Olaylar başından beri mükemmel değildi zaten.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Budama işleminin asıl amacını unutma.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Biliyorum. Budamanın temeli en güçlü ve en kalın dalı seçmektir. Bu sayede en kalın olan dal kontrol etmesi en kolay olan olur.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Yani diyorsun ki kan dökme ve tehlike o dalı besleyecek su haline gelecek.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Planları tekrar gözden geçirelim. Hamazura Shiage için yola çıkıyorum. Sen de ‘arılarla’ bana destek oluyorsun. Accelerator’ı şimdilik kendi başına bırakabiliriz. Ne kadar az risk o kadar iyi. Diğer taraf harekete geçti. Hendek bir kere dolduğunda, hepsi mıknatıs misali birbirine yapışacak”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Bu gerçekten yeterli mi? İlk olarak sürpriz bir saldırıyla Item’ı aradan çıkarsak. Hamazura, Fremea Seivelun’la birlikte olduğuna göre, onların da ortaya çıkması an meselesi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Umrumda değil. Onları arama zahmetinden kurtarmış olurlar”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kuroyoru.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Gümüş Haç, seni endişelendiren Mugino Shizuri mi? Yoksa Kinuhata Saiai mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Kara Mayıs Projesi.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Hmmh. Kinuhata? Merak etme. Pireyi deve yapıyorsun.” Konuşmanın diğer tarafındaki kişi, sanki alışkanlık haline gelmiş gibi yine aşağılayıcı bir tavırla konuşmuştu."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Her şeye rağmen, projenin başında ondan daha güçlüydüm.” Kız seri bir şekilde konuştu. “Ve şimdi herhangi bir esperin seviyesinden daha üstünüm.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Öyle mi?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Biraz fazla etkisiz değil misin? Sadece destek görevi görmeye gelmiş olsan bile, uzun süredir o bacakları kullandığını görmedim.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Daha önce de dediğim gibi: Ben doğru şeyi doğru zamanda yapmayı bilen bir adamım.” Güçlendirilmiş zırh, yaylarının gıcırtısıyla birlikte cevap vermişti."
+          },
+          {
+            "type": "paragraph",
+            "text": "“Başarılı sonuçlar aldım sonuçta, değil mi? Bu da aynı. Hangisinin en iyi olduğuyla alakalı değil. Enemy Blaster’ı kullanacak zaman ayrı, Bee Launcher’ı kullanacak zaman ayrı.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Plana göre ilerliyoruz yani?”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Evet.”"
+          },
+          {
+            "type": "paragraph",
+            "text": "“Fremea Seivelun.” Konuşmanın diğer tarafındaki kişi aşağılayıcı bir tavırla övmüştü."
+          },
+          {
+            "type": "paragraph",
+            "text": "“O velet gerçekten kullanışlı.”"
+          }
+        ]
+      }
+    ]
+  }
+]
