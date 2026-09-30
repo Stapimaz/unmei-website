@@ -77,6 +77,22 @@
     }
   }
 
+  function playUnmeiEasterVoice() {
+    try {
+      const root = window.UNMEI_ROOT || "";
+      const voiceAudio = new Audio(root + "assets/unmei_easter.mp3?v=3");
+      voiceAudio.volume = 0.65;
+      const playPromise = voiceAudio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(err => {
+          console.warn("Unmei voice play error:", err);
+        });
+      }
+    } catch (e) {
+      console.warn("Audio error:", e);
+    }
+  }
+
   footerSection.addEventListener('click', (e) => {
     consecutiveClicks++;
     clearTimeout(resetTimer);
@@ -121,11 +137,12 @@
       document.body.appendChild(flash);
       setTimeout(() => flash.remove(), 600);
 
-      playTone(520, 'sine', 0.35, 1040);
+      // Play "UNMEİ" voice
+      playUnmeiEasterVoice();
 
       setTimeout(() => {
         openEasterGame();
-      }, 250);
+      }, 350);
       return;
     }
 
