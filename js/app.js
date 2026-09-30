@@ -321,6 +321,12 @@ function showView(viewId) {
     }
   }
 
+  // Detay sayfasından ayrılınıyorsa YouTube videosunu durdur
+  if (viewId !== 'view-detail') {
+    const ytIframe = document.getElementById('detail-youtube-iframe');
+    if (ytIframe) ytIframe.src = "";
+  }
+
   const views = ['view-catalog', 'view-detail', 'view-manga', 'view-about'];
   views.forEach(id => {
     const el = document.getElementById(id);
@@ -451,7 +457,7 @@ function renderAnimeDetail(slug) {
   // Status & Meta
   const isCompleted = anime.status === "TAMAMLANDI";
   const statusClass = isCompleted ? "status-text-completed" : "status-text-incomplete";
-  const statusLabel = anime.ceviri_durumu || (isCompleted ? "Tamamlandı" : "Yarım Kaldı");
+  const statusLabel = isCompleted ? "Tamamlandı" : (anime.ceviri_durumu || "Yarım Kaldı");
 
   metaList.innerHTML = `
     <div class="meta-item">Stüdyo: <strong>${anime.studio || "Bilinmiyor"}</strong></div>
@@ -526,35 +532,61 @@ function renderAnimeDetail(slug) {
   RatingManager.renderRatingWidget("rating-anime-container", anime, "anime", "Anime Puanı");
   RatingManager.renderRatingWidget("rating-translation-container", anime, "translation", "Çeviri Kalitesi");
 
-  // Bölümler
-  if (episodesCount) episodesCount.textContent = anime.episodes_count;
-  if (!anime.episodes || anime.episodes.length === 0) {
-    episodesBody.innerHTML = `
-      <tr>
-        <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 32px 16px;">
-          ${anime.arsiv_durumu && (anime.arsiv_durumu.includes('Link Rot') || anime.archived_count === 0) ? 'Bu serinin bölümleri link rot sebebiyle henüz arşivlenememiştir.' : 'Kayıtlı bölüm bulunamadı.'}
-        </td>
-      </tr>
-    `;
-  } else {
-    episodesBody.innerHTML = (anime.episodes || []).map(ep => {
-      let epLabel = ep.label || String(ep.ep_no).padStart(2, '0');
-      if (anime.category === 'Film' || ep.ep_type === 'movie' || (ep.file_name && ep.file_name.includes('_Movie_'))) {
-        epLabel = '<span class="ep-badge-special">Film</span>';
-      } else if (ep.ep_type === 'special' || (ep.file_name && ep.file_name.includes('_Special_'))) {
-        epLabel = '<span class="ep-badge-special">Özel</span>';
-      }
+  // Bölümler vs YouTube Özel Video Bölümü
+  const episodesSection = document.getElementById("detail-episodes-section");
+  const youtubeSection = document.getElementById("detail-youtube-section");
+  const youtubeIframe = document.getElementById("detail-youtube-iframe");
+  const youtubeLink = document.getElementById("detail-youtube-link");
+  const youtubeHeading = document.getElementById("detail-youtube-heading");
 
-      return `
+  if (anime.youtube_id || anime.slug === "yeon-ae-halujeon") {
+    const videoId = anime.youtube_id || "AYxgS9FDRY4";
+    if (episodesSection) episodesSection.style.display = "none";
+    if (youtubeSection) {
+      youtubeSection.style.display = "block";
+      if (youtubeIframe) youtubeIframe.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+      if (youtubeLink) youtubeLink.href = anime.youtube_url || `https://youtu.be/${videoId}`;
+      if (youtubeHeading) {
+        youtubeHeading.textContent = `Bölümler (${anime.total_episodes || 10} Bölüm - YouTube Tek Parça)`;
+      }
+    }
+    if (archiveCard) archiveCard.style.display = "none";
+  } else {
+    if (episodesSection) episodesSection.style.display = "block";
+    if (youtubeSection) {
+      youtubeSection.style.display = "none";
+      if (youtubeIframe) youtubeIframe.src = "";
+    }
+
+    if (episodesCount) episodesCount.textContent = anime.episodes_count;
+    if (!anime.episodes || anime.episodes.length === 0) {
+      episodesBody.innerHTML = `
         <tr>
-          <td style="font-weight: 600; color: #fff;">${epLabel}</td>
-          <td class="ep-file-name">${ep.file_name || '-'}</td>
-          <td><span class="codec-badge">${ep.codec || 'H.264'}</span></td>
-          <td>${ep.quality || '-'}</td>
-          <td style="font-variant-numeric: tabular-nums;">${formatEpisodeSize(ep.size_mb)}</td>
+          <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 32px 16px;">
+            ${anime.arsiv_durumu && (anime.arsiv_durumu.includes('Link Rot') || anime.archived_count === 0) ? 'Bu serinin bölümleri link rot sebebiyle henüz arşivlenememiştir.' : 'Kayıtlı bölüm bulunamadı.'}
+          </td>
         </tr>
       `;
-    }).join('');
+    } else {
+      episodesBody.innerHTML = (anime.episodes || []).map(ep => {
+        let epLabel = ep.label || String(ep.ep_no).padStart(2, '0');
+        if (anime.category === 'Film' || ep.ep_type === 'movie' || (ep.file_name && ep.file_name.includes('_Movie_'))) {
+          epLabel = '<span class="ep-badge-special">Film</span>';
+        } else if (ep.ep_type === 'special' || (ep.file_name && ep.file_name.includes('_Special_'))) {
+          epLabel = '<span class="ep-badge-special">Özel</span>';
+        }
+
+        return `
+          <tr>
+            <td style="font-weight: 600; color: #fff;">${epLabel}</td>
+            <td class="ep-file-name">${ep.file_name || '-'}</td>
+            <td><span class="codec-badge">${ep.codec || 'H.264'}</span></td>
+            <td>${ep.quality || '-'}</td>
+            <td style="font-variant-numeric: tabular-nums;">${formatEpisodeSize(ep.size_mb)}</td>
+          </tr>
+        `;
+      }).join('');
+    }
   }
 
   // Disqus
