@@ -307,14 +307,20 @@ def main():
             except:
                 pass
 
-        # Category determination
+        # Category determination (Strictly 2 categories: Film or Dizi (TV))
+        MOVIE_SLUGS = {
+            'fate-kaleid-liner-prisma-illya-movie-sekka-no-chikai',
+            'human-lost-ningen-shikkaku',
+            'kimi-no-suizou-wo-tabetai',
+            'majo-no-takkyuubin',
+            'mimi-wo-sumaseba',
+            'perfect-blue',
+            'taifuu-no-noruda',
+            'tenki-no-ko'
+        }
         raw_cat = g.get('kategori') or mirror_info.get('Kategori') or (existing.get('category') if existing else 'TV')
-        if raw_cat in ['Movie', 'Film']:
+        if raw_cat in ['Movie', 'Film'] or slug in MOVIE_SLUGS:
             category = 'Film'
-        elif raw_cat in ['OVA', 'OAV']:
-            category = 'OVA'
-        elif raw_cat in ['ONA', 'Special', 'Özel']:
-            category = 'Özel / ONA'
         else:
             category = 'Dizi (TV)'
 
@@ -343,7 +349,7 @@ def main():
             if '_Movie_' in fn or (category == 'Film' and len(episodes) == 1):
                 ep_type = 'movie'
                 label = 'Film'
-            elif '_Special_' in fn or (category in ['OVA', 'Özel / ONA'] and len(episodes) == 1):
+            elif '_Special_' in fn:
                 ep_type = 'special'
                 label = 'Özel'
             else:

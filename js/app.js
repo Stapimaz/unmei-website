@@ -483,9 +483,9 @@ function renderAnimeDetail(slug) {
   } else {
     episodesBody.innerHTML = (anime.episodes || []).map(ep => {
       let epLabel = ep.label || String(ep.ep_no).padStart(2, '0');
-      if (ep.ep_type === 'movie' || (ep.file_name && ep.file_name.includes('_Movie_')) || (anime.category === 'Film' && anime.episodes.length === 1)) {
+      if (anime.category === 'Film' || ep.ep_type === 'movie' || (ep.file_name && ep.file_name.includes('_Movie_'))) {
         epLabel = '<span class="ep-badge-special">Film</span>';
-      } else if (ep.ep_type === 'special' || (ep.file_name && ep.file_name.includes('_Special_')) || (['OVA', 'Özel / ONA'].includes(anime.category) && anime.episodes.length === 1)) {
+      } else if (ep.ep_type === 'special' || (ep.file_name && ep.file_name.includes('_Special_'))) {
         epLabel = '<span class="ep-badge-special">Özel</span>';
       }
 
