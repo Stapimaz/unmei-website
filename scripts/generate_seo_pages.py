@@ -128,6 +128,71 @@ def generate_anime_page(item):
     # Genre chips
     genre_chips = "".join([f'<span class="genre-tag">{html.escape(g)}</span>' for g in genres])
 
+    # Check if special YouTube embed
+    youtube_id = item.get("youtube_id")
+    if slug == "yeon-ae-halujeon" or youtube_id:
+        vid = youtube_id or "AYxgS9FDRY4"
+        youtube_url = item.get("youtube_url") or f"https://youtu.be/{vid}"
+        episodes_block = f"""
+          <!-- YouTube Özel Video Bölümü -->
+          <div class="section-block" id="detail-youtube-section">
+            <div class="episodes-top-bar">
+              <h3 class="section-heading mb-0">Bölümler ({episodes_count} Bölüm - YouTube Tek Parça)</h3>
+            </div>
+            <div class="youtube-player-wrapper">
+              <iframe id="detail-youtube-iframe" src="https://www.youtube-nocookie.com/embed/{vid}" title="{html.escape(title)} Türkçe Altyazılı Tek Parça" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="youtube-note-box">
+              <div class="youtube-note-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #ff0033; flex-shrink: 0;">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <span>Tüm kısa bölümler tek parça halinde YouTube üzerinden izlenebilir.</span>
+              </div>
+              <a id="detail-youtube-link" href="{youtube_url}" target="_blank" rel="noopener noreferrer" class="youtube-open-link">
+                <span>YouTube'da Aç</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+"""
+    else:
+        episodes_block = f"""
+          <!-- Bölümler Tablosu -->
+          <div class="section-block" id="detail-episodes-section">
+            <div class="episodes-top-bar">
+              <h3 class="section-heading mb-0">Bölümler (<span id="detail-episodes-count">{episodes_count}</span>)</h3>
+              <a id="detail-gdrive-btn" href="{html.escape(gdrive_url)}" target="_blank" rel="noopener noreferrer" class="gdrive-folder-btn" title="Google Drive Klasörü">
+                <svg class="gdrive-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+                <span>Klasör Bağlantısı</span>
+              </a>
+            </div>
+
+            <div class="episodes-table-wrapper">
+              <table class="episodes-table">
+                <thead>
+                  <tr>
+                    <th style="width: 60px;">Bölüm</th>
+                    <th>Dosya Adı</th>
+                    <th style="width: 90px;">Codec</th>
+                    <th style="width: 80px;">Kalite</th>
+                    <th style="width: 90px;">Boyut</th>
+                  </tr>
+                </thead>
+                <tbody id="detail-episodes-body">
+                  {episodes_html}
+                </tbody>
+              </table>
+            </div>
+          </div>
+"""
+
     page_html = f"""<!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -237,35 +302,7 @@ def generate_anime_page(item):
             </div>
           </div>
 
-          <!-- Bölümler Tablosu -->
-          <div class="section-block">
-            <div class="episodes-top-bar">
-              <h3 class="section-heading mb-0">Bölümler (<span id="detail-episodes-count">{episodes_count}</span>)</h3>
-              <a id="detail-gdrive-btn" href="{html.escape(gdrive_url)}" target="_blank" rel="noopener noreferrer" class="gdrive-folder-btn" title="Google Drive Klasörü">
-                <svg class="gdrive-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                </svg>
-                <span>Klasör Bağlantısı</span>
-              </a>
-            </div>
-
-            <div class="episodes-table-wrapper">
-              <table class="episodes-table">
-                <thead>
-                  <tr>
-                    <th style="width: 60px;">Bölüm</th>
-                    <th>Dosya Adı</th>
-                    <th style="width: 90px;">Codec</th>
-                    <th style="width: 80px;">Kalite</th>
-                    <th style="width: 90px;">Boyut</th>
-                  </tr>
-                </thead>
-                <tbody id="detail-episodes-body">
-                  {episodes_html}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          {episodes_block}
 
           <!-- Yorumlar -->
           <div class="section-block">
