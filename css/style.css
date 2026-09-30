@@ -1495,33 +1495,225 @@ body {
 
 /* Responsive */
 @media (max-width: 860px) {
+  .letterboxd-backdrop-container {
+    height: 220px;
+    margin-bottom: -40px;
+  }
+  .detail-nav-bar {
+    padding: 10px 0 14px 0;
+  }
   .detail-content-layout {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
   .detail-sidebar {
-    max-width: 180px;
+    width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
   }
-  .letterboxd-backdrop-container {
-    height: 240px;
-    margin-bottom: -60px;
+  .detail-poster-box {
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.8);
+  }
+  .detail-main-info {
+    width: 100%;
+    gap: 30px;
+  }
+  .detail-title-section {
+    text-align: center;
+  }
+  .detail-title-section h1 {
+    font-size: 28px;
+    line-height: 1.22;
+    letter-spacing: -0.3px;
+    word-break: break-word;
+  }
+  .detail-native-title {
+    font-size: 13px;
+    margin-top: 4px;
+  }
+  .detail-meta-list {
+    justify-content: center;
+    gap: 10px 16px;
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  .detail-genres {
+    justify-content: center;
+    gap: 6px;
   }
   .ratings-panel {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+    gap: 16px;
+    padding: 18px 16px;
   }
   .ratings-divider {
     width: 100%;
     height: 1px;
   }
+  .rating-main-row {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .score-big {
+    font-size: 28px;
+  }
+  .star-btn {
+    font-size: 24px;
+  }
+
+  /* Episodes Table Responsive */
+  .episodes-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+  }
+  .episodes-table {
+    min-width: 480px;
+  }
+  .episodes-top-bar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 600px) {
+  .detail-title-section h1 {
+    font-size: 24px;
+  }
+  .synopsis-text {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .episodes-top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .gdrive-folder-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 9px 12px;
+    font-size: 12.5px;
+  }
+  .episodes-table th,
+  .episodes-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .ep-file-name {
+    font-size: 11px;
+    max-width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .archive-notice-card {
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+  }
+  .archive-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .archive-card-badge {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .site-header {
+    padding: 10px 0;
+  }
   .header-logo-img {
-    height: 42px;
+    height: 36px;
+    width: auto;
+  }
+  .main-nav {
+    gap: 12px;
+  }
+  .nav-link {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .controls-section {
+    padding: 14px 0 16px 0;
+    margin-bottom: 20px;
+  }
+  .search-row {
+    gap: 8px;
+  }
+  .search-input {
+    padding: 8px 12px 8px 36px;
+    font-size: 12.5px;
+  }
+  .search-input-box svg {
+    left: 11px;
+    width: 15px;
+    height: 15px;
+  }
+  .sort-toggle-btn {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 12px;
+    gap: 5px;
+  }
+  .filter-chips-row {
+    gap: 8px;
+  }
+  .filter-groups {
+    gap: 6px;
+  }
+  .filter-chip {
+    padding: 3px 8px;
+    font-size: 11px;
+  }
+
+  /* 2 Sütunlu Kompakt ve Şık Anime Grid */
+  .anime-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 10px;
+  }
+  .anime-item .item-title {
+    font-size: 12.5px;
+    margin-top: 6px;
+    line-height: 1.3;
+  }
+  .status-badge {
+    font-size: 8px;
+    padding: 3px 6px;
+  }
+  .anime-catalog-wrapper.collapsed {
+    max-height: 820px;
   }
   .footer-logo {
     height: 95px;
+  }
+}
+
+@media (max-width: 440px) {
+  .container {
+    padding: 0 12px;
+  }
+  .header-logo-img {
+    height: 31px;
+  }
+  .main-nav {
+    gap: 8px;
+  }
+  .nav-link {
+    font-size: 12px;
+    padding: 3px 4px;
   }
 }
 
@@ -3018,49 +3210,173 @@ body {
   box-shadow: 0 6px 22px rgba(188, 25, 154, 0.55);
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness for Manga & Light Novel */
 @media (max-width: 768px) {
-  .ln-series-title {
-    display: none;
-  }
-  .ln-content-wrapper {
-    padding: 30px 16px 80px 16px;
-  }
-  .ln-text-para {
-    font-size: 16.5px;
-    line-height: 1.8;
-  }
+  /* Vitrin */
   .manga-grid {
-    gap: 28px 20px;
+    gap: 24px 16px;
   }
   .manga-item {
-    width: 170px;
+    width: 155px;
   }
+
+  /* Manga Reader Top Bar */
   .reader-top-bar {
-    padding: 0 10px;
-    gap: 8px;
+    height: 48px;
+    padding: 0 8px;
+    gap: 6px;
   }
   .reader-series-title {
     display: none;
   }
+  .reader-back-btn {
+    padding: 6px 8px;
+  }
+  .reader-back-btn span {
+    display: none;
+  }
+  .reader-header-right {
+    gap: 6px;
+  }
+  .reader-mode-toggle {
+    padding: 1px;
+    gap: 1px;
+  }
+  .reader-mode-btn {
+    padding: 4px 6px;
+  }
+  .reader-mode-btn span {
+    display: none; /* Icon only on mobile */
+  }
   .reader-chapter-dropdown {
-    max-width: 115px;
-    font-size: 12px;
-    padding: 0 22px 0 8px;
+    max-width: 88px;
+    font-size: 11.5px;
+    height: 30px;
+    padding: 0 16px 0 6px;
+  }
+  .reader-page-indicator {
+    font-size: 11px;
+    padding: 3px 6px;
+    min-width: 38px;
+    text-align: center;
   }
   .reader-nav-arrow {
-    display: none; /* Tap on left/right half on mobile */
+    display: none; /* Tap left/right zone on touch screens */
+  }
+
+  /* Manga Stage: Fits 100% horizontally and vertically without clipping */
+  .reader-viewport {
+    padding: 0;
+  }
+  .reader-single-view {
+    padding: 4px;
+    overflow: hidden;
   }
   .reader-stage {
-    height: calc(100vh - 72px);
+    width: min(calc(100vw - 12px), calc((100vh - 60px) * (1440 / 2048)));
+    height: auto;
+    max-width: calc(100vw - 12px);
+    max-height: calc(100vh - 60px);
+    aspect-ratio: 1440 / 2048;
+  }
+  .reader-scroll-view {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 4px 60px 4px;
+    box-sizing: border-box;
+    gap: 8px;
+  }
+  .scroll-page-wrap {
     width: 100%;
     max-width: 100%;
   }
-  .reader-viewport {
-    padding: 8px 4px;
+  .scroll-page-img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
-  .reader-scroll-view {
-    padding: 14px 8px 60px 8px;
+
+  /* Light Novel Reader */
+  .ln-top-bar {
+    height: 48px;
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .ln-back-btn {
+    padding: 6px 8px;
+  }
+  .ln-back-btn span {
+    display: none;
+  }
+  .ln-series-title {
+    display: none;
+  }
+  .ln-chapter-dropdown {
+    max-width: 145px;
+    font-size: 11.5px;
+    height: 30px;
+    padding: 0 18px 0 6px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .ln-top-right {
+    gap: 4px;
+  }
+  .ln-font-control {
+    padding: 1px;
+    gap: 1px;
+  }
+  .ln-font-btn {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+  .ln-reader-viewport {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .ln-content-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 14px 75px 14px;
+    box-sizing: border-box;
+  }
+  .ln-chapter-header {
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+  }
+  .ln-chapter-title {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .ln-section-heading {
+    font-size: 16px;
+    margin: 28px 0 14px 0;
+    gap: 10px;
+  }
+  .ln-text-para {
+    font-size: 15.5px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .ln-illustration-wrap {
+    margin: 22px 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .ln-illustration-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .ln-next-chapter-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 14px;
+    font-size: 13px;
   }
 }
 
