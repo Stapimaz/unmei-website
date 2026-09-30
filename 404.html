@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayfa Bulunamadı - Unmei Çeviri</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/png" sizes="180x180" href="/assets/favicon.png?v=2">
+  <link rel="shortcut icon" href="/favicon.ico?v=2">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    .not-found-page {
+      min-height: calc(100vh - 180px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px 80px 16px;
+    }
+    .not-found-card {
+      max-width: 580px;
+      width: 100%;
+      background: #101216;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-lg);
+      padding: 44px 32px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+    .not-found-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+    }
+    .not-found-glitch {
+      font-family: var(--font-heading);
+      font-size: 88px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 12px;
+      text-shadow: 0 0 35px rgba(188, 25, 154, 0.5);
+    }
+    .not-found-title {
+      font-family: var(--font-heading);
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .not-found-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .redirect-banner {
+      display: none;
+      background: rgba(188, 25, 154, 0.12);
+      border: 1px solid var(--secondary-border);
+      border-radius: var(--radius-sm);
+      padding: 16px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .redirect-banner-title {
+      font-weight: 700;
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .redirect-banner-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+    .redirect-btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .btn-redirect-now {
+      background: var(--secondary);
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .btn-redirect-now:hover {
+      background: var(--secondary-hover);
+      transform: translateY(-1px);
+    }
+    .btn-cancel-redirect {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .btn-cancel-redirect:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .nf-search-box {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .nf-search-input {
+      width: 100%;
+      padding: 12px 42px 12px 16px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 13.5px;
+      transition: border-color 0.2s ease;
+    }
+    .nf-search-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+    .nf-search-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nf-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .nf-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .nf-btn-primary {
+      background: var(--secondary);
+      color: #fff;
+    }
+    .nf-btn-primary:hover {
+      background: var(--secondary-hover);
+      transform: translateY(-1px);
+    }
+    .nf-btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+    }
+    .nf-btn-secondary:hover {
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    @media (max-width: 600px) {
+      .not-found-card {
+        padding: 32px 18px;
+      }
+      .not-found-glitch {
+        font-size: 68px;
+      }
+      .not-found-title {
+        font-size: 20px;
+      }
+      .nf-actions {
+        flex-direction: column;
+      }
+      .nf-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <script>
+    // Smart Old-URL Resolver & Auto-Redirect
+    (function() {
+      const ANIME_MAP = {"100-man-no-inochi-no-ue-ni-ore-wa-tatteiru": "100-man no Inochi no Ue ni Ore wa Tatteiru", "2-43-seiin-koukou-danshi-volley-bu": "2.43: Seiin Koukou Danshi Volley-bu", "akkun-to-kanojo": "Akkun to Kanojo", "akudama-drive": "Akudama Drive", "alice-or-alice-siscon-niisan-to-futago-no-imouto": "Alice or Alice: Siscon Niisan to Futago no Imouto", "ani-ni-tsukeru-kusuri-wa-nai-2": "Ani ni Tsukeru Kusuri wa Nai! 2", "animegataris": "Animegataris", "appare-ranman": "Appare-Ranman!", "arad-senki-slap-up-party": "Arad Senki: Slap Up Party", "arifureta-shokugyou-de-sekai-saikyou": "Arifureta Shokugyou de Sekai Saikyou", "arte": "Arte", "asobi-asobase": "Asobi Asobase", "asobi-asobase-specials": "Asobi Asobase Specials", "assault-lily-bouquet": "Assault Lily: Bouquet", "bakumatsu": "Bakumatsu", "bakuten": "Bakuten!!", "banana-fish": "Banana Fish", "beatless": "Beatless", "bem": "Bem", "bishounen-tanteidan": "Bishounen Tanteidan", "bleach-sennen-kessen-hen-soukoku-tan": "Bleach: Sennen Kessen-hen - Soukoku-tan", "blue-reflection-ray": "Blue Reflection Ray", "boku-no-hero-academia-5th-season": "Boku no Hero Academia 5th Season", "bungou-stray-dogs-3rd-season": "Bungou Stray Dogs 3rd Season", "carole-tuesday": "Carole & Tuesday", "closers-side-blacklambs": "Closers: Side Blacklambs", "comic-girls": "Comic Girls", "cop-craft": "Cop Craft", "corpse-party-missing-footage": "Corpse Party: Missing Footage", "corpse-party-tortured-souls-bougyakusareta-tamashii-no-jukyou": "Corpse Party: Tortured Souls - Bougyakusareta Tamashii no Jukyou", "dame-x-prince-anime-caravan": "Dame x Prince Anime Caravan", "dandadan": "Dandadan", "date-a-live-iii": "Date A Live III", "deca-dence": "Deca-Dence", "domestic-na-kanojo": "Domestic na Kanojo", "dr-stone": "Dr. Stone", "dr-stone-stone-wars": "Dr. Stone: Stone Wars", "dumbbell-nan-kilo-moteru": "Dumbbell Nan Kilo Moteru?", "dungeon-ni-deai-wo-motomeru-no-wa-machigatteiru-darou-ka-ii": "Dungeon ni Deai wo Motomeru no wa Machigatteiru Darou ka II", "enen-no-shouboutai": "Enen no Shouboutai", "enen-no-shouboutai-ni-no-shou": "Enen no Shouboutai: Ni no Shou", "fate-kaleid-liner-prisma-illya-movie-sekka-no-chikai": "Fate/kaleid liner Prisma☆Illya Movie: Sekka no Chikai", "free-dive-to-the-future": "Free!: Dive to the Future", "fruits-basket-2nd-season": "Fruits Basket 2nd Season", "fugou-keiji-balance-unlimited": "Fugou Keiji: Balance:Unlimited", "fumetsu-no-anata-e": "Fumetsu no Anata e", "gibiate": "Gibiate", "gin-no-guardian-ii": "Gin no Guardian II", "given": "Given", "gleipnir": "Gleipnir", "goblin-slayer": "Goblin Slayer", "granbelm": "Granbelm", "great-pretender": "Great Pretender", "hachi-nan-tte-sore-wa-nai-deshou": "Hachi-nan tte, Sore wa Nai deshou!", "hachigatsu-no-cinderella-nine": "Hachigatsu no Cinderella Nine", "haikyuu-to-the-top": "Haikyuu!!: To the Top", "haikyuu-to-the-top-2nd-season": "Haikyuu!!: To the Top 2nd Season", "happy-sugar-life": "Happy Sugar Life", "heion-sedai-no-idaten-tachi": "Heion Sedai no Idaten-tachi", "hige-wo-soru-soshite-joshikousei-wo-hirou": "Hige wo Soru. Soshite Joshikousei wo Hirou.", "high-school-dxd-hero": "High School DxD Hero", "higurashi-no-naku-koro-ni-gou-2020": "Higurashi no Naku Koro ni Gou (2020)", "hitoribocchi-no-marumaru-seikatsu": "Hitoribocchi no Marumaru Seikatsu", "horimiya": "Horimiya", "houkago-teibou-nisshi": "Houkago Teibou Nisshi", "human-lost-ningen-shikkaku": "Human Lost: Ningen Shikkaku", "hypnosis-mic-division-rap-battle-rhyme-anima": "Hypnosis Mic: Division Rap Battle - Rhyme Anima", "ijiranaide-nagatoro-san": "Ijiranaide, Nagatoro-san", "ikebukuro-west-gate-park": "Ikebukuro West Gate Park", "isekai-cheat-magician": "Isekai Cheat Magician", "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu", "isekai-maou-to-shoukan-shoujo-no-dorei-majutsu-2nd-season": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu 2nd Season", "island": "Island", "joshikausei": "Joshikausei", "jouran-the-princess-of-snow-and-blood": "Jouran: The Princess of Snow and Blood", "jujutsu-kaisen": "Jujutsu Kaisen (TV)", "juuni-taisen": "Juuni Taisen", "kabukichou-sherlock": "Kabukichou Sherlock", "kabukichou-sherlock-ova": "Kabukichou Sherlock OVA", "kaguya-sama-wa-kokurasetai-tensai-tachi-no-renai-zunousen-2": "Kaguya-sama wa Kokurasetai? 2", "kai-byoui-ramune": "Kai Byoui Ramune", "kakegurui-2nd-season": "Kakegurui 2nd Season", "kakushigoto-tv": "Kakushigoto (TV)", "kami-no-tou-tower-of-god": "Kami no Tou: Tower of God", "kamisama-ni-natta-hi": "Kamisama ni Natta Hi", "kanojo-mo-kanojo": "Kanojo mo Kanojo", "kanojo-okarishimasu": "Kanojo, Okarishimasu", "kemono-jihen": "Kemono Jihen", "kenja-no-mago": "Kenja no Mago", "kimi-ni-todoke": "Kimi ni Todoke", "kimi-ni-todoke-2nd-season": "Kimi ni Todoke 2nd Season", "kimi-no-suizou-wo-tabetai": "Kimi no Suizou wo Tabetai", "king-s-raid-ishi-wo-tsugumono-tachi": "King's Raid: Ishi wo Tsugumono-tachi", "kino-no-tabi-the-beautiful-world-the-animated-series": "Kino no Tabi: The Beautiful World - The Animated Series", "kitsune-no-koe": "Kitsune no Koe", "koi-to-producer-evol-love": "Koi to Producer: EVOL×LOVE", "konohana-kitan": "Konohana Kitan", "kyuukyoku-shinka-shita-full-dive-rpg-ga-genjitsu-yori-mo-kusoge-dattara": "Kyuukyoku Shinka shita Full Dive RPG ga Genjitsu yori mo Kusoge Dattara", "ling-feng-zhe": "Ling Feng Zhe", "lord-el-melloi-ii-sei-no-jikenbo-rail-zeppelin-grace-note": "Lord El-Melloi II Sei no Jikenbo: Rail Zeppelin Grace Note", "lostorage-conflated-wixoss": "Lostorage Conflated WIXOSS", "mahoutsukai-no-yome": "Mahoutsukai no Yome", "maiko-san-chi-no-makanai-san": "Maiko-san Chi no Makanai-san", "mairimashita-iruma-kun-2nd-season": "Mairimashita! Iruma-kun 2nd Season", "majo-no-tabitabi": "Majo no Tabitabi", "majo-no-takkyuubin": "Majo no Takkyuubin", "major-2nd": "Major 2nd", "major-2nd-tv-2nd-season": "Major 2nd (TV) 2nd Season", "manaria-friends": "Manaria Friends", "maou-gakuin-no-futekigousha-shijou-saikyou-no-maou-no-shiso-tensei-shite-shison-tachi-no-gakkou-e": "Maou Gakuin no Futekigousha", "mashiro-no-oto": "Mashiro no Oto", "mayonaka-no-occult-koumuin": "Mayonaka no Occult Koumuin", "mimi-wo-sumaseba": "Mimi wo Sumaseba", "miru-tights": "Miru Tights", "mo-dao-zu-shi-2": "Mo Dao Zu Shi 2", "muhyo-to-rouji-no-mahouritsu-soudan-jimusho": "Muhyo to Rouji no Mahouritsu Soudan Jimusho", "mushoku-tensei-isekai-ittara-honki-dasu": "Mushoku Tensei: Isekai Ittara Honki Dasu", "ninja-collection": "Ninja Collection", "no-guns-life": "No Guns Life", "nomad-megalo-box-2": "Nomad: Megalo Box 2", "non-non-biyori-nonstop": "Non Non Biyori Nonstop", "obey-me": "Obey Me!", "odd-taxi": "Odd Taxi", "omae-wa-mada-gunma-wo-shiranai": "Omae wa Mada Gunma wo Shiranai", "one-punch-man-2nd-season": "One Punch Man 2nd Season", "ore-ga-suki-nano-wa-imouto-dakedo-imouto-ja-nai": "Ore ga Suki nano wa Imouto dakedo Imouto ja Nai", "osananajimi-ga-zettai-ni-makenai-love-comedy": "Osananajimi ga Zettai ni Makenai Love Comedy", "oshi-no-ko-2nd-season": "Oshi No Ko 2Nd Season", "osomatsu-san-2nd-season": "Osomatsu San 2Nd Season", "osomatsu-san-3rd-season": "Osomatsu-san 3rd Season", "ouran-koukou-host-club": "Ouran Koukou Host Club", "overlord-iii": "Overlord Iii", "perfect-blue": "Perfect Blue", "peter-grill-to-kenja-no-jikan": "Peter Grill to Kenja no Jikan", "raise-wa-tanin-ga-ii": "Raise Wa Tanin Ga Ii", "re-zero-kara-hajimeru-isekai-seikatsu-2nd-season": "Re:Zero kara Hajimeru Isekai Seikatsu 2nd Season", "re-zero-kara-hajimeru-isekai-seikatsu-shin-henshuu-ban": "Re:Zero kara Hajimeru Isekai Seikatsu: Shin Henshuu-ban", "satsuriku-no-tenshi": "Satsuriku no Tenshi", "senryuu-shoujo": "Senryuu Shoujo", "shadows-house": "Shadows House", "shingeki-no-kyojin-season-3-part-2": "Shingeki No Kyojin Season 3 Part 2", "shingeki-no-kyojin-lost-girls": "Shingeki No Kyojin Lost Girls", "shingeki-no-kyojin-the-final-season": "Shingeki no Kyojin: The Final Season", "shiroi-suna-no-aquatope": "Shiroi Suna no Aquatope", "shokugeki-no-souma-gou-no-sara": "Shokugeki No Souma Gou No Sara", "shoujo-kageki-revue-starlight": "Shoujo Kageki Revue Starlight", "shoumetsu-toshi": "Shoumetsu Toshi", "shoushimin-series": "Shoushimin Series", "sirius": "Sirius", "sk8-the-infinity": "SK8 the Infinity", "skate-leading-stars": "Skate-Leading☆Stars", "sk-crazy-rock-jam": "Sk Crazy Rock Jam", "slow-start": "Slow Start", "ssss-dynazenon": "Ssss Dynazenon", "steins-gate-0": "Steins Gate 0", "super-cub": "Super Cub", "sword-art-online-alicization-war-of-underworld": "Sword Art Online Alicization War Of Underworld", "sword-art-online-alicization-war-of-underworld-2nd-season": "Sword Art Online: Alicization - War of Underworld 2nd Season", "taifuu-no-noruda": "Taifuu no Noruda", "takunomi": "Takunomi", "tantei-wa-mou-shindeiru": "Tantei wa Mou, Shindeiru.", "tate-no-yuusha-no-nariagari": "Tate no Yuusha no Nariagari", "tenki-no-ko": "Tenki No Ko", "the-god-of-high-school": "The God of High School", "tokyo-ghoul-re": "Tokyo Ghoul:re", "tokyo-ghoul-re-2nd-season": "Tokyo Ghoul:re 2nd Season", "tokyo-revengers": "Tokyo Revengers", "tsuujou-kougeki-ga-zentai-kougeki-de-ni-kai-kougeki-no-okaasan-wa-suki-desu-ka": "Tsuujou Kougeki ga Zentai Kougeki de Ni-kai Kougeki no Okaasan wa Suki Desu ka?", "uchuu-senkan-tiramisu": "Uchuu Senkan Tiramisù", "uramichi-oniisan": "Uramichi Oniisan", "uzaki-chan-wa-asobitai": "Uzaki-chan wa Asobitai!", "uzumaki": "Uzumaki", "val-x-love": "Val x Love", "vanitas-no-karte": "Vanitas No Karte", "vinland-saga": "Vinland Saga", "w-z": "W'z", "wave-surfing-yappe-tv": "Wave Surfing Yappe Tv", "yahari-ore-no-seishun-love-comedy-wa-machigatteiru-kan": "Yahari Ore no Seishun Lovecome wa Machigatteiru. Kan", "yakusoku-no-neverland": "Yakusoku no Neverland", "yakusoku-no-neverland-2nd-season": "Yakusoku no Neverland 2nd Season", "yami-shibai-7": "Yami Shibai 7", "yeon-ae-halujeon": "Yeon Ae Halujeon", "yesterday-wo-utatte": "Yesterday wo Utatte", "yuukoku-no-moriarty-2nd-season": "Yuukoku No Moriarty 2Nd Season"};
+      const path = (window.location.pathname || '').toLowerCase();
+
+      // Clean last segment
+      let lastSeg = path.replace(/^\/+|\/+$/g, '').split('/').pop() || '';
+      lastSeg = lastSeg.replace(/\.html?$/i, '');
+
+      // Check special routes first
+      if (lastSeg.includes('manga')) {
+        window.location.replace('/manga/');
+        return;
+      }
+      if (lastSeg.includes('hakkimizda') || lastSeg.includes('about') || lastSeg.includes('iletisim')) {
+        window.location.replace('/hakkimizda/');
+        return;
+      }
+
+      // 1. Direct Slug Match
+      if (lastSeg && ANIME_MAP[lastSeg]) {
+        window.location.replace('/anime/' + lastSeg + '/');
+        return;
+      }
+
+      // 2. Partial / Substring Match (e.g. jujutsu-kaisen-1-sezon -> jujutsu-kaisen)
+      if (lastSeg && lastSeg.length >= 3) {
+        const allSlugs = Object.keys(ANIME_MAP);
+        let bestMatch = null;
+        for (const s of allSlugs) {
+          if (lastSeg === s) {
+            bestMatch = s;
+            break;
+          }
+          if (lastSeg.startsWith(s) || s.startsWith(lastSeg) || lastSeg.includes(s) || s.includes(lastSeg)) {
+            bestMatch = s;
+            break;
+          }
+        }
+
+        if (bestMatch) {
+          window.location.replace('/anime/' + bestMatch + '/');
+          return;
+        }
+
+        // Word overlap match
+        const words = lastSeg.split('-').filter(w => w.length >= 4);
+        if (words.length > 0) {
+          for (const s of allSlugs) {
+            if (words.every(w => s.includes(w))) {
+              window.location.replace('/anime/' + s + '/');
+              return;
+            }
+          }
+          for (const s of allSlugs) {
+            if (s.startsWith(words[0])) {
+              window.location.replace('/anime/' + s + '/');
+              return;
+            }
+          }
+        }
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/#/anime" class="brand-wrapper" id="brand-link" aria-label="Unmei Çeviri">
+        <img src="/assets/header_logo.png" alt="Unmei Çeviri" class="header-logo-img">
+      </a>
+
+      <nav class="main-nav">
+        <a href="/#/anime" class="nav-link active" id="nav-anime">Anime</a>
+        <a href="/#/manga" class="nav-link" id="nav-manga">Manga ve LN</a>
+        <a href="/#/hakkimizda" class="nav-link" id="nav-about">Hakkımızda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="not-found-page">
+    <div class="not-found-card">
+      <div class="not-found-glitch">404</div>
+      <h1 class="not-found-title">Sayfa Bulunamadı</h1>
+      <p class="not-found-desc">
+        Ulaşmaya çalıştığınız sayfa taşınmış, adı değişmiş veya arşive kaldırılmış olabilir. Yeni arşivimizde arama yaparak istediğiniz içeriğe anında ulaşabilirsiniz.
+      </p>
+
+      <!-- Quick Search Bar -->
+      <form class="nf-search-box" onsubmit="event.preventDefault(); const q = document.getElementById('nf-search-input').value.trim(); if(q) window.location.href = '/?q=' + encodeURIComponent(q);">
+        <input type="text" id="nf-search-input" class="nf-search-input" placeholder="Anime adı veya tür ara..." autocomplete="off">
+        <button type="submit" class="nf-search-btn" aria-label="Ara">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+
+      <!-- Action Buttons -->
+      <div class="nf-actions">
+        <a href="/#/anime" class="nf-btn nf-btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Ana Sayfaya Dön
+        </a>
+        <a href="/#/manga" class="nf-btn nf-btn-secondary">Manga ve LN Vitrini</a>
+        <a href="/#/hakkimizda" class="nf-btn nf-btn-secondary">Hakkımızda</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand-section">
+        <img src="/assets/logo.png" alt="Unmei Çeviri" class="footer-logo">
+      </div>
+      <div class="footer-links">
+        <a href="/#/anime">Anime</a>
+        <span class="footer-dot">•</span>
+        <a href="/#/manga">Manga ve LN</a>
+        <span class="footer-dot">•</span>
+        <a href="/#/hakkimizda">Hakkımızda</a>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2017 – 2026 Unmei Çeviri. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -21,6 +21,17 @@ async function initApp() {
   setupEventListeners();
   updateTrendingBadge();
 
+  // Support ?q= or ?search= query parameter from redirects or direct links
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const q = urlParams.get("q") || urlParams.get("search");
+    if (q) {
+      currentFilters.search = q.trim();
+      const searchInput = document.getElementById("search-input");
+      if (searchInput) searchInput.value = q.trim();
+    }
+  } catch (e) {}
+
   try {
     const rootPath = window.UNMEI_ROOT || "";
     const res = await fetch(rootPath + "data/catalog.json");
