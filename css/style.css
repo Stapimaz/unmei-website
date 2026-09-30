@@ -1110,10 +1110,10 @@ body {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: rgba(37, 99, 235, 0.12);
-  border: 1px solid rgba(59, 130, 246, 0.35);
+  background: var(--secondary-subtle);
+  border: 1px solid var(--secondary-border);
   border-radius: var(--radius-sm);
-  color: #93c5fd;
+  color: #f0abfc;
   font-family: var(--font-body);
   font-size: 13px;
   font-weight: 600;
@@ -1123,10 +1123,10 @@ body {
 }
 
 .gdrive-folder-btn:hover {
-  background: rgba(37, 99, 235, 0.22);
-  border-color: #60a5fa;
+  background: rgba(188, 25, 154, 0.25);
+  border-color: var(--secondary);
   color: #ffffff;
-  box-shadow: 0 0 16px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 16px rgba(188, 25, 154, 0.4);
   transform: translateY(-1px);
 }
 
