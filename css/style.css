@@ -478,32 +478,53 @@ body {
   gap: 8px;
 }
 
-.sort-label {
-  font-size: 13px;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-.custom-select {
-  padding: 9px 30px 9px 12px;
+.sort-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 38px;
+  padding: 0 14px;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  color: #fff;
+  color: var(--text-color);
   font-family: var(--font-body);
   font-size: 13px;
+  font-weight: 600;
   cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23848b98'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 14px;
-  transition: var(--transition);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
 }
 
-.custom-select:focus {
-  outline: none;
-  border-color: #2e3440;
+.sort-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #3b4252;
+  color: #fff;
+}
+
+.sort-toggle-btn:active {
+  transform: scale(0.97);
+}
+
+.sort-toggle-icon {
+  color: var(--text-dim);
+  transition: transform 0.25s ease, color 0.2s ease;
+}
+
+.sort-toggle-btn:hover .sort-toggle-icon {
+  color: #fff;
+}
+
+.sort-toggle-btn.descending {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.sort-toggle-btn.descending .sort-toggle-icon {
+  transform: rotate(180deg);
+  color: #fff;
 }
 
 .filter-chips-row {

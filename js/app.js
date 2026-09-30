@@ -689,12 +689,25 @@ function setupEventListeners() {
     });
   }
 
-  const sortSelect = document.getElementById("sort-select");
-  if (sortSelect) {
-    sortSelect.addEventListener("change", (e) => {
+  const sortToggleBtn = document.getElementById("sort-toggle-btn");
+  const sortToggleText = document.getElementById("sort-toggle-text");
+  if (sortToggleBtn) {
+    sortToggleBtn.addEventListener("click", () => {
       savedCatalogScrollY = 0;
       sessionStorage.removeItem("unmei_catalog_scroll");
-      currentFilters.sort = e.target.value;
+
+      if (currentFilters.sort === "name_asc") {
+        currentFilters.sort = "name_desc";
+        if (sortToggleText) sortToggleText.textContent = "Z-A";
+        sortToggleBtn.classList.add("descending");
+        sortToggleBtn.setAttribute("title", "Z'den A'ya sıralı (A-Z için tıklayın)");
+      } else {
+        currentFilters.sort = "name_asc";
+        if (sortToggleText) sortToggleText.textContent = "A-Z";
+        sortToggleBtn.classList.remove("descending");
+        sortToggleBtn.setAttribute("title", "A'dan Z'ye sıralı (Z-A için tıklayın)");
+      }
+
       renderCatalog();
     });
   }

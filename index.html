@@ -93,16 +93,16 @@
               <input type="text" id="search-input" class="search-input" placeholder="Anime ara..." autocomplete="off">
             </div>
 
-            <div class="sort-select-box">
-              <span class="sort-label">Sırala:</span>
-              <select id="sort-select" class="custom-select">
-                <option value="name_asc">İsim (A-Z)</option>
-                <option value="name_desc">İsim (Z-A)</option>
-                <option value="episodes_desc">Bölüm Sayısı</option>
-                <option value="score_anilist">Puan</option>
-                <option value="year_desc">Yayın Yılı</option>
-              </select>
-            </div>
+            <button type="button" id="sort-toggle-btn" class="sort-toggle-btn" title="A'dan Z'ye sıralı (Z-A için tıklayın)" aria-label="Sıralama Değiştir">
+              <span id="sort-toggle-text" class="sort-toggle-text">A-Z</span>
+              <svg id="sort-toggle-icon" class="sort-toggle-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6h7"/>
+                <path d="M3 12h5"/>
+                <path d="M3 18h3"/>
+                <path d="M18 6v12"/>
+                <path d="M15 15l3 3 3-3"/>
+              </svg>
+            </button>
           </div>
 
           <div class="filter-chips-row">
