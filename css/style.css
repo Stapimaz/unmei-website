@@ -1456,6 +1456,46 @@ body {
   font-size: 11px;
 }
 
+/* Footer Social Icons (Monochrome & Compact) */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 4px 0 2px 0;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.22s ease;
+}
+
+.footer-social-link:hover {
+  background: rgba(188, 25, 154, 0.15);
+  border-color: var(--secondary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(188, 25, 154, 0.35);
+}
+
+.footer-social-link svg {
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.footer-social-link:hover svg {
+  transform: scale(1.08);
+}
+
 .footer-bottom {
   display: flex;
   flex-direction: column;
