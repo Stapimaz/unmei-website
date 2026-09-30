@@ -130,9 +130,21 @@
         </div>
       </section>
 
-      <!-- Clean Anime Grid: Sadece afiş ve altında clean isim -->
-      <div class="anime-grid" id="anime-grid">
-        <!-- Rendered by app.js -->
+      <!-- Anime Grid Container (Initially 2.5 rows with Expand Button) -->
+      <div class="anime-catalog-wrapper collapsed" id="anime-catalog-wrapper">
+        <div class="anime-grid" id="anime-grid">
+          <!-- Rendered by app.js -->
+        </div>
+
+        <!-- Gradient Fade Overlay & Expand Button -->
+        <div class="grid-expand-overlay" id="grid-expand-overlay">
+          <button class="grid-expand-btn" id="grid-expand-btn" type="button" aria-label="Tümünü Göster">
+            <span id="grid-expand-btn-text">Tümünü Gör</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
 

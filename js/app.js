@@ -4,6 +4,8 @@
 
 const API_BASE = "https://unmei-rating-api.stapimazgraphics.workers.dev";
 let catalogData = null;
+let isCatalogManuallyExpanded = sessionStorage.getItem("unmei_catalog_expanded") === "true";
+let savedCatalogScrollY = parseInt(sessionStorage.getItem("unmei_catalog_scroll") || "0", 10);
 let currentFilters = {
   search: "",
   status: "all",
@@ -235,6 +237,8 @@ function renderCatalog() {
   const grid = document.getElementById("anime-grid");
   const countEl = document.getElementById("results-count-display");
   const trendingSec = document.getElementById("trending-section");
+  const wrapper = document.getElementById("anime-catalog-wrapper");
+  const expandBtnText = document.getElementById("grid-expand-btn-text");
   if (!grid) return;
 
   if (trendingSec) {
@@ -245,6 +249,22 @@ function renderCatalog() {
 
   if (countEl) {
     countEl.textContent = `${items.length} seri listeleniyor`;
+  }
+
+  // 2.5 Satır Önizleme & Hepsini Göster mantığı
+  // Arama yapılmadıysa ve 15'ten fazla anime varsa başlangıçta 2.5 satır ile sınırla
+  const shouldCollapse = !isCatalogManuallyExpanded && !currentFilters.search.trim() && items.length > 15;
+  if (wrapper) {
+    if (shouldCollapse) {
+      wrapper.classList.add("collapsed");
+      wrapper.classList.remove("expanded");
+      if (expandBtnText) {
+        expandBtnText.textContent = "Tümünü Gör";
+      }
+    } else {
+      wrapper.classList.remove("collapsed");
+      wrapper.classList.add("expanded");
+    }
   }
 
   if (items.length === 0) {
@@ -276,10 +296,31 @@ function renderCatalog() {
 }
 
 function navigateToAnime(slug) {
+  const currentY = window.scrollY || window.pageYOffset || 0;
+  if (currentY > 0) {
+    savedCatalogScrollY = currentY;
+    sessionStorage.setItem("unmei_catalog_scroll", String(currentY));
+    if (isCatalogManuallyExpanded) {
+      sessionStorage.setItem("unmei_catalog_expanded", "true");
+    }
+  }
   window.location.hash = `/anime/${slug}`;
 }
 
 function showView(viewId) {
+  // view-catalog'dan başka bir sayfaya geçiliyorsa mevcut scroll'u kaydet
+  const catalogEl = document.getElementById('view-catalog');
+  if (catalogEl && !catalogEl.classList.contains('hidden') && viewId !== 'view-catalog') {
+    const currentY = window.scrollY || window.pageYOffset || 0;
+    if (currentY > 0) {
+      savedCatalogScrollY = currentY;
+      sessionStorage.setItem('unmei_catalog_scroll', String(currentY));
+      if (isCatalogManuallyExpanded) {
+        sessionStorage.setItem('unmei_catalog_expanded', 'true');
+      }
+    }
+  }
+
   const views = ['view-catalog', 'view-detail', 'view-manga', 'view-about'];
   views.forEach(id => {
     const el = document.getElementById(id);
@@ -301,6 +342,21 @@ function showView(viewId) {
   if (navAnime) navAnime.classList.toggle('active', viewId === 'view-catalog' || viewId === 'view-detail');
   if (navManga) navManga.classList.toggle('active', viewId === 'view-manga');
   if (navAbout) navAbout.classList.toggle('active', viewId === 'view-about');
+
+  // Kataloğa dönüldüğünde önceki scroll konumunu geri yükle
+  if (viewId === 'view-catalog') {
+    const storedScroll = sessionStorage.getItem('unmei_catalog_scroll');
+    const targetY = savedCatalogScrollY || (storedScroll ? parseInt(storedScroll, 10) : 0);
+    if (targetY > 0) {
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: targetY, behavior: 'instant' });
+        setTimeout(() => {
+          window.scrollTo({ top: targetY, behavior: 'instant' });
+        }, 40);
+      });
+      return;
+    }
+  }
 
   window.scrollTo(0, 0);
 }
@@ -512,6 +568,8 @@ function setupEventListeners() {
     searchInput.addEventListener("input", (e) => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(() => {
+        savedCatalogScrollY = 0;
+        sessionStorage.removeItem("unmei_catalog_scroll");
         currentFilters.search = e.target.value;
         renderCatalog();
       }, 120);
@@ -524,6 +582,8 @@ function setupEventListeners() {
       } else if (e.key === "Escape" && document.activeElement === searchInput) {
         searchInput.value = "";
         currentFilters.search = "";
+        savedCatalogScrollY = 0;
+        sessionStorage.removeItem("unmei_catalog_scroll");
         renderCatalog();
         searchInput.blur();
       }
@@ -534,6 +594,8 @@ function setupEventListeners() {
     btn.addEventListener("click", () => {
       document.querySelectorAll("[data-filter-status]").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
+      savedCatalogScrollY = 0;
+      sessionStorage.removeItem("unmei_catalog_scroll");
       currentFilters.status = btn.getAttribute("data-filter-status");
       renderCatalog();
     });
@@ -543,14 +605,63 @@ function setupEventListeners() {
     btn.addEventListener("click", () => {
       document.querySelectorAll("[data-filter-format]").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
+      savedCatalogScrollY = 0;
+      sessionStorage.removeItem("unmei_catalog_scroll");
       currentFilters.format = btn.getAttribute("data-filter-format");
       renderCatalog();
     });
   });
 
+  const expandBtn = document.getElementById("grid-expand-btn");
+  if (expandBtn) {
+    expandBtn.addEventListener("click", () => {
+      isCatalogManuallyExpanded = true;
+      sessionStorage.setItem("unmei_catalog_expanded", "true");
+      const wrapper = document.getElementById("anime-catalog-wrapper");
+      if (wrapper) {
+        wrapper.classList.remove("collapsed");
+        wrapper.classList.add("expanded");
+      }
+    });
+  }
+
+  // Katalogta gezinirken anlık scroll konumunu kaydet
+  window.addEventListener("scroll", () => {
+    const catalogView = document.getElementById("view-catalog");
+    if (catalogView && !catalogView.classList.contains("hidden")) {
+      const y = window.scrollY || window.pageYOffset || 0;
+      if (y > 0) {
+        savedCatalogScrollY = y;
+        sessionStorage.setItem("unmei_catalog_scroll", String(y));
+      }
+    }
+  }, { passive: true });
+
+  const resetToCatalogTop = () => {
+    savedCatalogScrollY = 0;
+    sessionStorage.removeItem("unmei_catalog_scroll");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const brandLink = document.getElementById("brand-link");
+  if (brandLink) {
+    brandLink.addEventListener("click", () => {
+      resetToCatalogTop();
+    });
+  }
+
+  const navAnime = document.getElementById("nav-anime");
+  if (navAnime) {
+    navAnime.addEventListener("click", () => {
+      resetToCatalogTop();
+    });
+  }
+
   const sortSelect = document.getElementById("sort-select");
   if (sortSelect) {
     sortSelect.addEventListener("change", (e) => {
+      savedCatalogScrollY = 0;
+      sessionStorage.removeItem("unmei_catalog_scroll");
       currentFilters.sort = e.target.value;
       renderCatalog();
     });

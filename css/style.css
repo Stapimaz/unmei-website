@@ -579,11 +579,102 @@ body {
 /* ==========================================================================
    FRAMELESS POSTER ITEMS (KART KUTUSU YOK - CLEAN RESİM + ALTI YAZI)
    ========================================================================== */
+.anime-catalog-wrapper {
+  position: relative;
+  transition: max-height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-bottom: 60px;
+}
+
+.anime-catalog-wrapper.collapsed {
+  max-height: 770px; /* Exactly 2.5 rows of anime posters */
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .anime-catalog-wrapper.collapsed {
+    max-height: 720px;
+  }
+}
+
+@media (max-width: 600px) {
+  .anime-catalog-wrapper.collapsed {
+    max-height: 640px;
+  }
+}
+
+.anime-catalog-wrapper.collapsed .grid-expand-overlay {
+  display: flex;
+}
+
+.anime-catalog-wrapper.expanded {
+  max-height: 30000px;
+}
+
+.anime-catalog-wrapper.expanded .grid-expand-overlay {
+  display: none;
+}
+
+.grid-expand-overlay {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 10, 12, 0) 0%,
+    rgba(9, 10, 12, 0.5) 30%,
+    rgba(9, 10, 12, 0.88) 65%,
+    rgba(9, 10, 12, 1) 100%
+  );
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 20px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.grid-expand-btn {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: rgba(17, 20, 26, 0.94);
+  border: 1px solid var(--secondary-border);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(188, 25, 154, 0.25);
+  backdrop-filter: blur(8px);
+  transition: all 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.grid-expand-btn:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.9), 0 0 30px rgba(188, 25, 154, 0.5);
+}
+
+.grid-expand-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.grid-expand-btn:hover svg {
+  transform: translateY(2px);
+}
+
 .anime-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
   gap: 26px 18px;
-  margin-bottom: 60px;
+  margin-bottom: 0;
 }
 
 .anime-item {
