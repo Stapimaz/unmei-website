@@ -1,6 +1,6 @@
 /**
  * UNMEI FANSUB - FULL BACKEND (RATINGS + D1 PAGE VIEWS & TRENDING)
- * Cloudflare Worker + KV (Ratings) + D1 SQLite (Views & Weekly Trending)
+ * Cloudflare Worker + KV (Ratings) + D1 SQLite (Views & Monthly Trending)
  */
 
 const SALT = "unmei_fansub_tribute_2017_2022";
@@ -112,7 +112,7 @@ export default {
       }
     }
 
-    // 4. GET /trending (Last 7 days top viewed anime from D1 SQLite)
+    // 4. GET /trending (Current month's top viewed anime from D1 SQLite)
     if (request.method === "GET" && url.pathname === "/trending") {
       try {
         let results = [];
@@ -120,7 +120,7 @@ export default {
           const query = await env.DB.prepare(
             `SELECT slug, SUM(views) as total_views 
              FROM page_views 
-             WHERE view_date >= date('now', '-7 days') 
+             WHERE view_date >= date('now', 'start of month') 
              GROUP BY slug 
              ORDER BY total_views DESC 
              LIMIT 5`
