@@ -145,7 +145,7 @@ function renderTrending() {
     const others = itemsWithViews.slice(1, 5);
 
     const top1Html = `
-      <a href="#/anime/${top1.anime.slug}" class="spotlight-card">
+      <a href="/anime/${top1.anime.slug}/" class="spotlight-card" data-slug="${top1.anime.slug}">
         <span class="rank-badge">#1</span>
         <div class="card-backdrop" style="background-image: url('${top1.anime.banner_image || top1.anime.cover_image}');"></div>
         <div class="card-overlay"></div>
@@ -170,7 +170,7 @@ function renderTrending() {
           const bgImg = item.anime.banner_image || item.anime.cover_image || "assets/placeholder_poster.svg";
 
           return `
-            <a href="#/anime/${item.anime.slug}" class="side-trending-card">
+            <a href="/anime/${item.anime.slug}/" class="side-trending-card" data-slug="${item.anime.slug}">
               <span class="rank-badge">#${rank}</span>
               <div class="card-backdrop" style="background-image: url('${bgImg}');"></div>
               <div class="card-overlay"></div>
@@ -295,13 +295,13 @@ function renderCatalog() {
     const posterSrc = anime.cover_image || "assets/placeholder_poster.svg";
 
     return `
-      <div class="anime-item" data-slug="${anime.slug}" onclick="navigateToAnime('${anime.slug}')">
+      <a href="/anime/${anime.slug}/" class="anime-item" data-slug="${anime.slug}">
         <div class="poster-wrapper">
           <img src="${posterSrc}" alt="${anime.title}" class="poster-img" loading="lazy" onerror="this.src='assets/placeholder_poster.svg'"/>
           <span class="status-badge ${statusClass}">${statusLabel}</span>
         </div>
         <div class="item-title" title="${anime.title}">${anime.title}</div>
-      </div>
+      </a>
     `;
   }).join('');
 }
@@ -397,14 +397,12 @@ function handleRouting() {
   }
 
   if (hash === "#/manga") {
-    document.title = "Manga ve Light Novel Çevirilerimiz - Unmei Çeviri";
-    showView('view-manga');
+    window.location.replace("/manga/");
     return;
   }
 
   if (hash === "#/hakkimizda") {
-    document.title = "Hakkımızda - Unmei Çeviri";
-    showView('view-about');
+    window.location.replace("/hakkimizda/");
     return;
   }
 
@@ -688,17 +686,45 @@ function setupEventListeners() {
 
   const brandLink = document.getElementById("brand-link");
   if (brandLink) {
-    brandLink.addEventListener("click", () => {
-      resetToCatalogTop();
+    brandLink.addEventListener("click", (e) => {
+      if (!window.UNMEI_ROOT) {
+        e.preventDefault();
+        window.location.hash = "#/anime";
+        resetToCatalogTop();
+      }
     });
   }
 
   const navAnime = document.getElementById("nav-anime");
   if (navAnime) {
-    navAnime.addEventListener("click", () => {
-      resetToCatalogTop();
+    navAnime.addEventListener("click", (e) => {
+      if (!window.UNMEI_ROOT) {
+        e.preventDefault();
+        window.location.hash = "#/anime";
+        resetToCatalogTop();
+      }
     });
   }
+
+  // Seamless SPA navigation for anime cards while preserving real crawlable <a> hrefs for SEO
+  const handleAnimeLinkClick = (e) => {
+    const link = e.target.closest(".anime-item, .spotlight-card, .side-trending-card");
+    if (!link) return;
+    // Allow users to middle-click or Ctrl/Cmd/Shift click to open in new tab
+    if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+
+    if (!window.UNMEI_ROOT) {
+      e.preventDefault();
+      const slug = link.getAttribute("data-slug");
+      if (slug) navigateToAnime(slug);
+    }
+  };
+
+  const gridEl = document.getElementById("anime-grid");
+  if (gridEl) gridEl.addEventListener("click", handleAnimeLinkClick);
+
+  const trendingEl = document.getElementById("trending-track");
+  if (trendingEl) trendingEl.addEventListener("click", handleAnimeLinkClick);
 
   const sortToggleBtn = document.getElementById("sort-toggle-btn");
   const sortToggleText = document.getElementById("sort-toggle-text");
@@ -727,23 +753,11 @@ function setupEventListeners() {
   if (backBtn) {
     backBtn.addEventListener("click", () => {
       if (window.UNMEI_ROOT) {
-        window.location.href = window.UNMEI_ROOT + "#/anime";
+        window.location.href = "/";
       } else {
         window.location.hash = "#/anime";
       }
     });
-  }
-
-  const root = window.UNMEI_ROOT || "";
-  if (root) {
-    const brandLink = document.getElementById("brand-link");
-    const navAnime = document.getElementById("nav-anime");
-    const navManga = document.getElementById("nav-manga");
-    const navAbout = document.getElementById("nav-about");
-    if (brandLink) brandLink.href = root + "#/anime";
-    if (navAnime) navAnime.href = root + "#/anime";
-    if (navManga) navManga.href = root + "#/manga";
-    if (navAbout) navAbout.href = root + "#/hakkimizda";
   }
 
   window.addEventListener("hashchange", handleRouting);

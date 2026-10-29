@@ -695,6 +695,8 @@ body {
   cursor: pointer;
   background: transparent;
   border: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .poster-wrapper {
